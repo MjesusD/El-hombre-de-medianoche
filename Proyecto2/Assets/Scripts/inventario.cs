@@ -47,7 +47,7 @@ public class inventario : MonoBehaviour
 
     void Start()
     {
-        player = FindObjectOfType<Player>();
+        player = FindAnyObjectByType<Player>();
 
         if (inventoryPanel != null)
         {
@@ -256,9 +256,8 @@ public class inventario : MonoBehaviour
         InventoryItem selectedItem = items[selectedIndex];
         Debug.Log("Usando item: " + selectedItem.itemName);
 
-        // Aquí puedes agregar lógica específica para usar items
-        // Por ejemplo: si es una llave, abrir una puerta
-        // Si es medicina, curar al jugador, etc.
+        // Agregar lógica específica para usar items
+       
     }
 
     public List<InventoryItem> GetAllItems()

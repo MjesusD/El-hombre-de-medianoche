@@ -10,8 +10,8 @@ public class InteractionObject : MonoBehaviour
     [SerializeField] private Sprite inventoryIcon;
 
     [Header("Visual Feedback")]
-    [SerializeField] private GameObject interactionPrompt; //UI "Presiona E"
-    [SerializeField] private GameObject highlightSprite; //sprite que brilla al estar cerca
+    [SerializeField] private GameObject interactionPrompt; // Presionar E
+    [SerializeField] private GameObject highlightSprite;   // Sprite con brillo
 
     [Header("Eventos")]
     public UnityEvent onInteract;
@@ -20,73 +20,67 @@ public class InteractionObject : MonoBehaviour
 
     void Start()
     {
-        inventory = FindObjectOfType<inventario>();
+        inventory = FindAnyObjectByType<inventario>();
 
-        //ocultar elementos visuales al inicio
         if (interactionPrompt != null)
-        {
             interactionPrompt.SetActive(false);
-        }
 
         if (highlightSprite != null)
-        {
             highlightSprite.SetActive(false);
-        }
     }
-    //metodo llamado desde Player cuando presiona E
+
+    // Llamado desde el Player cuando presiona E
     public void Interact()
     {
         Debug.Log("Interactuando con: " + objectName);
 
         if (canPickup && inventory != null)
         {
-            //agregar al inventario y destruir del mundo
             inventory.AddItem(objectName, inventoryIcon);
             Destroy(gameObject);
         }
         else
         {
-            //mostrar mensaje de interaccion
             ShowInteractionMessage();
         }
 
-        //ejecutar eventos personalizados
         onInteract?.Invoke();
     }
 
     void ShowInteractionMessage()
     {
-        //aqui conectarias con tu sistema de dialogos
         Debug.Log(interactionMessage);
 
-        // Ejemplo futuro:
-        // DialogueManager.Instance.ShowMessage(interactionMessage);
+        if (DialogueManager.Instance != null)
+        {
+            DialogueManager.Instance.ShowBubble(interactionMessage, transform);
+        }
     }
 
-    //mostrar/ocultar el prompt de "Presiona E"
     public void ShowPrompt(bool show)
     {
         if (interactionPrompt != null)
-        {
             interactionPrompt.SetActive(show);
-        }
 
         if (highlightSprite != null)
-        {
             highlightSprite.SetActive(show);
+    }
+
+    public string GetObjectName() => objectName;
+    public string GetInteractionMessage() => interactionMessage;
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+            ShowPrompt(true);
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            ShowPrompt(false);
+            DialogueManager.Instance?.HideBubble();
         }
     }
-
-    //obtener informacion del objeto
-    public string GetObjectName()
-    {
-        return objectName;
-    }
-
-    public string GetInteractionMessage()
-    {
-        return interactionMessage;
-    }
 }
-
-
