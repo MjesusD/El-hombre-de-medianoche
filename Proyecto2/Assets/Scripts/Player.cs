@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 
     [Header("Controles")]
     [SerializeField] private KeyCode interactKey = KeyCode.E;
-    [SerializeField] private KeyCode inventoryKey = KeyCode.I;
+    //[SerializeField] private KeyCode inventoryKey = KeyCode.I;
 
     private float horizontalInput;
     private bool isMoving = false;

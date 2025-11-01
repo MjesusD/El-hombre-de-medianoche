@@ -1,57 +1,82 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 [System.Serializable]
-public class InventoryItem
+public class InventarioItem
 {
     public string itemName;
     public Sprite itemIcon;
-    public string description;
+    public string descripcion;
 
-    public InventoryItem(string name, Sprite icon, string desc = "")
+    public InventarioItem(string name, Sprite icon, string desc = "")
     {
         itemName = name;
         itemIcon = icon;
-        description = desc;
+        descripcion = desc;
     }
 }
 
 public class inventario : MonoBehaviour
 {
     [Header("Referencias UI")]
-    [SerializeField] private GameObject inventoryPanel;
+    [SerializeField] private GameObject inventarioPanel;
     [SerializeField] private Transform itemsContainer;
     [SerializeField] private GameObject itemSlotPrefab;
-    [SerializeField] private Text itemDescriptionText; //descripcion del item seleccionado
+    [SerializeField] private Text itemNameText;
+    [SerializeField] private Text itemDescripcionText; //descripcion del item seleccionado
 
-    [Header("Configuración")]
+    [Header("Configuracion")]
     [SerializeField] private int maxItems = 20;
     [SerializeField] private KeyCode toggleKey = KeyCode.I;
     [SerializeField] private KeyCode useItemKey = KeyCode.E;
     [SerializeField] private KeyCode closeKey = KeyCode.Escape;
 
-    [Header("Navegación con Teclado")]
-    [SerializeField] private KeyCode upKey = KeyCode.W;
-    [SerializeField] private KeyCode downKey = KeyCode.S;
-    [SerializeField] private KeyCode leftKey = KeyCode.A;
-    [SerializeField] private KeyCode rightKey = KeyCode.D;
+    [Header("Navegacion")]
     [SerializeField] private int itemsPerRow = 5;
 
-    private List<InventoryItem> items = new List<InventoryItem>();
+    private List<InventarioItem> items = new List<InventarioItem>();
     private List<GameObject> itemSlots = new List<GameObject>();
     private bool isInventoryOpen = false;
     private int selectedIndex = 0;
     private Player player;
+    private AudioSource audioSource;
+    public static inventario Instance { get; private set; }
 
+    void Awake()
+    {
+        // Configurar singleton
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // Mantener entre escenas
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
         player = FindAnyObjectByType<Player>();
 
-        if (inventoryPanel != null)
+        if (inventarioPanel != null)
         {
-            inventoryPanel.SetActive(false);
+            inventarioPanel.SetActive(false);
+        }
+        if(itemsContainer != null)
+        {
+            GridLayoutGroup grid = itemsContainer.GetComponent<GridLayoutGroup>();
+            if (grid == null)
+            {
+                grid = itemsContainer.AddComponent<GridLayoutGroup>();
+            }
+            grid.cellSize = new Vector2(80, 80);
+            grid.spacing = new Vector2(10, 10);
+            grid.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
+            grid.constraintCount = itemsPerRow;
         }
     }
 
@@ -88,44 +113,36 @@ public class inventario : MonoBehaviour
 
         int oldIndex = selectedIndex;
 
-        // Navegación arriba
-        if (Input.GetKeyDown(upKey))
+        // Navegación con flechas o WASD
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             selectedIndex -= itemsPerRow;
-            if (selectedIndex < 0)
-                selectedIndex = 0;
         }
 
-        // Navegación abajo
-        if (Input.GetKeyDown(downKey))
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             selectedIndex += itemsPerRow;
-            if (selectedIndex >= items.Count)
-                selectedIndex = items.Count - 1;
         }
 
-        // Navegación izquierda
-        if (Input.GetKeyDown(leftKey))
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             selectedIndex--;
-            if (selectedIndex < 0)
-                selectedIndex = 0;
         }
 
-        // Navegación derecha
-        if (Input.GetKeyDown(rightKey))
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             selectedIndex++;
-            if (selectedIndex >= items.Count)
-                selectedIndex = items.Count - 1;
         }
 
-        // Si cambió la selección, actualizar visual
+        // Limitar índice
+        selectedIndex = Mathf.Clamp(selectedIndex, 0, items.Count - 1);
+
         if (oldIndex != selectedIndex)
         {
             UpdateSelection();
         }
     }
+
 
     public void AddItem(string itemName, Sprite itemIcon, string description = "")
     {
@@ -135,7 +152,7 @@ public class inventario : MonoBehaviour
             return;
         }
 
-        InventoryItem newItem = new InventoryItem(itemName, itemIcon, description);
+        InventarioItem newItem = new InventarioItem(itemName, itemIcon, description);
         items.Add(newItem);
 
         Debug.Log("Item agregado: " + itemName);
@@ -149,7 +166,7 @@ public class inventario : MonoBehaviour
 
     public void RemoveItem(string itemName)
     {
-        InventoryItem itemToRemove = items.Find(item => item.itemName == itemName);
+        InventarioItem itemToRemove = items.Find(item => item.itemName == itemName);
 
         if (itemToRemove != null)
         {
@@ -157,12 +174,14 @@ public class inventario : MonoBehaviour
             Debug.Log("Item removido: " + itemName);
 
             // Ajustar índice seleccionado si es necesario
-            if (selectedIndex >= items.Count)
+            if (selectedIndex >= items.Count && items.Count > 0)
             {
-                selectedIndex = Mathf.Max(0, items.Count - 1);
+                selectedIndex = items.Count - 1;
             }
-
-            UpdateInventoryUI();
+            if (isInventoryOpen)
+            {
+                UpdateInventoryUI();
+            }          
         }
     }
 
@@ -175,9 +194,9 @@ public class inventario : MonoBehaviour
     {
         isInventoryOpen = !isInventoryOpen;
 
-        if (inventoryPanel != null)
+        if (inventarioPanel != null)
         {
-            inventoryPanel.SetActive(isInventoryOpen);
+            inventarioPanel.SetActive(isInventoryOpen);
         }
 
         // Pausar/despausar al jugador
@@ -188,7 +207,10 @@ public class inventario : MonoBehaviour
 
         if (isInventoryOpen)
         {
-            selectedIndex = 0;
+            if (items.Count > 0)
+            {
+                selectedIndex = 0;
+            }
             UpdateInventoryUI();
         }
     }
@@ -197,33 +219,36 @@ public class inventario : MonoBehaviour
     {
         if (itemsContainer == null) return;
 
-        // Limpiar slots existentes
-        foreach (Transform child in itemsContainer)
+        //limpiar slots 
+        foreach (Transform child in itemsContainer.transform)
         {
             Destroy(child.gameObject);
         }
         itemSlots.Clear();
 
-        // Crear slots para cada item
+        //crear slots para cada item
         for (int i = 0; i < items.Count; i++)
         {
-            InventoryItem item = items[i];
-            GameObject slot = Instantiate(itemSlotPrefab, itemsContainer);
+            InventarioItem item = items[i];
+            GameObject slot = Instantiate(itemSlotPrefab, itemsContainer.transform);
             itemSlots.Add(slot);
 
-            // Configurar icono
-            Image iconImage = slot.transform.Find("Icon")?.GetComponent<Image>();
-            if (iconImage != null && item.itemIcon != null)
-            {
-                iconImage.sprite = item.itemIcon;
-                iconImage.enabled = true;
-            }
+            // Configurar slot
+            Image slotBg = slot.GetComponent<Image>();
 
-            // Configurar nombre (opcional)
-            Text itemText = slot.transform.Find("ItemName")?.GetComponent<Text>();
-            if (itemText != null)
+            // Buscar componentes del slot
+            Image iconImage = slot.transform.Find("Icon")?.GetComponent<Image>();
+            if (iconImage != null)
             {
-                itemText.text = item.itemName;
+                if (item.itemIcon != null)
+                {
+                    iconImage.sprite = item.itemIcon;
+                    iconImage.color = Color.white;
+                }
+                else
+                {
+                    iconImage.color = new Color(1, 1, 1, 0.3f);
+                }
             }
         }
 
@@ -235,17 +260,45 @@ public class inventario : MonoBehaviour
         // Actualizar highlight visual de todos los slots
         for (int i = 0; i < itemSlots.Count; i++)
         {
-            Image background = itemSlots[i].GetComponent<Image>();
-            if (background != null)
+            Image bg = itemSlots[i].GetComponent<Image>();
+            if (bg != null)
             {
-                background.color = (i == selectedIndex) ? Color.yellow : Color.white;
+                bg.color = (i == selectedIndex) ? new Color(1f, 1f, 0.3f, 1f) : new Color(0.2f, 0.2f, 0.2f, 0.8f);
+            }
+
+            // Agregar borde al seleccionado
+            Outline outline = itemSlots[i].GetComponent<Outline>();
+            if (outline == null && i == selectedIndex)
+            {
+                outline = itemSlots[i].AddComponent<Outline>();
+                outline.effectColor = Color.yellow;
+                outline.effectDistance = new Vector2(3, 3);
+            }
+            else if (outline != null && i != selectedIndex)
+            {
+                Destroy(outline);
             }
         }
 
         // Actualizar descripción del item seleccionado
-        if (itemDescriptionText != null && items.Count > 0 && selectedIndex < items.Count)
+        if (items.Count > 0 && selectedIndex < items.Count)
         {
-            itemDescriptionText.text = items[selectedIndex].description;
+            InventarioItem selected = items[selectedIndex];
+
+            if (itemNameText != null)
+            {
+                itemNameText.text = selected.itemName;
+            }
+
+            if (itemDescripcionText != null)
+            {
+                itemDescripcionText.text = selected.descripcion;
+            }
+        }
+        else
+        {
+            if (itemNameText != null) itemNameText.text = "";
+            if (itemDescripcionText != null) itemDescripcionText.text = "Inventario vacío";
         }
     }
 
@@ -253,15 +306,16 @@ public class inventario : MonoBehaviour
     {
         if (selectedIndex >= items.Count) return;
 
-        InventoryItem selectedItem = items[selectedIndex];
-        Debug.Log("Usando item: " + selectedItem.itemName);
+        InventarioItem selectedItem = items[selectedIndex];
+        Debug.Log("Usando: " + selectedItem.itemName);
 
-        // Agregar lógica específica para usar items
-       
+        // Aqui agregar logica especifica por item
+        // Ejemplo:
+        // if (selectedItem.itemName == "Llave") { AbrirPuerta(); }
     }
 
-    public List<InventoryItem> GetAllItems()
+    public List<InventarioItem> GetAllItems()
     {
         return items;
     }
-}
+} 

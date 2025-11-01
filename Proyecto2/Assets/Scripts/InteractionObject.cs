@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public class InteractionObject : MonoBehaviour
 {
-    [Header("Configuración del Objeto")]
+    [Header("Configuracion del Objeto")]
     [SerializeField] private string objectName = "Objeto";
     [SerializeField] private string interactionMessage = "Examinar este objeto";
     [SerializeField] private bool canPickup = false;
