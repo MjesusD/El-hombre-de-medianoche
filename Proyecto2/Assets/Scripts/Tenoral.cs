@@ -16,6 +16,14 @@ public class PruebaInventario : MonoBehaviour
                 "Una llave antigua que parece abrir algo importante."
             );
         }
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            inventario.Instance.AddItem(
+                "navaja",
+                iconoPrueba,
+                "Importante"
+            );
+        }
 
         // Presiona R para remover item
         if (Input.GetKeyDown(KeyCode.R))
@@ -28,7 +36,7 @@ public class PruebaInventario : MonoBehaviour
         {
             inventario.Instance.AddItem(
                 "Nota Vieja",
-                null,
+                iconoPrueba,
                 "Un papel arrugado con escritura ilegible."
             );
         }

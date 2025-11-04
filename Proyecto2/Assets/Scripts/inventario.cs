@@ -25,8 +25,8 @@ public class inventario : MonoBehaviour
     [SerializeField] private GameObject inventarioPanel;
     [SerializeField] private Transform itemsContainer;
     [SerializeField] private GameObject itemSlotPrefab;
-    [SerializeField] private Text itemNameText;
-    [SerializeField] private Text itemDescripcionText; //descripcion del item seleccionado
+    [SerializeField] private TextMeshProUGUI itemNameText;
+    [SerializeField] private TextMeshProUGUI itemDescripcionText; //descripcion del item seleccionado
 
     [Header("Configuracion")]
     [SerializeField] private int maxItems = 20;
