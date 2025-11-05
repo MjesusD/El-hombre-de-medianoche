@@ -19,7 +19,7 @@ public class InventarioItem
     }
 }
 
-public class inventario : MonoBehaviour
+public class Inventario : MonoBehaviour
 {
     [Header("Referencias UI")]
     [SerializeField] private GameObject inventarioPanel;
@@ -43,7 +43,7 @@ public class inventario : MonoBehaviour
     private int selectedIndex = 0;
     private Player player;
     private AudioSource audioSource;
-    public static inventario Instance { get; private set; }
+    public static Inventario Instance { get; private set; }
 
     void Awake()
     {

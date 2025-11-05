@@ -10,7 +10,7 @@ public class PruebaInventario : MonoBehaviour
         // Presiona T para agregar item
         if (Input.GetKeyDown(KeyCode.T))
         {
-            inventario.Instance.AddItem(
+            Inventario.Instance.AddItem(
                 "Llave Misteriosa",
                 iconoPrueba,
                 "Una llave antigua que parece abrir algo importante."
@@ -18,7 +18,7 @@ public class PruebaInventario : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.U))
         {
-            inventario.Instance.AddItem(
+            Inventario.Instance.AddItem(
                 "navaja",
                 iconoPrueba,
                 "Importante"
@@ -28,13 +28,13 @@ public class PruebaInventario : MonoBehaviour
         // Presiona R para remover item
         if (Input.GetKeyDown(KeyCode.R))
         {
-            inventario.Instance.RemoveItem("Llave Misteriosa");
+            Inventario.Instance.RemoveItem("Llave Misteriosa");
         }
 
         // Presiona Y para agregar otro item
         if (Input.GetKeyDown(KeyCode.Y))
         {
-            inventario.Instance.AddItem(
+            Inventario.Instance.AddItem(
                 "Nota Vieja",
                 iconoPrueba,
                 "Un papel arrugado con escritura ilegible."
@@ -44,7 +44,7 @@ public class PruebaInventario : MonoBehaviour
         // Presiona U para agregar más items de prueba
         if (Input.GetKeyDown(KeyCode.U))
         {
-            inventario.Instance.AddItem(
+            Inventario.Instance.AddItem(
                 "Moneda Dorada",
                 iconoPrueba,
                 "Una moneda brillante de origen desconocido."
@@ -54,7 +54,7 @@ public class PruebaInventario : MonoBehaviour
         // Presiona P para verificar si tiene un item
         if (Input.GetKeyDown(KeyCode.P))
         {
-            bool tieneLlave = inventario.Instance.HasItem("Llave Misteriosa");
+            bool tieneLlave = Inventario.Instance.HasItem("Llave Misteriosa");
             Debug.Log("¿Tiene Llave Misteriosa? " + (tieneLlave ? "SÍ" : "NO"));
         }
     }

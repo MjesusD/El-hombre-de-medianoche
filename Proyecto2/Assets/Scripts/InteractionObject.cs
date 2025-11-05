@@ -16,11 +16,11 @@ public class InteractionObject : MonoBehaviour
     [Header("Eventos")]
     public UnityEvent onInteract;
 
-    private inventario inventory;
+    private Inventario inventory;
 
     void Start()
     {
-        inventory = FindAnyObjectByType<inventario>();
+        inventory = FindAnyObjectByType<Inventario>();
 
         if (interactionPrompt != null)
             interactionPrompt.SetActive(false);
