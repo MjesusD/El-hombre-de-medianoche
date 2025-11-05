@@ -4,21 +4,6 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-[System.Serializable]
-public class InventarioItem
-{
-    public string itemName;
-    public Sprite itemIcon;
-    public string descripcion;
-
-    public InventarioItem(string name, Sprite icon, string desc = "")
-    {
-        itemName = name;
-        itemIcon = icon;
-        descripcion = desc;
-    }
-}
-
 public class Inventario : MonoBehaviour
 {
     [Header("Referencias UI")]
@@ -154,6 +139,7 @@ public class Inventario : MonoBehaviour
         }
 
         InventarioItem newItem = new InventarioItem(itemName, itemIcon, description);
+        
         items.Add(newItem);
 
         Debug.Log("Item agregado: " + itemName);
