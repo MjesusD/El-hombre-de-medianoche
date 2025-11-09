@@ -120,7 +120,7 @@ public class Inventario : MonoBehaviour
             selectedIndex++;
         }
 
-        // Limitar índice
+        //limitar indice
         selectedIndex = Mathf.Clamp(selectedIndex, 0, items.Count - 1);
 
         if (oldIndex != selectedIndex)
@@ -144,7 +144,7 @@ public class Inventario : MonoBehaviour
 
         Debug.Log("Item agregado: " + itemName);
 
-        // Si el inventario está abierto, actualizar UI
+        //si el inventario esta abierto, actualizar UI
         if (isInventoryOpen)
         {
             UpdateInventoryUI();
@@ -223,6 +223,9 @@ public class Inventario : MonoBehaviour
             // Configurar slot
             Image slotBg = slot.GetComponent<Image>();
 
+            //cambiar sprite del componente image
+            slotBg.sprite = item.itemIcon;
+
             // Buscar componentes del slot
             Image iconImage = slot.transform.Find("Icon")?.GetComponent<Image>();
             if (iconImage != null)
@@ -244,7 +247,7 @@ public class Inventario : MonoBehaviour
 
     void UpdateSelection()
     {
-        // Actualizar highlight visual de todos los slots
+        //actualizar highlight visual de todos los slots
         for (int i = 0; i < itemSlots.Count; i++)
         {
             Image bg = itemSlots[i].GetComponent<Image>();
@@ -253,7 +256,7 @@ public class Inventario : MonoBehaviour
                 bg.color = (i == selectedIndex) ? new Color(1f, 1f, 0.3f, 1f) : new Color(0.2f, 0.2f, 0.2f, 0.8f);
             }
 
-            // Agregar borde al seleccionado
+            //agregar borde al seleccionado
             Outline outline = itemSlots[i].GetComponent<Outline>();
             if (outline == null && i == selectedIndex)
             {
@@ -267,7 +270,7 @@ public class Inventario : MonoBehaviour
             }
         }
 
-        // Actualizar descripción del item seleccionado
+        //actualizar descripcion del item seleccionado
         if (items.Count > 0 && selectedIndex < items.Count)
         {
             InventarioItem selected = items[selectedIndex];
