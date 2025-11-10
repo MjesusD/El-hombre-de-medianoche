@@ -302,6 +302,27 @@ public class Inventario : MonoBehaviour
         // Aqui agregar logica especifica por item
         // Ejemplo:
         // if (selectedItem.itemName == "Llave") { AbrirPuerta(); }
+
+        // Usar Reloj
+
+        if (selectedItem.itemName == "Reloj")
+        {
+            // Cerrar inventario
+            ToggleInventory();
+
+            // Abrir panel del reloj
+            if (ClockPanelManager.Instance != null)
+            {
+                ClockPanelManager.Instance.ShowClockPanel();
+            }
+            else
+            {
+                Debug.LogWarning("No se encontró ClockPanelManager en la escena.");
+            }
+
+            return;
+        }
+
     }
 
     public List<InventarioItem> GetAllItems()
