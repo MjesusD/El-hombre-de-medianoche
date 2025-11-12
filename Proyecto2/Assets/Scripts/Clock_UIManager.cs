@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+
 public class Clock_UIManager : MonoBehaviour
 {
     [Header("UI Confirmación")]
@@ -11,6 +12,9 @@ public class Clock_UIManager : MonoBehaviour
     [SerializeField] private Button noButton;
 
     private string targetScene;
+
+    // ID del punto de aparición cuando se viaja con el reloj
+    [SerializeField] private string clockSpawnID = "ClockSpawn";
 
     private void Start()
     {
@@ -33,8 +37,24 @@ public class Clock_UIManager : MonoBehaviour
 
         if (!string.IsNullOrEmpty(targetScene))
         {
-            // Aquí se puede guardar el spawn ID antes de cambiar
-            // SpawnManager.nextSpawnID = "SpawnDesdeReloj";
+            // Guardar el punto de spawn
+            SpawnManager.nextSpawnID = clockSpawnID;
+
+            // Obtener referencia al jugador actual
+            var spawnManager = FindAnyObjectByType<SpawnManager>();
+            var player = spawnManager != null ? spawnManager.GetPlayer() : null;
+
+            if (player != null)
+            {
+                var playerScript = player.GetComponent<Player>();
+                if (playerScript != null)
+                    playerScript.SetCanMove(true);
+            }
+
+            // Asegurar que el tiempo corra normalmente
+            Time.timeScale = 1f;
+
+            // Cargar la nueva escena
             SceneManager.LoadScene(targetScene);
         }
     }

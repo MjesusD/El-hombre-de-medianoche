@@ -2,31 +2,65 @@ using UnityEngine;
 
 public class PanelManager : MonoBehaviour
 {
-    [Header("Paneles en orden")]
+    [Header("Paneles registrados")]
+    [Tooltip("Lista de paneles que se pueden mostrar por nombre o índice.")]
     public GameObject[] panels;
-    private int currentPanel = 0;
+
+    [Header("Dependencias")]
+    [SerializeField] private CameraSwitcher cameraSwitcher;
+
+    private int currentPanel = -1;
 
     void Start()
     {
-        // Ocultar todos menos el primero
+        // Desactiva todos al inicio
+        foreach (var p in panels)
+            if (p != null)
+                p.SetActive(false);
+    }
+
+    public void ShowPanel(int index)
+    {
+        if (index < 0 || index >= panels.Length) return;
+
+        HideAllPanels();
+        panels[index].SetActive(true);
+        currentPanel = index;
+
+        if (cameraSwitcher != null && !cameraSwitcher.IsInUICamera())
+            cameraSwitcher.SwitchToUICamera();
+    }
+
+    public void ShowPanel(string panelName)
+    {
         for (int i = 0; i < panels.Length; i++)
         {
-            panels[i].SetActive(i == 0);
+            if (panels[i] != null && panels[i].name == panelName)
+            {
+                ShowPanel(i);
+                return;
+            }
         }
+        Debug.LogWarning("Panel no encontrado: " + panelName);
+    }
+
+    public void HideAllPanels()
+    {
+        foreach (var p in panels)
+            if (p != null)
+                p.SetActive(false);
+
+        currentPanel = -1;
+
+        if (cameraSwitcher != null && cameraSwitcher.IsInUICamera())
+            cameraSwitcher.SwitchToMainCamera();
     }
 
     public void ShowNextPanel()
     {
-        if (currentPanel < panels.Length - 1)
-        {
-            panels[currentPanel].SetActive(false);
-            currentPanel++;
-            panels[currentPanel].SetActive(true);
-        }
-        else
-        {
-            // Todos los paneles mostrados
-            Debug.Log("Fin de la secuencia de paneles");
-        }
+        if (panels.Length == 0) return;
+
+        int next = (currentPanel + 1) % panels.Length;
+        ShowPanel(next);
     }
 }

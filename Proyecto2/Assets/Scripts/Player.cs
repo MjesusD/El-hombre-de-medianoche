@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField] private KeyCode interactKey = KeyCode.E;
     //[SerializeField] private KeyCode inventoryKey = KeyCode.I;
 
+    private bool canMove = true;
     private float horizontalInput;
     private bool isMoving = false;
     private SpriteRenderer spriteRenderer;
@@ -23,6 +24,10 @@ public class Player : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+
+        Debug.Log($"[Player] Rigidbody asignado: {rb != null}, Scene: {gameObject.scene.name}");
+
+
     }
 
     void Update()
@@ -37,28 +42,27 @@ public class Player : MonoBehaviour
 
     void HandleMovementInput()
     {
-        //obtener input horizontal (A/D o Flechas Izquierda/Derecha)
-        horizontalInput = Input.GetAxisRaw("Horizontal");
+        if (!canMove)
+        {
+            horizontalInput = 0;
+            isMoving = false;
+            if (animator != null)
+                animator.SetBool("isWalking", false);
+            return;
+        }
 
-        //determinar si esta en movimiento
+        horizontalInput = Input.GetAxisRaw("Horizontal");
         isMoving = horizontalInput != 0;
 
-        //voltear sprite segun direccion
         if (horizontalInput < 0)
-        {
-            spriteRenderer.flipX = true; //izquierda
-        }
+            spriteRenderer.flipX = true;
         else if (horizontalInput > 0)
-        {
-            spriteRenderer.flipX = false; //derecha
-        }
+            spriteRenderer.flipX = false;
 
-        //actualizar animacion
         if (animator != null)
-        {
             animator.SetBool("isWalking", isMoving);
-        }
     }
+
 
     void MovePlayer()
     {
@@ -103,17 +107,22 @@ public class Player : MonoBehaviour
     //metodo publico para bloquear movimiento
     public void SetCanMove(bool canMove)
     {
-        enabled = canMove;
+        if (rb == null) rb = GetComponent<Rigidbody2D>();
+
         if (!canMove)
         {
             rb.linearVelocity = Vector2.zero;
             if (animator != null)
-            {
                 animator.SetBool("isWalking", false);
-            }
         }
+
+        // Solo desactiva el movimiento, no todo el script
+        this.enabled = true; // aseguramos que nunca quede deshabilitado completamente
+        moveSpeed = canMove ? 5f : 0f; // velocidad 0 si está bloqueado
     }
-   
+
+
+
     public bool IsMoving()
     {
         return isMoving;

@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Puzzle4.unity
     guid: cc0a326346f236842aab8ab497e25247
+  - enabled: 1
+    path: Assets/Scenes/Bar.unity
+    guid: 6120d346ee239d14ea7124e8a375790b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

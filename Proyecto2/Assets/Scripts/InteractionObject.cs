@@ -18,6 +18,10 @@ public class InteractionObject : MonoBehaviour
 
     private Inventario inventory;
 
+    [SerializeField] private PanelManager panelManager;
+    [SerializeField] private string panelNameToShow;
+
+
     void Start()
     {
         inventory = FindAnyObjectByType<Inventario>();
@@ -45,6 +49,12 @@ public class InteractionObject : MonoBehaviour
         }
 
         onInteract?.Invoke();
+
+        if (panelManager != null && !string.IsNullOrEmpty(panelNameToShow))
+        {
+            panelManager.ShowPanel(panelNameToShow);
+        }
+
     }
 
     void ShowInteractionMessage()
