@@ -309,6 +309,7 @@ MonoBehaviour:
   questionText: {fileID: 5186632454351930518}
   yesButton: {fileID: 1264462109252394085}
   noButton: {fileID: 2866073154221830202}
+  clockSpawnID: ClockSpawn
 --- !u!1 &4701304316759231916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1921,7 +1922,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 9015575697952045032, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1

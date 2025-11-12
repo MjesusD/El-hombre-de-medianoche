@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcbf1b031574666489e3dc2936fb35cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClockPanelManager
-  clockCanvas: {fileID: 0}
+  clockCanvas: {fileID: 8290212439030009804, guid: 15c032269cfedc1429ec8db8958c56cb, type: 3}
