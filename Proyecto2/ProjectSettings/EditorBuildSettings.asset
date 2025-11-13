@@ -15,10 +15,10 @@ EditorBuildSettings:
     path: "Assets/Scenes/Nivel 1/Ba\xF1o.unity"
     guid: 7cc09a285eec8f64887af58f0e120cd1
   - enabled: 1
-    path: Assets/Scenes/Puzzle2.unity
+    path: Assets/Scenes/Barco.unity
     guid: 53936b4972bc9f744aea5d73e44f57ce
   - enabled: 1
-    path: Assets/Scenes/Puzzle3.unity
+    path: Assets/Scenes/Nivel 3/Puzzle3.unity
     guid: 58124735584d662489b900f8e33c4283
   - enabled: 1
     path: Assets/Scenes/Puzzle4.unity
@@ -26,9 +26,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bar.unity
     guid: 6120d346ee239d14ea7124e8a375790b
-  - enabled: 0
-    path: Assets/Scenes/P4.unity
-    guid: d2c1ba6e418951843a0df1404dc6438e
+  - enabled: 1
+    path: Assets/Scenes/Nivel 1/Afuera.unity
+    guid: c0512361958e5214080852b58c38d98d
+  - enabled: 1
+    path: Assets/Scenes/Nivel 1/Habitacion.unity
+    guid: 00843a0fc2ab3db46b9ffaefdbc72814
+  - enabled: 1
+    path: Assets/Scenes/Nivel 2/Puzzle2.unity
+    guid: aae47466fa7a0e047b5b1ce19e3fe145
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

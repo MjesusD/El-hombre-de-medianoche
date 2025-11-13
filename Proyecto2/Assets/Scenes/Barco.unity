@@ -989,6 +989,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 107212197963782153, guid: 1b600107e11308b47943f531d3ad706a, type: 3}
+      propertyPath: spawnID
+      value: Barco
+      objectReference: {fileID: 0}
     - target: {fileID: 1350887374405916599, guid: 1b600107e11308b47943f531d3ad706a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.14617

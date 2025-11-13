@@ -570,6 +570,14 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7903770663357358383, guid: 15c032269cfedc1429ec8db8958c56cb, type: 3}
+      propertyPath: 'sceneNames.Array.data[0]'
+      value: Afuera
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903770663357358383, guid: 15c032269cfedc1429ec8db8958c56cb, type: 3}
+      propertyPath: 'sceneNames.Array.data[1]'
+      value: Puzzle2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903770663357358383, guid: 15c032269cfedc1429ec8db8958c56cb, type: 3}
       propertyPath: 'sceneNames.Array.data[3]'
       value: Puzzle4
       objectReference: {fileID: 0}

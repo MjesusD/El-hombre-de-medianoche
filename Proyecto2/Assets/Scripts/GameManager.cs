@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
     // Método que se llama desde el botón
     public void PlayGame()
     {
-        SceneManager.LoadScene("Principal_P1");
+        SceneManager.LoadScene("Barco");
     }
 
     public void QuitGame()
