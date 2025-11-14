@@ -9,14 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenuScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Scenes/Barco.unity
+    guid: 53936b4972bc9f744aea5d73e44f57ce
+  - enabled: 1
     path: Assets/Scenes/Nivel 1/Principal_P1.unity
     guid: f3420b6951bec53489e65692fbe39a1c
   - enabled: 1
     path: "Assets/Scenes/Nivel 1/Ba\xF1o.unity"
     guid: 7cc09a285eec8f64887af58f0e120cd1
-  - enabled: 1
-    path: Assets/Scenes/Barco.unity
-    guid: 53936b4972bc9f744aea5d73e44f57ce
   - enabled: 1
     path: Assets/Scenes/Nivel 3/Puzzle3.unity
     guid: 58124735584d662489b900f8e33c4283
