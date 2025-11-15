@@ -34,10 +34,8 @@ public class DialogueBubble : MonoBehaviour
     {
         if (target == null || Camera.main == null) return;
 
-        // Convertir posición mundial a pantalla
         Vector3 screenPos = Camera.main.WorldToScreenPoint(target.position + offset);
 
-        // Si el objeto está detrás de la cámara, no mostrar
         if (screenPos.z < 0)
             return;
 

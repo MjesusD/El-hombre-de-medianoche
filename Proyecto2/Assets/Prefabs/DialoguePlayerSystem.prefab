@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4938031000550988376
+--- !u!1 &6466846254675457701
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5497209312925079454}
-  - component: {fileID: 6912644605210940315}
+  - component: {fileID: 3740067427526703146}
+  - component: {fileID: 6556811252820141884}
   m_Layer: 0
-  m_Name: DialogueManager
+  m_Name: DialoguePlayerSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5497209312925079454
+--- !u!4 &3740067427526703146
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4938031000550988376}
+  m_GameObject: {fileID: 6466846254675457701}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.20348, y: -0.49901, z: 0}
+  m_LocalPosition: {x: -1.3021, y: -1.30653, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6912644605210940315
+--- !u!114 &6556811252820141884
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4938031000550988376}
+  m_GameObject: {fileID: 6466846254675457701}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55a5253be689e174f88c86eb896a2ea9, type: 3}
+  m_Script: {fileID: 11500000, guid: d4a0ee3158e9ff4499832a8782ae2e25, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
-  bubblePrefab: {fileID: 4277873102946240998, guid: 0f46ad0e6ef42fd4aa7b944f50fa4fd2, type: 3}
-  uiCanvas: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::DialoguePlayerSystem
+  dialoguePanel: {fileID: 0}
+  dialogueText: {fileID: 0}
+  nextButton: {fileID: 0}
