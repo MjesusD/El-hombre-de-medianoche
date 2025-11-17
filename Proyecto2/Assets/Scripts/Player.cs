@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance;
+
     [Header("Configuraci�n de Movimiento")]
     [SerializeField] private float moveSpeed = 5f;
 
@@ -16,8 +18,13 @@ public class Player : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
 
-    //variable para detectar objetos interactuables cercanos
+    // Variable para detectar objetos interactuables cercanos
     private InteractionObject currentInteractable;
+
+    void Awake()
+    {
+        Instance = this;  
+    }
 
     void Start()
     {
@@ -66,14 +73,14 @@ public class Player : MonoBehaviour
 
     void MovePlayer()
     {
-        //mover al jugador horizontalmente
+        // Mover al jugador horizontalmente
         Vector2 movement = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
         rb.linearVelocity = movement;
     }
 
     void HandleInteractionInput()
     {
-        //presionar E para interactuar con objetos cercanos
+        // Presionar E para interactuar con objetos cercanos
         if (Input.GetKeyDown(interactKey))
         {
             if (currentInteractable != null)
@@ -82,7 +89,7 @@ public class Player : MonoBehaviour
             }
         }
     }
-    //detectar cuando entramos en rango de un objeto interactuable
+    // Detectar cuando entramos en rango de un objeto interactuable
     void OnTriggerEnter2D(Collider2D other)
     {
         InteractionObject interactable = other.GetComponent<InteractionObject>();
@@ -93,7 +100,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    //detectar cuando salimos del rango
+    // Detectar cuando salimos del rango
     void OnTriggerExit2D(Collider2D other)
     {
         InteractionObject interactable = other.GetComponent<InteractionObject>();
@@ -104,7 +111,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    //metodo publico para bloquear movimiento
+    // Metodo publico para bloquear movimiento
     public void SetCanMove(bool canMove)
     {
         if (rb == null) rb = GetComponent<Rigidbody2D>();
@@ -117,8 +124,8 @@ public class Player : MonoBehaviour
         }
 
         // Solo desactiva el movimiento, no todo el script
-        this.enabled = true; // aseguramos que nunca quede deshabilitado completamente
-        moveSpeed = canMove ? 5f : 0f; // velocidad 0 si está bloqueado
+        this.enabled = true; // Aseguramos que nunca quede deshabilitado completamente
+        moveSpeed = canMove ? 5f : 0f; // Velocidad 0 si está bloqueado
     }
 
 

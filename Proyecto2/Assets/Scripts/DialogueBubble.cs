@@ -21,7 +21,6 @@ public class DialogueBubble : MonoBehaviour
     {
         target = worldTarget;
         messageText.text = message;
-
         UpdatePosition();
     }
 
@@ -34,10 +33,21 @@ public class DialogueBubble : MonoBehaviour
     {
         if (target == null || Camera.main == null) return;
 
+        // Convertir posición mundial a pantalla
         Vector3 screenPos = Camera.main.WorldToScreenPoint(target.position + offset);
 
+        // Si el target está detrás de la cámara ? ocultar burbuja
         if (screenPos.z < 0)
+        {
+            if (gameObject.activeSelf)
+                gameObject.SetActive(false);
+
             return;
+        }
+
+        // Reactivar si vuelve al campo de visión
+        if (!gameObject.activeSelf)
+            gameObject.SetActive(true);
 
         rectTransform.position = screenPos;
     }

@@ -6,60 +6,88 @@ public class DialoguePlayerSystem : MonoBehaviour
 {
     public static DialoguePlayerSystem Instance;
 
-    [Header("UI")]
-    public GameObject dialoguePanel;
-    public TMP_Text dialogueText;
-    public Button nextButton;
+    [Header("UI de diálogos")]
+    public GameObject subtitlePanel;
+    public TextMeshProUGUI subtitleText;
 
-    private DialogueData activeDialogue;
-    private int currentIndex = 0;
+    [Header("Configuración")]
+    public KeyCode nextKey = KeyCode.Space;
 
-    void Awake()
+    private DialogueData currentDialogue;
+    private int lineIndex = 0;
+    private bool isPlaying = false;
+
+    private void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
+        if (Instance == null)
+            Instance = this;
+        else
             Destroy(gameObject);
-            return;
-        }
 
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-
-        if (dialoguePanel != null)
-            dialoguePanel.SetActive(false);
+        if (subtitlePanel != null)
+            subtitlePanel.SetActive(false);
     }
+
+    public bool IsPlaying() => isPlaying;
 
     public void StartDialogue(DialogueData data)
     {
-        if (DialoguePersistence.WasSeen(data.dialogueID) && !data.repeatable)
+        if (isPlaying || data == null)
             return;
 
-        activeDialogue = data;
-        currentIndex = 0;
+        currentDialogue = data;
+        lineIndex = 0;
+        isPlaying = true;
 
-        dialoguePanel.SetActive(true);
-        dialogueText.text = activeDialogue.lines[currentIndex].text;
+        // Bloquear movimiento del jugador
+        if (Player.Instance != null)
+            Player.Instance.SetCanMove(false);
 
-        nextButton.onClick.RemoveAllListeners();
-        nextButton.onClick.AddListener(NextLine);
+        subtitlePanel.SetActive(true);
+        ShowCurrentLine();
     }
 
-    private void NextLine()
+    private void Update()
     {
-        currentIndex++;
+        if (!isPlaying) return;
 
-        if (currentIndex >= activeDialogue.lines.Length)
+        if (Input.GetKeyDown(nextKey))
+        {
+            NextLine();
+        }
+    }
+
+    public void NextLine()
+    {
+        lineIndex++;
+
+        if (lineIndex >= currentDialogue.lines.Length)
         {
             EndDialogue();
-            return;
         }
+        else
+        {
+            ShowCurrentLine();
+        }
+    }
 
-        dialogueText.text = activeDialogue.lines[currentIndex].text;
+    private void ShowCurrentLine()
+    {
+        subtitleText.text = currentDialogue.lines[lineIndex].text;
     }
 
     private void EndDialogue()
     {
-        dialoguePanel.SetActive(false);
-        DialoguePersistence.WasSeen(activeDialogue.dialogueID);
+        isPlaying = false;
+        subtitlePanel.SetActive(false);
+
+        // Desbloquear movimiento del jugador
+        if (Player.Instance != null)
+            Player.Instance.SetCanMove(true);
+
+        // Guardar persistencia opcional
+        DialoguePersistence.MarkAsSeen(currentDialogue.dialogueID);
+
+        currentDialogue = null;
     }
 }

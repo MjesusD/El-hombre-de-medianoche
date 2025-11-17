@@ -3,35 +3,47 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     public DialogueData dialogue;
-    public Transform bubbleAnchor;
-
     public KeyCode interactKey = KeyCode.E;
+
+    private bool playerNearby = false;
 
     void Update()
     {
-        if (Input.GetKeyDown(interactKey))
+        if (!playerNearby) return;
+
+        // No iniciar si ya hay uno corriendo
+        if (DialoguePlayerSystem.Instance != null &&
+            DialoguePlayerSystem.Instance.IsPlaying())
         {
-            TryStartDialogue();
+            return;
         }
 
-        if (DialogueManager.Instance != null &&
-            DialogueManager.Instance.IsDialoguePlaying() &&
-            Input.GetKeyDown(KeyCode.Space))
-        {
-            DialogueManager.Instance.ShowNextLine();
-        }
+        // Iniciar diálogo al presionar E
+        if (Input.GetKeyDown(interactKey))
+            TryStartDialogue();
     }
 
     void TryStartDialogue()
     {
         if (dialogue == null) return;
 
-        // Si ya se vio y no es repetible, no reproducir
-        if (!dialogue.repeatable && DialoguePersistence.WasSeen(dialogue.dialogueID))
-        {
+        // Si el diálogo no es repetible y ya fue visto, no iniciar
+        if (!dialogue.repeatable &&
+            DialoguePersistence.WasSeen(dialogue.dialogueID))
             return;
-        }
 
-        DialogueManager.Instance.StartDialogue(dialogue, bubbleAnchor);
+        DialoguePlayerSystem.Instance.StartDialogue(dialogue);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+            playerNearby = true;
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+            playerNearby = false;
     }
 }
