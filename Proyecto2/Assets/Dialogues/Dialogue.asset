@@ -17,3 +17,4 @@ MonoBehaviour:
   lines:
   - text: Hola, soy el hombre de medianoche.
   - text: "Recoge este reloj que te permitir\xE1 viajar a trav\xE9s del tiempo."
+  - text: "Est\xE1 en aquella mesa. \n"

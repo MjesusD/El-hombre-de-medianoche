@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 
 public class DialoguePlayerSystem : MonoBehaviour
 {
@@ -16,6 +15,13 @@ public class DialoguePlayerSystem : MonoBehaviour
     private DialogueData currentDialogue;
     private int lineIndex = 0;
     private bool isPlaying = false;
+
+    // Datos del spawn al terminar 
+    private GameObject itemToSpawn;
+    private Transform spawnPoint;
+
+    public delegate void DialogueEvent();
+    public event DialogueEvent OnDialogueFinished;
 
     private void Awake()
     {
@@ -39,7 +45,6 @@ public class DialoguePlayerSystem : MonoBehaviour
         lineIndex = 0;
         isPlaying = true;
 
-        // Bloquear movimiento del jugador
         if (Player.Instance != null)
             Player.Instance.SetCanMove(false);
 
@@ -52,9 +57,7 @@ public class DialoguePlayerSystem : MonoBehaviour
         if (!isPlaying) return;
 
         if (Input.GetKeyDown(nextKey))
-        {
             NextLine();
-        }
     }
 
     public void NextLine()
@@ -62,13 +65,9 @@ public class DialoguePlayerSystem : MonoBehaviour
         lineIndex++;
 
         if (lineIndex >= currentDialogue.lines.Length)
-        {
             EndDialogue();
-        }
         else
-        {
             ShowCurrentLine();
-        }
     }
 
     private void ShowCurrentLine()
@@ -81,13 +80,31 @@ public class DialoguePlayerSystem : MonoBehaviour
         isPlaying = false;
         subtitlePanel.SetActive(false);
 
-        // Desbloquear movimiento del jugador
         if (Player.Instance != null)
             Player.Instance.SetCanMove(true);
 
-        // Guardar persistencia opcional
         DialoguePersistence.MarkAsSeen(currentDialogue.dialogueID);
 
+        // Ejecutar spawn si existe 
+        if (itemToSpawn != null && spawnPoint != null)
+        {
+            Instantiate(itemToSpawn, spawnPoint.position, spawnPoint.rotation);
+            itemToSpawn = null;
+            spawnPoint = null;
+        }
+
+        // Llamar evento global
+        OnDialogueFinished?.Invoke();
+
         currentDialogue = null;
+    }
+
+   
+    // Asigna un ítem para aparecer al final del diálogo
+    
+    public void RegisterItemSpawnAfterDialogue(GameObject prefab, Transform point)
+    {
+        itemToSpawn = prefab;
+        spawnPoint = point;
     }
 }

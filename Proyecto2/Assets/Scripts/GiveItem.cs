@@ -5,7 +5,7 @@ public class GiveItem : MonoBehaviour
     [Header("Configuración del Reloj")]
     [SerializeField] private string relojNombre = "Reloj";
     [SerializeField] private Sprite relojIcono;
-    [TextArea][SerializeField] private string descripcion = "Un reloj antiguo que te permite ajustar la hora.";
+    [TextArea][SerializeField] private string descripcion = "Permite viajar en el tiempo.";
     [SerializeField] private bool entregarSoloUnaVez = true;
 
     private bool entregado = false;
@@ -18,6 +18,7 @@ public class GiveItem : MonoBehaviour
 
     public void EntregarReloj()
     {
+        // Evita duplicados
         if (entregarSoloUnaVez && entregado)
         {
             Debug.Log("El reloj ya fue entregado.");
@@ -30,15 +31,19 @@ public class GiveItem : MonoBehaviour
             return;
         }
 
+        // Agregar al inventario
         inventario.AddItem(relojNombre, relojIcono, descripcion);
         entregado = true;
 
         Debug.Log("Has obtenido el reloj.");
 
-        // Mostrar burbuja con tu DialogueManager actual
+        // Mostrar mensaje
         if (DialogueManager.Instance != null)
         {
             DialogueManager.Instance.ShowBubble("Has obtenido el reloj.", transform);
         }
+
+        // Destruir el reloj en la escena después de recogerlo
+        Destroy(gameObject);
     }
 }

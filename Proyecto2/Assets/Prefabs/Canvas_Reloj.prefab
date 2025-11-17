@@ -1455,6 +1455,7 @@ MonoBehaviour:
   - Principal_P1
   - Puzzle3
   - Puzzle4
+  unlockedHours: 01000000
 --- !u!1 &7166967288306329329
 GameObject:
   m_ObjectHideFlags: 0
