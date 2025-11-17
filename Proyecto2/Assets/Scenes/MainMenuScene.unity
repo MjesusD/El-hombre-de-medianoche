@@ -252,7 +252,7 @@ MonoBehaviour:
   introText: {fileID: 408864894}
   nextButton: {fileID: 818529772}
   musicSource: {fileID: 86791092}
-  introMusic: {fileID: 8300000, guid: e465f530fde2aa84bb9d6fd14a6abf84, type: 3}
+  introMusic: {fileID: 8300000, guid: 1f8283ab5bac3ad48a6d1dbed6fb84ba, type: 3}
   musicFadeDuration: 2
   textos:
   - "Hola han pasado muchos a\xF1os\n"
@@ -1148,7 +1148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &977966652
 RectTransform:
   m_ObjectHideFlags: 0
