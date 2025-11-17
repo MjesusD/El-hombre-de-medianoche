@@ -288,7 +288,7 @@ public class Inventario : MonoBehaviour
         else
         {
             if (itemNameText != null) itemNameText.text = "";
-            if (itemDescripcionText != null) itemDescripcionText.text = "Inventario vacío";
+            if (itemDescripcionText != null) itemDescripcionText.text = "";
         }
     }
 
