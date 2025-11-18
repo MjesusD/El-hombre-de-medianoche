@@ -1,62 +1,130 @@
-using UnityEngine;
+锘縰sing UnityEngine;
 
 public class PickItem : MonoBehaviour
 {
-    
+    [Header("Informaci贸n del Item")]
     public string itemName;
     public Sprite itemIcon;
-    public string descripcion;
+    [TextArea] public string descripcion;
 
-    [Header("Configuraci髇")]
+    [Header("Configuraci贸n")]
     [SerializeField] private bool destruirAlRecoger = true;
+    [SerializeField] private bool recogerSoloUnaVez = true;
     [SerializeField] private AudioClip sonidoRecoger;
 
+    [Header("Visual Feedback")]
+    [SerializeField] private GameObject interactionPrompt; // UI "Presiona E"
+
     private bool yaRecogido = false;
+    private bool jugadorCerca = false;
+
+    private void Update()
+    {
+        // Si el jugador est谩 cerca y presiona E
+        if (jugadorCerca && !yaRecogido && Input.GetKeyDown(KeyCode.E))
+        {
+            RecogerItem();
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && !yaRecogido)
         {
-            RecogerItem();
+            jugadorCerca = true;
+            Debug.Log("Cerca de: " + itemName);
+
+            // Mostrar prompt "Presiona E"
+            if (interactionPrompt != null)
+            {
+                interactionPrompt.SetActive(true);
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            jugadorCerca = false;
+
+            // Ocultar prompt
+            if (interactionPrompt != null)
+            {
+                interactionPrompt.SetActive(false);
+            }
+        }
+    }
+
+    public void RecogerItem()
+    {
+        // Evitar duplicados si est谩 configurado
+        if (recogerSoloUnaVez && yaRecogido)
+        {
+            Debug.Log($"El item '{itemName}' ya fue recogido.");
+            return;
         }
 
-        Debug.Log("choque con" + itemName);
+        yaRecogido = true;
 
-        void RecogerItem()
+        Debug.Log("Recogiendo: " + itemName);
+
+        // Ocultar prompt
+        if (interactionPrompt != null)
         {
-            yaRecogido = true;
+            interactionPrompt.SetActive(false);
+        }
 
-            Debug.Log("Recogiendo: " + itemName);
-
-            // Opci髇 1: Usar Singleton (recomendado)
-            if (Inventario.Instance != null)
+        // Opci贸n 1: Usar Singleton (recomendado)
+        if (Inventario.Instance != null)
+        {
+            Inventario.Instance.AddItem(itemName, itemIcon, descripcion);
+            Debug.Log($"{itemName} agregado al inventario.");
+        }
+        else
+        {
+            // Opci贸n 2: Buscar el objeto (menos eficiente pero funcional)
+            GameObject objetoInventario = GameObject.FindWithTag("Inventario");
+            if (objetoInventario != null)
             {
-                Inventario.Instance.AddItem(itemName, itemIcon, descripcion);
-            }
-            else
-            {
-                // Opci髇 2: Buscar el objeto (menos eficiente pero funcional)
-                GameObject objetoInventario = GameObject.FindWithTag("Inventario");
-                if (objetoInventario != null)
+                Inventario inventario = objetoInventario.GetComponent<Inventario>();
+                if (inventario != null)
                 {
-                    Inventario inventario = objetoInventario.GetComponent<Inventario>();
-                    if (inventario != null)
-                    {
-                        inventario.AddItem(itemName, itemIcon, descripcion);
-                    }
+                    inventario.AddItem(itemName, itemIcon, descripcion);
+                    Debug.Log($"{itemName} agregado al inventario.");
+                }
+                else
+                {
+                    Debug.LogWarning("No se encontr贸 el componente Inventario.");
                 }
             }
-            // Destruir el objeto de la escena
-            if (destruirAlRecoger)
-            {
-                Destroy(gameObject);
-            }
             else
             {
-                // Alternativa: solo desactivarlo
-                gameObject.SetActive(false);
+                Debug.LogWarning("No se encontr贸 el inventario en la escena.");
             }
         }
 
+        // Mostrar mensaje en el juego (si DialogueManager existe)
+        if (DialogueManager.Instance != null)
+        {
+            DialogueManager.Instance.ShowBubble($"Has obtenido: {itemName}", transform);
+        }
+
+        // Reproducir sonido si existe
+        if (sonidoRecoger != null)
+        {
+            AudioSource.PlayClipAtPoint(sonidoRecoger, transform.position);
+        }
+
+        // Destruir el objeto de la escena
+        if (destruirAlRecoger)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            // Alternativa: solo desactivarlo
+            gameObject.SetActive(false);
+        }
     }
 }

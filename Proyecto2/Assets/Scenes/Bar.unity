@@ -139,6 +139,18 @@ PrefabInstance:
       propertyPath: interactionPrompt
       value: 
       objectReference: {fileID: 1652503077}
+    - target: {fileID: 2494043833589441990, guid: 5bb932b065ce9f9499e1bf67c4ab10ac, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1708416286}
+    - target: {fileID: 2494043833589441990, guid: 5bb932b065ce9f9499e1bf67c4ab10ac, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 2494043833589441990, guid: 5bb932b065ce9f9499e1bf67c4ab10ac, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PickItem, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2776809818985890283, guid: 5bb932b065ce9f9499e1bf67c4ab10ac, type: 3}
       propertyPath: m_SortingOrder
       value: 2
@@ -207,13 +219,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4269883237338700437, guid: 5bb932b065ce9f9499e1bf67c4ab10ac, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7237599928430723658, guid: 5bb932b065ce9f9499e1bf67c4ab10ac, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1652503079}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6693565455592966761, guid: 5bb932b065ce9f9499e1bf67c4ab10ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1708416286}
   m_SourcePrefab: {fileID: 100100000, guid: 5bb932b065ce9f9499e1bf67c4ab10ac, type: 3}
 --- !u!1001 &101600853
 PrefabInstance:
@@ -657,6 +673,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &355093461 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6693565455592966761, guid: 5bb932b065ce9f9499e1bf67c4ab10ac, type: 3}
+  m_PrefabInstance: {fileID: 71199557}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &361288994
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1907,6 +1928,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7237599928430723658, guid: 5bb932b065ce9f9499e1bf67c4ab10ac, type: 3}
   m_PrefabInstance: {fileID: 71199557}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1708416286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355093461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb98bb5b47a62154abe0acffe979a4d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickItem
+  itemName: Reloj
+  itemIcon: {fileID: 849652119764549919, guid: 93e4ca2c03daf9c4ab49463abc6591f0, type: 3}
+  descripcion: Reloj Antiguo que me dio el Hombre de Media noche
+  destruirAlRecoger: 1
+  recogerSoloUnaVez: 1
+  sonidoRecoger: {fileID: 0}
+  interactionPrompt: {fileID: 0}
 --- !u!1 &1784230889 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7166967288306329329, guid: 15c032269cfedc1429ec8db8958c56cb, type: 3}
@@ -1995,11 +2035,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.9673915
+      value: -1.956048
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.26223004
+      value: 0.26217997
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.z
