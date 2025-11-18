@@ -1,0 +1,2873 @@
+fileFormatVersion: 2
+guid: 2bf295882b3cd4e48a1245eb28a13610
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 988438091333727131
+    second: Vapor_0
+  - first:
+      213: -1273583638686500231
+    second: Vapor_1
+  - first:
+      213: -1635686710837553360
+    second: Vapor_2
+  - first:
+      213: 8853174017776128387
+    second: Vapor_3
+  - first:
+      213: -2602752317510332315
+    second: Vapor_4
+  - first:
+      213: -8090917499461083807
+    second: Vapor_5
+  - first:
+      213: 2732413284349992571
+    second: Vapor_6
+  - first:
+      213: 1875447857178459723
+    second: Vapor_7
+  - first:
+      213: 7624873009479339921
+    second: Vapor_8
+  - first:
+      213: -7938225016891576897
+    second: Vapor_9
+  - first:
+      213: 8480380621216985816
+    second: Vapor_10
+  - first:
+      213: -9165075729961378777
+    second: Vapor_11
+  - first:
+      213: -7999311427327347398
+    second: Vapor_12
+  - first:
+      213: 5866644170836419764
+    second: Vapor_13
+  - first:
+      213: 7736359242278747812
+    second: Vapor_14
+  - first:
+      213: 2395743546701934521
+    second: Vapor_15
+  - first:
+      213: 4023361835357024047
+    second: Vapor_16
+  - first:
+      213: -3349002561346767403
+    second: Vapor_17
+  - first:
+      213: -8857662108953404327
+    second: Vapor_18
+  - first:
+      213: 4899322411347921891
+    second: Vapor_19
+  - first:
+      213: 8759082260227472496
+    second: Vapor_20
+  - first:
+      213: -7757713319691160804
+    second: Vapor_21
+  - first:
+      213: -2215500433981825388
+    second: Vapor_22
+  - first:
+      213: 6832955005673550857
+    second: Vapor_23
+  - first:
+      213: 6653186638146545551
+    second: Vapor_24
+  - first:
+      213: 3298103832836247499
+    second: Vapor_25
+  - first:
+      213: 3617015971914012102
+    second: Vapor_26
+  - first:
+      213: 4622556800527126989
+    second: Vapor_27
+  - first:
+      213: 6658945578890599211
+    second: Vapor_28
+  - first:
+      213: 8741812876798802682
+    second: Vapor_29
+  - first:
+      213: 1961686904382726956
+    second: Vapor_30
+  - first:
+      213: -8739481742862744046
+    second: Vapor_31
+  - first:
+      213: -3882859568515778590
+    second: Vapor_32
+  - first:
+      213: -6598670172947160605
+    second: Vapor_33
+  - first:
+      213: 2495415093418383255
+    second: Vapor_34
+  - first:
+      213: 3796630316312136222
+    second: Vapor_35
+  - first:
+      213: -6884357313255774086
+    second: Vapor_36
+  - first:
+      213: 4334065623411365372
+    second: Vapor_37
+  - first:
+      213: -6816540977499471485
+    second: Vapor_38
+  - first:
+      213: -2962418774713322542
+    second: Vapor_39
+  - first:
+      213: 2899022205768735562
+    second: Vapor_40
+  - first:
+      213: 5425984814839866268
+    second: Vapor_41
+  - first:
+      213: 776260580309230731
+    second: Vapor_42
+  - first:
+      213: 3841505174002344401
+    second: Vapor_43
+  - first:
+      213: 4677688709464288081
+    second: Vapor_44
+  - first:
+      213: 8525846609451111717
+    second: Vapor_45
+  - first:
+      213: 1484284018352405495
+    second: Vapor_46
+  - first:
+      213: -2327279074370566521
+    second: Vapor_47
+  - first:
+      213: -6826419872952844253
+    second: Vapor_48
+  - first:
+      213: -861747002063608019
+    second: Vapor_49
+  - first:
+      213: -7404539646176002096
+    second: Vapor_50
+  - first:
+      213: -2541679778304995986
+    second: Vapor_51
+  - first:
+      213: -4360104165685699114
+    second: Vapor_52
+  - first:
+      213: -3497946314825138261
+    second: Vapor_53
+  - first:
+      213: -7688483997776789228
+    second: Vapor_54
+  - first:
+      213: 2635141831805797389
+    second: Vapor_55
+  - first:
+      213: 4056854459098526754
+    second: Vapor_56
+  - first:
+      213: -9123006149022977086
+    second: Vapor_57
+  - first:
+      213: -149056942582409494
+    second: Vapor_58
+  - first:
+      213: 4548809295802686462
+    second: Vapor_59
+  - first:
+      213: 6661148920741715136
+    second: Vapor_60
+  - first:
+      213: 2038408680804833692
+    second: Vapor_61
+  - first:
+      213: 9041225585405794969
+    second: Vapor_62
+  - first:
+      213: -1285967817598957982
+    second: Vapor_63
+  - first:
+      213: -4653231658509674658
+    second: Vapor_64
+  - first:
+      213: 8488005554792114692
+    second: Vapor_65
+  - first:
+      213: 3782236751114232600
+    second: Vapor_66
+  - first:
+      213: 5394963175063107804
+    second: Vapor_67
+  - first:
+      213: 3692692329597121214
+    second: Vapor_68
+  - first:
+      213: 6623866913038780683
+    second: Vapor_69
+  - first:
+      213: -7579498541817748797
+    second: Vapor_70
+  - first:
+      213: -3330688225057956734
+    second: Vapor_71
+  - first:
+      213: 745252740883945094
+    second: Vapor_72
+  - first:
+      213: -2487641753838993292
+    second: Vapor_73
+  - first:
+      213: -7154429698251296665
+    second: Vapor_74
+  - first:
+      213: 2154659828356819262
+    second: Vapor_75
+  - first:
+      213: 7045993718267004723
+    second: Vapor_76
+  - first:
+      213: 4947853980693540507
+    second: Vapor_77
+  - first:
+      213: 4989166370647226200
+    second: Vapor_78
+  - first:
+      213: -5521903914272804866
+    second: Vapor_79
+  - first:
+      213: 1139083114488360308
+    second: Vapor_80
+  - first:
+      213: 3331845069287230602
+    second: Vapor_81
+  - first:
+      213: -3884373375657358121
+    second: Vapor_82
+  - first:
+      213: -7488540175374415135
+    second: Vapor_83
+  - first:
+      213: -2710128894559953778
+    second: Vapor_84
+  - first:
+      213: 2158150497628253265
+    second: Vapor_85
+  - first:
+      213: 3520199109166372914
+    second: Vapor_86
+  - first:
+      213: -309094144625866910
+    second: Vapor_87
+  - first:
+      213: -224250758502162161
+    second: Vapor_88
+  - first:
+      213: -4214266241281672989
+    second: Vapor_89
+  - first:
+      213: -9002348352065060774
+    second: Vapor_90
+  - first:
+      213: -47951760760120551
+    second: Vapor_91
+  - first:
+      213: -7047644688776239138
+    second: Vapor_92
+  - first:
+      213: -7332521351161291121
+    second: Vapor_93
+  - first:
+      213: -6682048246463180412
+    second: Vapor_94
+  - first:
+      213: 5321753312955713963
+    second: Vapor_95
+  - first:
+      213: -4122365021385645976
+    second: Vapor_96
+  - first:
+      213: -4899926493596858914
+    second: Vapor_97
+  - first:
+      213: -5883275441150414885
+    second: Vapor_98
+  - first:
+      213: -8960826203457559220
+    second: Vapor_99
+  - first:
+      213: -407754958919212102
+    second: Vapor_100
+  - first:
+      213: -242820193947048359
+    second: Vapor_101
+  - first:
+      213: 2224113612270787231
+    second: Vapor_102
+  - first:
+      213: -4214163674236197665
+    second: Vapor_103
+  - first:
+      213: -8994414165163985834
+    second: Vapor_104
+  - first:
+      213: -2378243819545098033
+    second: Vapor_105
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Vapor_0
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 1135
+        width: 96
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9379640533a7bd00800000000000000
+      internalID: 988438091333727131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_1
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1161
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97a7758ad62535ee0800000000000000
+      internalID: -1273583638686500231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_2
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 1175
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03753bc4a9fdc49e0800000000000000
+      internalID: -1635686710837553360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_3
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1140
+        width: 111
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3819340fcdaccda70800000000000000
+      internalID: 8853174017776128387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_4
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 1140
+        width: 48
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 560d874ae8a21ebd0800000000000000
+      internalID: -2602752317510332315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_5
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 1136
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16d51a9d66947bf80800000000000000
+      internalID: -8090917499461083807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_6
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 1135
+        width: 96
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7e5d39b76b7be520800000000000000
+      internalID: 2732413284349992571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_7
+      rect:
+        serializedVersion: 2
+        x: 2152
+        y: 1161
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4eb3e9b3ede60a10800000000000000
+      internalID: 1875447857178459723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_8
+      rect:
+        serializedVersion: 2
+        x: 2168
+        y: 1175
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19fca739a9df0d960800000000000000
+      internalID: 7624873009479339921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_9
+      rect:
+        serializedVersion: 2
+        x: 2218
+        y: 1140
+        width: 111
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbdee09d762c5d190800000000000000
+      internalID: -7938225016891576897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_10
+      rect:
+        serializedVersion: 2
+        x: 3674
+        y: 1140
+        width: 48
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d2beb77e3d50b570800000000000000
+      internalID: 8480380621216985816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_11
+      rect:
+        serializedVersion: 2
+        x: 3729
+        y: 1136
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72c1918ae2c1fc080800000000000000
+      internalID: -9165075729961378777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1107
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a353e6693acbcf090800000000000000
+      internalID: -7999311427327347398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_13
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 1002
+        width: 180
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b422526ac18a6150800000000000000
+      internalID: 5866644170836419764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_14
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 872
+        width: 420
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aeb5daedb11d5b60800000000000000
+      internalID: 7736359242278747812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_15
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 932
+        width: 170
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bf6a1200146f3120800000000000000
+      internalID: 2395743546701934521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_16
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 1121
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2fa157c54ad5d730800000000000000
+      internalID: 4023361835357024047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_17
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 855
+        width: 335
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d57d0b0ae3f581d0800000000000000
+      internalID: -3349002561346767403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_18
+      rect:
+        serializedVersion: 2
+        x: 1660
+        y: 1111
+        width: 49
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95c1567ed33431580800000000000000
+      internalID: -8857662108953404327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_19
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 1107
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ebc08086c3edf340800000000000000
+      internalID: 4899322411347921891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_20
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 1002
+        width: 180
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07cb84778e28e8970800000000000000
+      internalID: 8759082260227472496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_21
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 872
+        width: 420
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c13fd7e76d0175490800000000000000
+      internalID: -7757713319691160804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_22
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 932
+        width: 170
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49e1ac0f716f041e0800000000000000
+      internalID: -2215500433981825388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_23
+      rect:
+        serializedVersion: 2
+        x: 3088
+        y: 1121
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9043667006883de50800000000000000
+      internalID: 6832955005673550857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_24
+      rect:
+        serializedVersion: 2
+        x: 3441
+        y: 855
+        width: 335
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f87a91f4ffdd45c50800000000000000
+      internalID: 6653186638146545551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_25
+      rect:
+        serializedVersion: 2
+        x: 3557
+        y: 1111
+        width: 49
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcf0f8c36f735cd20800000000000000
+      internalID: 3298103832836247499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_26
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 1024
+        width: 178
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c559d8dcd8323230800000000000000
+      internalID: 3617015971914012102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_27
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 1094
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc15c713bee962040800000000000000
+      internalID: 4622556800527126989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_28
+      rect:
+        serializedVersion: 2
+        x: 3190
+        y: 1024
+        width: 178
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2b9e6039b3596c50800000000000000
+      internalID: 6658945578890599211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_29
+      rect:
+        serializedVersion: 2
+        x: 3438
+        y: 1094
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afa378ece78215970800000000000000
+      internalID: 8741812876798802682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_30
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1065
+        width: 38
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c23a44898df493b10800000000000000
+      internalID: 1961686904382726956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_31
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 1057
+        width: 33
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21687ab98af17b680800000000000000
+      internalID: -8739481742862744046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_32
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 1062
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e7f3e17bcf4d1ac0800000000000000
+      internalID: -3882859568515778590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_33
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1055
+        width: 36
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e1e48f5070dc64a0800000000000000
+      internalID: -6598670172947160605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_34
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 1060
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 797d9526ece71a220800000000000000
+      internalID: 2495415093418383255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_35
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 1073
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1a8343482750b430800000000000000
+      internalID: 3796630316312136222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_36
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 1055
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a78e68c9f79d570a0800000000000000
+      internalID: -6884357313255774086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_37
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 1075
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf59aacb8b1b52c30800000000000000
+      internalID: 4334065623411365372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_38
+      rect:
+        serializedVersion: 2
+        x: 1528
+        y: 1070
+        width: 35
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3810047b818c661a0800000000000000
+      internalID: -6816540977499471485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_39
+      rect:
+        serializedVersion: 2
+        x: 1899
+        y: 1065
+        width: 38
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d3b349e1df53e6d0800000000000000
+      internalID: -2962418774713322542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_40
+      rect:
+        serializedVersion: 2
+        x: 2595
+        y: 1057
+        width: 33
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4b90d226556b3820800000000000000
+      internalID: 2899022205768735562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_41
+      rect:
+        serializedVersion: 2
+        x: 2637
+        y: 1062
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c93a135e078fc4b40800000000000000
+      internalID: 5425984814839866268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_42
+      rect:
+        serializedVersion: 2
+        x: 2857
+        y: 1055
+        width: 36
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b84687e82e4d5ca00800000000000000
+      internalID: 776260580309230731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_43
+      rect:
+        serializedVersion: 2
+        x: 2892
+        y: 1060
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d12c334a94cf4530800000000000000
+      internalID: 3841505174002344401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_44
+      rect:
+        serializedVersion: 2
+        x: 3181
+        y: 1073
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15b6979091d7ae040800000000000000
+      internalID: 4677688709464288081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_45
+      rect:
+        serializedVersion: 2
+        x: 3358
+        y: 1055
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5255dc5c154e15670800000000000000
+      internalID: 8525846609451111717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_46
+      rect:
+        serializedVersion: 2
+        x: 3396
+        y: 1075
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fb3fab537c399410800000000000000
+      internalID: 1484284018352405495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_47
+      rect:
+        serializedVersion: 2
+        x: 3425
+        y: 1070
+        width: 35
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78641f62308d3bfd0800000000000000
+      internalID: -2327279074370566521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_48
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 1028
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3208af02b4fa341a0800000000000000
+      internalID: -6826419872952844253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_49
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1010
+        width: 45
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d27adb7daa57a04f0800000000000000
+      internalID: -861747002063608019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_50
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 1001
+        width: 60
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dff1683c6acd3990800000000000000
+      internalID: -7404539646176002096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_51
+      rect:
+        serializedVersion: 2
+        x: 1264
+        y: 1030
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6d465145b32abcd0800000000000000
+      internalID: -2541679778304995986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_52
+      rect:
+        serializedVersion: 2
+        x: 1433
+        y: 996
+        width: 71
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dd5a94bc5ccd73c0800000000000000
+      internalID: -4360104165685699114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_53
+      rect:
+        serializedVersion: 2
+        x: 2606
+        y: 1028
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baff57d0c5cc47fc0800000000000000
+      internalID: -3497946314825138261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_54
+      rect:
+        serializedVersion: 2
+        x: 2689
+        y: 1010
+        width: 45
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4114d331a840d4590800000000000000
+      internalID: -7688483997776789228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_55
+      rect:
+        serializedVersion: 2
+        x: 2971
+        y: 1001
+        width: 60
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d048e81d887e19420800000000000000
+      internalID: 2635141831805797389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_56
+      rect:
+        serializedVersion: 2
+        x: 3161
+        y: 1030
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 224f60ce2a7dc4830800000000000000
+      internalID: 4056854459098526754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_57
+      rect:
+        serializedVersion: 2
+        x: 3330
+        y: 996
+        width: 71
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c3f7c34e32946180800000000000000
+      internalID: -9123006149022977086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_58
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 984
+        width: 59
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae6d11e10817eedf0800000000000000
+      internalID: -149056942582409494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_59
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 990
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efb505334fd902f30800000000000000
+      internalID: 4548809295802686462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_60
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 979
+        width: 108
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cc59c0b6a7217c50800000000000000
+      internalID: 6661148920741715136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_61
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 997
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c99d17e25e1e94c10800000000000000
+      internalID: 2038408680804833692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_62
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 988
+        width: 53
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99a194874c2e87d70800000000000000
+      internalID: 9041225585405794969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_63
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 1005
+        width: 45
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2660e6f4513572ee0800000000000000
+      internalID: -1285967817598957982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_64
+      rect:
+        serializedVersion: 2
+        x: 2736
+        y: 984
+        width: 59
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e57dde0e5766c6fb0800000000000000
+      internalID: -4653231658509674658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_65
+      rect:
+        serializedVersion: 2
+        x: 2931
+        y: 990
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40a2de8a4147bc570800000000000000
+      internalID: 8488005554792114692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_66
+      rect:
+        serializedVersion: 2
+        x: 3123
+        y: 979
+        width: 108
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 813679639443d7430800000000000000
+      internalID: 3782236751114232600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_67
+      rect:
+        serializedVersion: 2
+        x: 3228
+        y: 997
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd833f98c62ceda40800000000000000
+      internalID: 5394963175063107804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_68
+      rect:
+        serializedVersion: 2
+        x: 3239
+        y: 988
+        width: 53
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb2327aeb141f3330800000000000000
+      internalID: 3692692329597121214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_69
+      rect:
+        serializedVersion: 2
+        x: 3287
+        y: 1005
+        width: 45
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b09c327dcd3bceb50800000000000000
+      internalID: 6623866913038780683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_70
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 974
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c2ac5feb3630d690800000000000000
+      internalID: -7579498541817748797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_71
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 928
+        width: 91
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c18dfb4b407c1d0800000000000000
+      internalID: -3330688225057956734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_72
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 973
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68616485b6ba75a00800000000000000
+      internalID: 745252740883945094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_73
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 981
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4704ff5410f1a7dd0800000000000000
+      internalID: -2487641753838993292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_74
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 971
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 760f931681c56bc90800000000000000
+      internalID: -7154429698251296665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_75
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 975
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e392301b2b3e6ed10800000000000000
+      internalID: 2154659828356819262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_76
+      rect:
+        serializedVersion: 2
+        x: 2426
+        y: 974
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33740fa94f568c160800000000000000
+      internalID: 7045993718267004723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_77
+      rect:
+        serializedVersion: 2
+        x: 2785
+        y: 928
+        width: 91
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9eadb70bfe4aa440800000000000000
+      internalID: 4947853980693540507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_78
+      rect:
+        serializedVersion: 2
+        x: 3067
+        y: 973
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 857b0cf51641d3540800000000000000
+      internalID: 4989166370647226200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_79
+      rect:
+        serializedVersion: 2
+        x: 3094
+        y: 981
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eff2ee175a14e53b0800000000000000
+      internalID: -5521903914272804866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_80
+      rect:
+        serializedVersion: 2
+        x: 3115
+        y: 971
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47d69b8be06decf00800000000000000
+      internalID: 1139083114488360308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_81
+      rect:
+        serializedVersion: 2
+        x: 3140
+        y: 975
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8c808900771d3e20800000000000000
+      internalID: 3331845069287230602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_82
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 954
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dc45f0cefee71ac0800000000000000
+      internalID: -3884373375657358121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_83
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 959
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ea0190f26c531890800000000000000
+      internalID: -7488540175374415135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_84
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 950
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8c5b381120b36ad0800000000000000
+      internalID: -2710128894559953778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_85
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 842
+        width: 491
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15ce6f6717a43fd10800000000000000
+      internalID: 2158150497628253265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_86
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 948
+        width: 60
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 238128060724ad030800000000000000
+      internalID: 3520199109166372914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_87
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 953
+        width: 33
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2670c6b5380e5bbf0800000000000000
+      internalID: -309094144625866910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_88
+      rect:
+        serializedVersion: 2
+        x: 2587
+        y: 954
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f01edde8f1d43ecf0800000000000000
+      internalID: -224250758502162161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_89
+      rect:
+        serializedVersion: 2
+        x: 2621
+        y: 959
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e83c738e2be385c0800000000000000
+      internalID: -4214266241281672989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_90
+      rect:
+        serializedVersion: 2
+        x: 2649
+        y: 950
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a50c6dacedb311380800000000000000
+      internalID: -9002348352065060774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_91
+      rect:
+        serializedVersion: 2
+        x: 2709
+        y: 842
+        width: 491
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91bd98da024a55ff0800000000000000
+      internalID: -47951760760120551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_92
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 948
+        width: 60
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed7e25ede7cb13e90800000000000000
+      internalID: -7047644688776239138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_93
+      rect:
+        serializedVersion: 2
+        x: 3353
+        y: 953
+        width: 33
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8e50143ea6ad3a90800000000000000
+      internalID: -7332521351161291121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_94
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 888
+        width: 90
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4815a89d5889443a0800000000000000
+      internalID: -6682048246463180412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_95
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 940
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba9cbf8317aaad940800000000000000
+      internalID: 5321753312955713963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_96
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 928
+        width: 57
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86020d1bada6ac6c0800000000000000
+      internalID: -4122365021385645976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_97
+      rect:
+        serializedVersion: 2
+        x: 2479
+        y: 888
+        width: 90
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed542a3a0d6fffbb0800000000000000
+      internalID: -4899926493596858914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_98
+      rect:
+        serializedVersion: 2
+        x: 3333
+        y: 940
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdf237e38286a5ea0800000000000000
+      internalID: -5883275441150414885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_99
+      rect:
+        serializedVersion: 2
+        x: 3724
+        y: 928
+        width: 57
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4566e06b00c4a380800000000000000
+      internalID: -8960826203457559220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_100
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 915
+        width: 42
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab36736760d575af0800000000000000
+      internalID: -407754958919212102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_101
+      rect:
+        serializedVersion: 2
+        x: 2440
+        y: 915
+        width: 42
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 956ae73f15451acf0800000000000000
+      internalID: -242820193947048359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_102
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 861
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9ad287eb83adde10800000000000000
+      internalID: 2224113612270787231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_103
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 866
+        width: 126
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd4ebc347784485c0800000000000000
+      internalID: -4214163674236197665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_104
+      rect:
+        serializedVersion: 2
+        x: 2214
+        y: 861
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 654b8a2a8fb6d2380800000000000000
+      internalID: -8994414165163985834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vapor_105
+      rect:
+        serializedVersion: 2
+        x: 2405
+        y: 866
+        width: 126
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc80fbab8d7cefed0800000000000000
+      internalID: -2378243819545098033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Vapor_0: 988438091333727131
+      Vapor_1: -1273583638686500231
+      Vapor_10: 8480380621216985816
+      Vapor_100: -407754958919212102
+      Vapor_101: -242820193947048359
+      Vapor_102: 2224113612270787231
+      Vapor_103: -4214163674236197665
+      Vapor_104: -8994414165163985834
+      Vapor_105: -2378243819545098033
+      Vapor_11: -9165075729961378777
+      Vapor_12: -7999311427327347398
+      Vapor_13: 5866644170836419764
+      Vapor_14: 7736359242278747812
+      Vapor_15: 2395743546701934521
+      Vapor_16: 4023361835357024047
+      Vapor_17: -3349002561346767403
+      Vapor_18: -8857662108953404327
+      Vapor_19: 4899322411347921891
+      Vapor_2: -1635686710837553360
+      Vapor_20: 8759082260227472496
+      Vapor_21: -7757713319691160804
+      Vapor_22: -2215500433981825388
+      Vapor_23: 6832955005673550857
+      Vapor_24: 6653186638146545551
+      Vapor_25: 3298103832836247499
+      Vapor_26: 3617015971914012102
+      Vapor_27: 4622556800527126989
+      Vapor_28: 6658945578890599211
+      Vapor_29: 8741812876798802682
+      Vapor_3: 8853174017776128387
+      Vapor_30: 1961686904382726956
+      Vapor_31: -8739481742862744046
+      Vapor_32: -3882859568515778590
+      Vapor_33: -6598670172947160605
+      Vapor_34: 2495415093418383255
+      Vapor_35: 3796630316312136222
+      Vapor_36: -6884357313255774086
+      Vapor_37: 4334065623411365372
+      Vapor_38: -6816540977499471485
+      Vapor_39: -2962418774713322542
+      Vapor_4: -2602752317510332315
+      Vapor_40: 2899022205768735562
+      Vapor_41: 5425984814839866268
+      Vapor_42: 776260580309230731
+      Vapor_43: 3841505174002344401
+      Vapor_44: 4677688709464288081
+      Vapor_45: 8525846609451111717
+      Vapor_46: 1484284018352405495
+      Vapor_47: -2327279074370566521
+      Vapor_48: -6826419872952844253
+      Vapor_49: -861747002063608019
+      Vapor_5: -8090917499461083807
+      Vapor_50: -7404539646176002096
+      Vapor_51: -2541679778304995986
+      Vapor_52: -4360104165685699114
+      Vapor_53: -3497946314825138261
+      Vapor_54: -7688483997776789228
+      Vapor_55: 2635141831805797389
+      Vapor_56: 4056854459098526754
+      Vapor_57: -9123006149022977086
+      Vapor_58: -149056942582409494
+      Vapor_59: 4548809295802686462
+      Vapor_6: 2732413284349992571
+      Vapor_60: 6661148920741715136
+      Vapor_61: 2038408680804833692
+      Vapor_62: 9041225585405794969
+      Vapor_63: -1285967817598957982
+      Vapor_64: -4653231658509674658
+      Vapor_65: 8488005554792114692
+      Vapor_66: 3782236751114232600
+      Vapor_67: 5394963175063107804
+      Vapor_68: 3692692329597121214
+      Vapor_69: 6623866913038780683
+      Vapor_7: 1875447857178459723
+      Vapor_70: -7579498541817748797
+      Vapor_71: -3330688225057956734
+      Vapor_72: 745252740883945094
+      Vapor_73: -2487641753838993292
+      Vapor_74: -7154429698251296665
+      Vapor_75: 2154659828356819262
+      Vapor_76: 7045993718267004723
+      Vapor_77: 4947853980693540507
+      Vapor_78: 4989166370647226200
+      Vapor_79: -5521903914272804866
+      Vapor_8: 7624873009479339921
+      Vapor_80: 1139083114488360308
+      Vapor_81: 3331845069287230602
+      Vapor_82: -3884373375657358121
+      Vapor_83: -7488540175374415135
+      Vapor_84: -2710128894559953778
+      Vapor_85: 2158150497628253265
+      Vapor_86: 3520199109166372914
+      Vapor_87: -309094144625866910
+      Vapor_88: -224250758502162161
+      Vapor_89: -4214266241281672989
+      Vapor_9: -7938225016891576897
+      Vapor_90: -9002348352065060774
+      Vapor_91: -47951760760120551
+      Vapor_92: -7047644688776239138
+      Vapor_93: -7332521351161291121
+      Vapor_94: -6682048246463180412
+      Vapor_95: 5321753312955713963
+      Vapor_96: -4122365021385645976
+      Vapor_97: -4899926493596858914
+      Vapor_98: -5883275441150414885
+      Vapor_99: -8960826203457559220
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

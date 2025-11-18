@@ -422,7 +422,7 @@ GameObject:
   - component: {fileID: 381095831}
   - component: {fileID: 381095832}
   m_Layer: 0
-  m_Name: EfectoVapor
+  m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -849,7 +849,7 @@ MonoBehaviour:
   iconoPista: {fileID: 0}
   tiempoParaRevelar: 3
   tiempoVaporVisible: 10
-  sonidoActivarDucha: {fileID: 8300000, guid: a335965e51b996845982910a166bc23e, type: 3}
+  sonidoActivarDucha: {fileID: 0}
   sonidoNumeroAparece: {fileID: 0}
 --- !u!4 &1104014299
 Transform:
@@ -1172,7 +1172,7 @@ GameObject:
   - component: {fileID: 1636660627}
   - component: {fileID: 1636660628}
   m_Layer: 0
-  m_Name: Interaction
+  m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

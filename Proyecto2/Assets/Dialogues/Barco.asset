@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba2fa1e12611c743834d2fdb79059ce, type: 3}
+  m_Name: Barco
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  dialogueID: Barco
+  repeatable: 1
+  lines:
+  - text: "Capit\xE1n: Tengo ya los nervios destemplados."
+  - text: "Capit\xE1n: Este desasosiego absurdo no se va ni con la cerveza negra
+      del viejo Patt."
+  - text: "Capit\xE1n: Quiz\xE1s deber\xEDa volver, a ver si con una m\xE1s logro
+      cambiar estas ideas..."
+  - text: "Capit\xE1n: Si tan solo pudiera retroceder en el tiempo, y escapar en
+      la profundidad..."

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba2fa1e12611c743834d2fdb79059ce, type: 3}
+  m_Name: Organillero
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  dialogueID: Organillero
+  repeatable: 1
+  lines:
+  - text: "Hombre extra\xF1o: \xBFHola?\n\xBFQui\xE9n eres?\n"
+  - text: "Capit\xE1n: Eso deber\xEDa preguntar yo. \n"
+  - text: "Hombre extra\xF1o: Eres diferente al resto de personas que viven ac\xE1."
+  - text: "Pero ignorar\xE9 eso. De hecho, busco la ayuda de alguien, y puede que
+      la persona a la que he estado buscando seas t\xFA."
+  - text: "Capit\xE1n: \xBFAyuda?\n\xBFYo?"
+  - text: "Organillero: Soy un organillero, como puedes notar. Con mi m\xFAsica alegro
+      al resto. Pero me falta una peque\xF1a pieza para seguir con mi trabajo."
+  - text: "Capit\xE1n: (\xBFSer\xE1 esto un sue\xF1o?)"
+  - text: "Organillero: Hey! \xBFMe has escuchado? "
+  - text: "Capit\xE1n: \xBFQu\xE9 has dicho?"
+  - text: "Organillero: S\xE9 que podr\xE1s recuperar la pieza faltante para hacer
+      sonar a mi querido amigo."
+  - text: "Recoge esa nota que hay m\xE1s adelante, te ser\xE1 de ayuda.\n"
+  - text: "\xA1Buena suerte!"

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 31097c0ea478f6648a7843f57d7a8fb8
+guid: c306a945b00f7aa47a40e6a94fefd81f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8192846432518265814
-    second: Repisa_0
+      213: -5813102238523170163
+    second: candado_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Repisa_0
+      name: candado_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 159
-        width: 369
-        height: 86
+        x: 102
+        y: 174
+        width: 642
+        height: 606
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a242c62c3992d4e80800000000000000
-      internalID: -8192846432518265814
+      spriteID: d826ccd2056b35fa0800000000000000
+      internalID: -5813102238523170163
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Repisa_0: -8192846432518265814
+      candado_0: -5813102238523170163
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

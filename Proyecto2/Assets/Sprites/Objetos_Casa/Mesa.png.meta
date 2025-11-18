@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 31097c0ea478f6648a7843f57d7a8fb8
+guid: 6960fe5ec69af8941aefdbbfe4bec83e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8192846432518265814
-    second: Repisa_0
+      213: 7121819778050679306
+    second: Mesa_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Repisa_0
+      name: Mesa_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 159
-        width: 369
-        height: 86
+        x: 27
+        y: 138
+        width: 948
+        height: 809
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a242c62c3992d4e80800000000000000
-      internalID: -8192846432518265814
+      spriteID: a02ef09ea59c5d260800000000000000
+      internalID: 7121819778050679306
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Repisa_0: -8192846432518265814
+      Mesa_0: 7121819778050679306
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

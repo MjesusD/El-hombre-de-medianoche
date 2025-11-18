@@ -174,7 +174,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4670171049397540627, guid: 420e69748777c6046a9dcd86719043c1, type: 3}
+  m_Sprite: {fileID: 7281515248980148213, guid: eaa1c762255584f42bb1a84a48e8ed22, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -264,6 +264,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  panelManager: {fileID: 0}
+  panelNameToShow: 
 --- !u!114 &1067982746271787898
 MonoBehaviour:
   m_ObjectHideFlags: 0

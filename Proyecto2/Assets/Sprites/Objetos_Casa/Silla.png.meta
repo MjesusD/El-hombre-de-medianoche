@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 31097c0ea478f6648a7843f57d7a8fb8
+guid: 5b70112d934aea2488cab4ecf35b1db7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8192846432518265814
-    second: Repisa_0
+      213: 2219330145117181386
+    second: Silla_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Repisa_0
+      name: Silla_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 159
-        width: 369
-        height: 86
+        x: 94
+        y: 139
+        width: 674
+        height: 834
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a242c62c3992d4e80800000000000000
-      internalID: -8192846432518265814
+      spriteID: ac5960b2205acce10800000000000000
+      internalID: 2219330145117181386
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Repisa_0: -8192846432518265814
+      Silla_0: 2219330145117181386
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

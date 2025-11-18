@@ -5,18 +5,16 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private string firstSceneName = "Barco"; // escena de juego real
     [SerializeField] private IntroSystem introSystem;         // referencia al script de la intro
+    [SerializeField] private GameObject controlsPanel;        // panel de controles
 
     public void PlayGame()
     {
-        // Se mostró la intro antes?
         if (PlayerPrefs.GetInt("IntroPlayed", 0) == 1)
         {
-            // Saltar directo al juego
             SceneManager.LoadScene(firstSceneName);
             return;
         }
 
-        // Primera vez ejecutar intro
         if (introSystem != null)
         {
             introSystem.StartIntro();
@@ -33,10 +31,25 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
-    // para testear la intro de nuevo
     public void ResetIntro()
     {
         PlayerPrefs.DeleteKey("IntroPlayed");
         Debug.Log("Intro reseteada");
+    }
+
+    // Abrir el panel de controles
+    public void ShowControls()
+    {
+        if (controlsPanel != null)
+            controlsPanel.SetActive(true);
+        else
+            Debug.LogWarning("No se asignó el panel de controles");
+    }
+
+    // Cerrar el panel de controles
+    public void HideControls()
+    {
+        if (controlsPanel != null)
+            controlsPanel.SetActive(false);
     }
 }

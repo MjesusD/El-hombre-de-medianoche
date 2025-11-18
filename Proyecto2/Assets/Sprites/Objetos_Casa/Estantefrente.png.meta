@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 31097c0ea478f6648a7843f57d7a8fb8
+guid: 1002743c5751ed940b30a4cace1b1e94
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8192846432518265814
-    second: Repisa_0
+      213: -3734389449832963704
+    second: Estantefrente_0
+  - first:
+      213: 2406290824630926367
+    second: Estantefrente_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Repisa_0
+      name: Estantefrente_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 159
-        width: 369
-        height: 86
+        x: 74
+        y: 23
+        width: 534
+        height: 802
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a242c62c3992d4e80800000000000000
-      internalID: -8192846432518265814
+      spriteID: 8816dbdb498cc2cc0800000000000000
+      internalID: -3734389449832963704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estantefrente_1
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 66
+        width: 71
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1c786481ccd46120800000000000000
+      internalID: 2406290824630926367
       vertices: []
       indices: 
       edges: []
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Repisa_0: -8192846432518265814
+      Estantefrente_0: -3734389449832963704
+      Estantefrente_1: 2406290824630926367
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

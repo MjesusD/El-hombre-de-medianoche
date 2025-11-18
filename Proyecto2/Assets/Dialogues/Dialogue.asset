@@ -15,6 +15,21 @@ MonoBehaviour:
   dialogueID: Hombre1
   repeatable: 1
   lines:
-  - text: Hola, soy el hombre de medianoche.
-  - text: "Recoge este reloj que te permitir\xE1 viajar a trav\xE9s del tiempo."
-  - text: "Est\xE1 en aquella mesa. \n"
+  - text: "? : Usted es navegante, \xBFcierto?"
+  - text: "Capit\xE1n: \xBFQui\xE9n eres?"
+  - text: '?: Hay seres diferentes a usted.
+
+'
+  - text: "Capit\xE1n: No estoy entendiendo. Yo solo ven\xEDa por una cerveza...\n"
+  - text: "? : Hay hombres del tiempo, sin ubicaci\xF3n posible en el espacio..."
+  - text: "Capit\xE1n: (Creo que no es buena idea tomar otra cerveza)."
+  - text: 'Hombre 00: Yo soy uno de ellos. Y dentro de las ubicaciones del tiempo,
+      yo soy de medianoche.'
+  - text: "Hombre 00: Est\xE1s en un encargo...otros habr\xE1 de mediod\xEDa, tres
+      de la tarde o nueve de la ma\xF1ana...\n"
+  - text: "Capit\xE1n: Es esto acaso una borrachera o me est\xE1s diciendo que eres
+      un ser del tiempo..."
+  - text: "Hombre 00: Recoge este reloj que te permitir\xE1 viajar a trav\xE9s del
+      tiempo."
+  - text: "Hombre 00: Est\xE1 en aquella mesa. \n"
+  - text: "Capit\xE1n: Acabo de imaginar esto...?"

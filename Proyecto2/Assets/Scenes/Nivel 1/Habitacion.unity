@@ -1064,7 +1064,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.3, y: -0.86}
+  m_AnchoredPosition: {x: -0.22, y: 2.92}
   m_SizeDelta: {x: 0.09, y: 0.09}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &779781982
@@ -1322,15 +1322,15 @@ MonoBehaviour:
   indicadorSeleccion1: {fileID: 1545214290}
   indicadorSeleccion2: {fileID: 1558034047}
   indicadorSeleccion3: {fileID: 1885448813}
-  nombreItem: 'Maniela '
+  nombreItem: 'Manivela '
   iconoItem: {fileID: -2549848037264190303, guid: 28c9d0ba185f9c948a4e7129ac6a278a, type: 3}
-  descripcionItem: "Manivela del Hombre extra\xF1o"
+  descripcionItem: "Manivela del hombre extra\xF1o"
   sonidoCambioDigito: {fileID: 0}
   sonidoCorrecto: {fileID: 0}
   sonidoIncorrecto: {fileID: 0}
-  sonidoAbrir: {fileID: 0}
-  spriteCaja: {fileID: 0}
-  spriteCajaAbierta: {fileID: 0}
+  sonidoAbrir: {fileID: 8300000, guid: a5522137ae70b2b45a2b8e1d3c83914b, type: 3}
+  spriteCaja: {fileID: 972296450}
+  spriteCajaAbierta: {fileID: 21300000, guid: c306a945b00f7aa47a40e6a94fefd81f, type: 3}
   onCajaAbierta:
     m_PersistentCalls:
       m_Calls: []
@@ -1401,7 +1401,7 @@ Transform:
   m_GameObject: {fileID: 972296447}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 47.07, y: -2.55, z: -1.08}
+  m_LocalPosition: {x: 41.39, y: -2.75, z: -1.08}
   m_LocalScale: {x: 0.36552814, y: 0.36552814, z: 0.36552814}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1818,11 +1818,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.473763
+      value: 22.476482
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.76685
+      value: 0.76684
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2182,6 +2182,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3506115860785677587, guid: 5552d405e24415a4ba90279df6c87337, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7281515248980148213, guid: eaa1c762255584f42bb1a84a48e8ed22, type: 3}
+    - target: {fileID: 3506115860785677587, guid: 5552d405e24415a4ba90279df6c87337, type: 3}
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
@@ -2199,11 +2203,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6006794386330139778, guid: 5552d405e24415a4ba90279df6c87337, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.06
+      value: 31.61
       objectReference: {fileID: 0}
     - target: {fileID: 6006794386330139778, guid: 5552d405e24415a4ba90279df6c87337, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.76
+      value: 1.09
       objectReference: {fileID: 0}
     - target: {fileID: 6006794386330139778, guid: 5552d405e24415a4ba90279df6c87337, type: 3}
       propertyPath: m_LocalPosition.z

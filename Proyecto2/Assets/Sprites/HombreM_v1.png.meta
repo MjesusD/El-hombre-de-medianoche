@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 31097c0ea478f6648a7843f57d7a8fb8
+guid: 9d2f158fd0f584b40afae16fbc5dd1df
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8192846432518265814
-    second: Repisa_0
+      213: 1555031785382845660
+    second: HombreM_v1_0
+  - first:
+      213: -250070044618513587
+    second: HombreM_v1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Repisa_0
+      name: HombreM_v1_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 159
-        width: 369
-        height: 86
+        x: 269
+        y: 91
+        width: 329
+        height: 767
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a242c62c3992d4e80800000000000000
-      internalID: -8192846432518265814
+      spriteID: cdc9f2e7b25949510800000000000000
+      internalID: 1555031785382845660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HombreM_v1_1
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 695
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d432c8d8e92978cf0800000000000000
+      internalID: -250070044618513587
       vertices: []
       indices: 
       edges: []
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Repisa_0: -8192846432518265814
+      HombreM_v1_0: 1555031785382845660
+      HombreM_v1_1: -250070044618513587
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
