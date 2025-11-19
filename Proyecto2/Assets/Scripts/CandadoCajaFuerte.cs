@@ -84,7 +84,7 @@ public class CandadoCajaFuerte : MonoBehaviour
     void ManejarControlesCandado()
     {
         // Cerrar con ESC
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             CerrarInterfazCandado();
             return;
