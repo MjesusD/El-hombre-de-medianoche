@@ -3,26 +3,40 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private string firstSceneName = "Barco"; // escena de juego real
-    [SerializeField] private IntroSystem introSystem;         // referencia al script de la intro
-    [SerializeField] private GameObject controlsPanel;        // panel de controles
+    [Header("Escena de juego principal")]
+    [SerializeField] private string firstSceneName = "Barco";
+
+    [Header("Intro")]
+    [SerializeField] private IntroSystem introSystem;
+    private bool introRunning = false;
+
+    [Header("Panel de Controles")]
+    [SerializeField] private GameObject controlsPanel;
 
     public void PlayGame()
     {
-        if (PlayerPrefs.GetInt("IntroPlayed", 0) == 1)
-        {
-            SceneManager.LoadScene(firstSceneName);
+        // Evitar que se presione Play dos veces
+        if (introRunning)
             return;
-        }
 
+        introRunning = true;
+
+        // Siempre reproducir la intro
         if (introSystem != null)
         {
             introSystem.StartIntro();
         }
         else
         {
-            Debug.LogError("No se asignó IntroSystem en GameManager");
+            Debug.LogError("No se asignó IntroSystem en GameManager. No se puede iniciar la intro.");
+            // Si falta IntroSystem, cargar juego igual para evitar que se trabe
+            SceneManager.LoadScene(firstSceneName);
         }
+    }
+
+    public void LoadGame()
+    {
+        SceneManager.LoadScene(firstSceneName);
     }
 
     public void QuitGame()
@@ -31,13 +45,6 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void ResetIntro()
-    {
-        PlayerPrefs.DeleteKey("IntroPlayed");
-        Debug.Log("Intro reseteada");
-    }
-
-    // Abrir el panel de controles
     public void ShowControls()
     {
         if (controlsPanel != null)
@@ -46,7 +53,6 @@ public class GameManager : MonoBehaviour
             Debug.LogWarning("No se asignó el panel de controles");
     }
 
-    // Cerrar el panel de controles
     public void HideControls()
     {
         if (controlsPanel != null)
