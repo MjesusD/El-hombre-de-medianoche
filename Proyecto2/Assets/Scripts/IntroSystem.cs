@@ -11,12 +11,12 @@ public class IntroSystem : MonoBehaviour
 
     [Header("Audio del Menú (MusicManager)")]
     [SerializeField] private AudioSource menuMusicSource;
-    // Solo se usa si no existe MusicManager
 
     [Header("Panel Narrativo")]
     [SerializeField] private GameObject introPanel;
     [SerializeField] private TextMeshProUGUI introText;
     [SerializeField] private Button nextButton;
+    [SerializeField] private Button skipButton; // botón para skipear
 
     [Header("Audio")]
     [SerializeField] private AudioSource musicSource;
@@ -26,7 +26,6 @@ public class IntroSystem : MonoBehaviour
     [Header("Texto Narrativo")]
     [TextArea(3, 5)]
     [SerializeField] private string[] textos;
-    [SerializeField] private float autoNextTime = 6f;
 
     [Header("Transiciones")]
     [SerializeField] private float fadeDuration = 1.5f;
@@ -35,13 +34,16 @@ public class IntroSystem : MonoBehaviour
     [SerializeField] private string nextSceneName;
 
     private int currentIndex = 0;
-    private bool currentIndexChanged = false;
 
     private void Start()
     {
         introPanel.SetActive(false);
         fadeImage.color = new Color(0, 0, 0, 1);
+
         nextButton.onClick.AddListener(NextText);
+
+        if (skipButton != null)
+            skipButton.onClick.AddListener(SkipIntro);
     }
 
     public void StartIntro()
@@ -55,7 +57,6 @@ public class IntroSystem : MonoBehaviour
         }
         else
         {
-            // Respaldo si no estás usando MusicManager
             if (menuMusicSource != null && menuMusicSource.isPlaying)
                 menuMusicSource.Pause();
         }
@@ -65,7 +66,6 @@ public class IntroSystem : MonoBehaviour
 
     private IEnumerator IntroSequence()
     {
-        // Reproducir música propia de la intro
         if (introMusic != null)
         {
             musicSource.clip = introMusic;
@@ -74,10 +74,8 @@ public class IntroSystem : MonoBehaviour
             StartCoroutine(FadeMusic(0f, 1f, musicFadeDuration));
         }
 
-        // Fade desde negro
         yield return Fade(1f, 0f);
 
-        // Mostrar panel narrativo
         introPanel.SetActive(true);
         ShowText();
     }
@@ -85,31 +83,12 @@ public class IntroSystem : MonoBehaviour
     private void ShowText()
     {
         introText.text = textos[currentIndex];
-        StartCoroutine(AutoNextCoroutine());
-    }
-
-    private IEnumerator AutoNextCoroutine()
-    {
-        float timer = 0f;
-        currentIndexChanged = false;
-
-        while (timer < autoNextTime)
-        {
-            timer += Time.deltaTime;
-            yield return null;
-
-            if (currentIndexChanged)
-                yield break;
-        }
-
-        NextText();
     }
 
     private void NextText()
     {
-        currentIndexChanged = true;
-
         currentIndex++;
+
         if (currentIndex >= textos.Length)
         {
             StartCoroutine(EndIntro());
@@ -119,26 +98,19 @@ public class IntroSystem : MonoBehaviour
         ShowText();
     }
 
-    private IEnumerator EndIntro()
+    // Función para skip
+    private void SkipIntro()
     {
-        // Fade a negro
-        yield return Fade(0f, 1f);
-
-        // Guardamos que la intro ya fue vista
-        PlayerPrefs.SetInt("IntroPlayed", 1);
-        PlayerPrefs.Save();
-
-        // Cargar escena final
-        if (!string.IsNullOrEmpty(nextSceneName))
-        {
-            SceneManager.LoadScene(nextSceneName);
-        }
-        else
-        {
-            Debug.LogWarning("No se asignó la escena final en IntroSystem.");
-        }
+        StopAllCoroutines();
+        StartCoroutine(EndIntro());
     }
 
+    private IEnumerator EndIntro()
+    {
+        yield return Fade(0f, 1f);
+
+        SceneManager.LoadScene(nextSceneName);
+    }
 
     private IEnumerator Fade(float from, float to)
     {
