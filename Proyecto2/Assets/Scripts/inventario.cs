@@ -299,12 +299,22 @@ public class Inventario : MonoBehaviour
         InventarioItem selectedItem = items[selectedIndex];
         Debug.Log("Usando: " + selectedItem.itemName);
 
-        // Aqui agregar logica especifica por item
-        // Ejemplo:
-        // if (selectedItem.itemName == "Llave") { AbrirPuerta(); }
+        if (selectedItem.itemName.Contains("Llave"))
+        {
+            // Verificar si hay una puerta cerca
+            if (PuertaConLlave.puertaCercana != null)
+            {
+                // Intentar usar la llave en la puerta cercana
+                PuertaConLlave.puertaCercana.UsarLlaveEnPuerta(selectedItem.itemName);
+
+                // Cerrar inventario
+                ToggleInventory();
+
+                return;
+            }
+        }
 
         // Usar Reloj
-
         if (selectedItem.itemName == "Reloj")
         {
             // Cerrar inventario
