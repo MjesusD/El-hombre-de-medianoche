@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1806892171493903457}
   - component: {fileID: 2494043833589441990}
   - component: {fileID: 1205914602062640514}
-  - component: {fileID: 4269883237338700437}
   m_Layer: 0
   m_Name: Npc1
   m_TagString: Untagged
@@ -151,7 +150,7 @@ MonoBehaviour:
   onInteract:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4269883237338700437}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GiveItem, Assembly-CSharp
         m_MethodName: EntregarReloj
         m_Mode: 1
@@ -192,19 +191,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4269883237338700437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6693565455592966761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46d097385d69cd04aa90141a18f19417, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GiveItem
-  relojNombre: Reloj
-  relojIcono: {fileID: 849652119764549919, guid: 93e4ca2c03daf9c4ab49463abc6591f0, type: 3}
-  descripcion: Un reloj antiguo que te permite ajustar la hora.
-  entregarSoloUnaVez: 1

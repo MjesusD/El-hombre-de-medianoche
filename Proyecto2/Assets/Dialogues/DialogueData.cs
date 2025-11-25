@@ -1,15 +1,9 @@
 using UnityEngine;
 
-[System.Serializable]
-public class DialogueLine
+[CreateAssetMenu(fileName = "InkDialogue", menuName = "Dialogue/Ink Dialogue")]
+public class InkDialogue : ScriptableObject
 {
-    [TextArea] public string text;
-}
-
-[CreateAssetMenu(fileName = "Dialogue", menuName = "Dialogue/New Dialogue")]
-public class DialogueData : ScriptableObject
-{
-    public string dialogueID;
+    public string dialogueID;   // para persistencia
     public bool repeatable = false;
-    public DialogueLine[] lines;
+    public string knotName;     // el nombre del nodo en el .ink
 }

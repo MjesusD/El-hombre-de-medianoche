@@ -2,13 +2,13 @@ using UnityEngine;
 
 public static class DialoguePersistence
 {
-    public static bool WasSeen(string id)
+    public static void MarkSeen(string id)
     {
-        return PlayerPrefs.GetInt("DIALOGUE_" + id, 0) == 1;
+        PlayerPrefs.SetInt("dialogue_" + id, 1);
     }
 
-    public static void MarkAsSeen(string id)
+    public static bool WasSeen(string id)
     {
-        PlayerPrefs.SetInt("DIALOGUE_" + id, 1);
+        return PlayerPrefs.GetInt("dialogue_" + id, 0) == 1;
     }
 }

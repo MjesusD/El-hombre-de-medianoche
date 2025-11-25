@@ -1,49 +1,34 @@
 using UnityEngine;
 
-public class DialogueTrigger : MonoBehaviour
+public class InkTrigger : MonoBehaviour
 {
-    public DialogueData dialogue;
+    public TextAsset inkJSON;
+    public string knotName = "start";
     public KeyCode interactKey = KeyCode.E;
 
-    private bool playerNearby = false;
+    private bool playerInside = false;
 
     void Update()
     {
-        if (!playerNearby) return;
-
-        // No iniciar si ya hay uno corriendo
-        if (DialoguePlayerSystem.Instance != null &&
-            DialoguePlayerSystem.Instance.IsPlaying())
+        if (playerInside && Input.GetKeyDown(interactKey))
         {
-            return;
+            InkDialogueManager.Instance.StartStory(inkJSON, knotName);
         }
-
-        // Iniciar diálogo al presionar E
-        if (Input.GetKeyDown(interactKey))
-            TryStartDialogue();
-    }
-
-    void TryStartDialogue()
-    {
-        if (dialogue == null) return;
-
-        // Si el diálogo no es repetible y ya fue visto, no iniciar
-        if (!dialogue.repeatable &&
-            DialoguePersistence.WasSeen(dialogue.dialogueID))
-            return;
-
-        DialoguePlayerSystem.Instance.StartDialogue(dialogue);
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
-            playerNearby = true;
+        {
+            playerInside = true;
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
-            playerNearby = false;
+        {
+            playerInside = false;
+        }
     }
 }
