@@ -20,7 +20,7 @@ public class PuertaConLlave : MonoBehaviour
     [SerializeField] private AudioClip sonidoPuertaAbierta;
     [SerializeField] private AudioClip sonidoUsarLlave;
 
-    private bool puertaAbierta = false;
+    public bool puertaAbierta = false;
     private AudioSource audioSource;
     private string llaveSeleccionada = "";
 

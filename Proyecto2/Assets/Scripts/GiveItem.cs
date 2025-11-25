@@ -32,7 +32,7 @@ public class GiveItem : MonoBehaviour
         }
 
         // Agregar al inventario
-        inventario.AddItem(relojNombre, relojIcono, descripcion);
+        Inventario.AddItem(relojNombre, relojIcono, descripcion);
         entregado = true;
 
         Debug.Log("Has obtenido el reloj.");

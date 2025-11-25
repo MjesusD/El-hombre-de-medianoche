@@ -27,7 +27,6 @@ public class Inventario : MonoBehaviour
     private bool isInventoryOpen = false;
     private int selectedIndex = 0;
     private Player player;
-    private AudioSource audioSource;
     public static Inventario Instance { get; private set; }
 
     void Awake()
