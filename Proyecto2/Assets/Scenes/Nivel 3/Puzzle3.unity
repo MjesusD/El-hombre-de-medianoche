@@ -127,13 +127,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 253864861139495217, guid: 94ca785ba855e7340918bac5465627af, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5617844846176997242, guid: 0a9fb0b77c6bf634faac8324dc4741d7, type: 3}
+    - target: {fileID: 2778874942923943119, guid: 94ca785ba855e7340918bac5465627af, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778874942923943119, guid: 94ca785ba855e7340918bac5465627af, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778874942923943119, guid: 94ca785ba855e7340918bac5465627af, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2778874942923943119, guid: 94ca785ba855e7340918bac5465627af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.17
+      value: 2.97
       objectReference: {fileID: 0}
     - target: {fileID: 2778874942923943119, guid: 94ca785ba855e7340918bac5465627af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.27
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2778874942923943119, guid: 94ca785ba855e7340918bac5465627af, type: 3}
       propertyPath: m_LocalPosition.z
@@ -170,6 +186,10 @@ PrefabInstance:
     - target: {fileID: 5933842189927693888, guid: 94ca785ba855e7340918bac5465627af, type: 3}
       propertyPath: m_Name
       value: Fondo1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5933842189927693888, guid: 94ca785ba855e7340918bac5465627af, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -373,11 +393,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.6704073
+      value: 2.6733332
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.19146001
+      value: -0.19147003
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -426,15 +446,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3593992641891662202, guid: c44aff0016a620345b923c48768a4554, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.2363663
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593992641891662202, guid: c44aff0016a620345b923c48768a4554, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593992641891662202, guid: c44aff0016a620345b923c48768a4554, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3593992641891662202, guid: c44aff0016a620345b923c48768a4554, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.4
+      value: 22.03
       objectReference: {fileID: 0}
     - target: {fileID: 3593992641891662202, guid: c44aff0016a620345b923c48768a4554, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.28
+      value: -0.22
       objectReference: {fileID: 0}
     - target: {fileID: 3593992641891662202, guid: c44aff0016a620345b923c48768a4554, type: 3}
       propertyPath: m_LocalPosition.z
@@ -468,6 +496,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7067597494531688356, guid: c44aff0016a620345b923c48768a4554, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5617844846176997242, guid: 0a9fb0b77c6bf634faac8324dc4741d7, type: 3}
     - target: {fileID: 8548311249819379704, guid: c44aff0016a620345b923c48768a4554, type: 3}
       propertyPath: m_Name
       value: Fondo2
@@ -548,7 +580,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4247298520749411256, guid: 103857b168eb24144895a2f1c1c6363e, type: 3}
       propertyPath: spawnID
-      value: Inicio_P3
+      value: Cocina
       objectReference: {fileID: 0}
     - target: {fileID: 4648828847410905525, guid: 103857b168eb24144895a2f1c1c6363e, type: 3}
       propertyPath: m_LocalPosition.x

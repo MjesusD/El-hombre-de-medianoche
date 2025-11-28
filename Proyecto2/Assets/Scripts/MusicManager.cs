@@ -154,4 +154,22 @@ public class MusicManager : MonoBehaviour
         }
         audioSource.volume = targetVolume;
     }
+
+
+    // --- CONTROLES GLOBALES DE PAUSA / RESUME ---
+
+    // Pausar música sin fade
+    public void PauseMusic()
+    {
+        if (audioSource != null)
+            audioSource.Pause();
+    }
+
+    // Reanudar música sin fade
+    public void ResumeMusic()
+    {
+        if (audioSource != null)
+            audioSource.UnPause();
+
+    }
 }

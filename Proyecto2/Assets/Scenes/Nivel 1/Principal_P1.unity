@@ -2117,7 +2117,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1067982746271787898, guid: 5552d405e24415a4ba90279df6c87337, type: 3}
       propertyPath: sceneToLoad
-      value: Afuera B
+      value: AfueraB
       objectReference: {fileID: 0}
     - target: {fileID: 1067982746271787898, guid: 5552d405e24415a4ba90279df6c87337, type: 3}
       propertyPath: destinationSpawnID
@@ -3771,7 +3771,7 @@ Transform:
   m_GameObject: {fileID: 2097143249}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -53.287018, y: -13.33967, z: -10.047}
+  m_LocalPosition: {x: -53.299706, y: -13.33965, z: -10.047}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

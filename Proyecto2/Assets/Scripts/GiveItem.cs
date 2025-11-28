@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GiveItem : MonoBehaviour
+/*public class GiveItem : MonoBehaviour
 {
     [Header("Configuración del Reloj")]
     [SerializeField] private string relojNombre = "Reloj";
@@ -46,4 +46,4 @@ public class GiveItem : MonoBehaviour
         // Destruir el reloj en la escena después de recogerlo
         Destroy(gameObject);
     }
-}
+}*/
