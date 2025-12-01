@@ -1324,7 +1324,7 @@ MonoBehaviour:
   indicadorSeleccion3: {fileID: 1885448813}
   nombreItem: 'Manivela '
   iconoItem: {fileID: -2549848037264190303, guid: 28c9d0ba185f9c948a4e7129ac6a278a, type: 3}
-  descripcionItem: "Manivela del hombre extra\xF1o"
+  descripcionItem: Manivela
   sonidoCambioDigito: {fileID: 0}
   sonidoCorrecto: {fileID: 0}
   sonidoIncorrecto: {fileID: 0}
@@ -1818,11 +1818,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.481756
+      value: 22.466965
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.76681995
+      value: 0.7668899
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.z

@@ -1,4 +1,4 @@
-﻿=== capitan_Barco ===
+﻿=== capitan_barco ===
 Tengo los nervios destemplados.
 Quiero irme de este lugar. 
 Este desasosiego absurdo no se me quita ni con la cerveza negra del viejo Patt.

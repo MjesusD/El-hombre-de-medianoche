@@ -3,46 +3,73 @@ VAR has_key = false
 
 === hombre1 ===
 Hola viajero.
-¿Qué haces aquí?
+Capitán: ¿Hola?
+¿Usted y yo nos conocemos?
 
-+ Busco al capitán.
-    Está en el puerto.
-    ~ visited_port = true
+Hombre extraño: Solo pasaba por aquí, para saber si encontraba a alguien con el tiempo correcto.
+
+Capitán: ¿El tiempo correcto?
+
+Hombre extraño: Pues sí. Pensaba que quizás alguien tendría un reloj igual al mío.
+Pero me he equivocado. Su reloj también marca solo las horas. 
+Capitán: ¿Qué querría usted que marcara?
+Hombre extraño: Ya le he dicho que me he equivocado.
+Capitán: Bueno, pero me dirá ¿de dónde es?
+Hombre extraño: ¿Yo?
+Yo no tengo nombre, y en cuanto a mi origen le diré que simplemente soy de medianoche. 
+
+Capitán: ¿Cómo?
+
+Hombre medianoche: Ya me ha escuchado, solo soy de medianoche. Busco a más como yo. 
+Realmente por eso estoy aquí. 
+Otros habrá de mediodía, otros de las tres de la tarde o de las nueve de la mañana...
+Capitán: Seres del tiempo. Eso es lo que busca.
+
+Hombre medianoche: Así es. Mientras sus relojes marcan las horas y minutos, el mío da los meridianos y los paralelos.
+
+Capitán: (No estoy entendiendo. Quizás solo es un sueño. Estoy ebrio.)
+
+Hombre medianoche: Que le parece si hacemos un trato. 
+Usted busca con mi reloj a otros como yo, y nos vemos después de tres tiempos.
+Aquí, en su espacio. Su tiempo.
+
+Capitán: ¿Y que gano yo al ayudarlo?
+
+Hombre medianoche: Logrará comprender de donde provengo. Conocerá lo que que perdió en este puerto. 
+Recuperará el tiempo perdido. O eso espero.
+¿Qué dice?
+
+Capitán: (Quizás es solo otro loco más que se pasó por el bar)
+ (Pero si sigo estancado aquí en este puerto, los ruidos me terminarán matando)
+(¿Debería arriesgarme?)
+
++ Está bien, acepto.
+Hombre medianoche: Muy bien. Gracias por aceptar. 
+Espero que logres encontrar lo que perdiste.
+Vuelve conmigo cuando hayas recuperado el tiempo perdido.
+Buena suerte.
 -> END
 
-+ Solo paso por aquí.
-    Bien, no causes problemas.
++ Debería irme.
+    Hombre medianoche: No te preocupes. Estaré esperando.
 -> END
 
 
-=== capitan ===
-{visited_port:
-    Veo que ya fuiste al puerto. Bien.
-- else:
-    ¿Qué haces aquí sin pasar por el puerto?
-}
+=== hombre1_repeat ===
+Hombre medianoche: ¿Ya estás listo?
+
++ Sí.
+
+Hombre medianoche: Muy bien. Gracias por aceptar. 
+Espero que logres encontrar lo que perdiste.
+Vuelve conmigo cuando hayas recuperado el tiempo perdido.
+Buena suerte.
 -> END
 
-
-=== organillero ===
-Te encuentras a un hombre extraño.
-
-+ ¿Quién eres?
-    Te presentas y preguntas su historia.
-    ~ has_key = true
-    -> END
-
-+ Hola.
-    Hola, soy un hombre del pasado.
-    ~ has_key = true
++ No.
+Hombre medianoche: Estaré esperando.
 -> END
 
 
 
-=== puerta ===
-{has_key:
-    Usas la llave y abres la puerta.
-- else:
-    La puerta está cerrada, necesitas una llave.
-}
--> END
+

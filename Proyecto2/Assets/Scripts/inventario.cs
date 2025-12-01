@@ -293,6 +293,8 @@ public class Inventario : MonoBehaviour
 
     void UseSelectedItem()
     {
+  
+
         if (selectedIndex >= items.Count) return;
 
         InventarioItem selectedItem = items[selectedIndex];
@@ -332,6 +334,20 @@ public class Inventario : MonoBehaviour
             return;
         }
 
+
+        if (InkDialogueManager.Instance != null &&
+    InkDialogueManager.Instance.IsWaitingForItem())
+        {
+            bool entregado = InkDialogueManager.Instance.TryGiveItem(selectedItem.itemName);
+
+            if (entregado)
+            {
+                RemoveItem(selectedItem.itemName); // eliminar del inventario
+                UpdateInventoryUI();               // refrescar UI
+            }
+
+            return;
+        }
     }
 
     public List<InventarioItem> GetAllItems()

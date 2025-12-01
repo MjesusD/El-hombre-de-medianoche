@@ -430,10 +430,14 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8527d48704e3769489c7e6f540e8b8dd, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  m_EditorClassIdentifier: Assembly-CSharp::InkTrigger
   inkJSON: {fileID: 4900000, guid: 01f4dd49f56de97489bdf1de1b985d54, type: 3}
-  knotName: hombre1
+  firstKnot: hombre1
+  repeatKnot: hombre1_repeat
+  dialogueID: hombre1
   interactKey: 101
+  requiresItem: 0
+  expectedItemName: 
 --- !u!212 &189698113
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1677,7 +1681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.9631376
+      value: -1.961431
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1903,7 +1907,7 @@ MonoBehaviour:
   itemDescripcionText: {fileID: 1976352729}
   maxItems: 4
   toggleKey: 105
-  useItemKey: 101
+  useItemKey: 32
   closeKey: 27
   itemsPerRow: 4
 --- !u!1001 &2013037509
@@ -2147,7 +2151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5029756863523987355, guid: 0fc5720fd775fb44f9b69f55282fc78d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -160.99995
+      value: -160.99994
       objectReference: {fileID: 0}
     - target: {fileID: 5118430191613469771, guid: 0fc5720fd775fb44f9b69f55282fc78d, type: 3}
       propertyPath: m_Camera
@@ -2161,9 +2165,33 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6932049108880329208, guid: 0fc5720fd775fb44f9b69f55282fc78d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 95.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 6932049108880329208, guid: 0fc5720fd775fb44f9b69f55282fc78d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 34.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 6932049108880329208, guid: 0fc5720fd775fb44f9b69f55282fc78d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 350.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6932049108880329208, guid: 0fc5720fd775fb44f9b69f55282fc78d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -41.7
+      objectReference: {fileID: 0}
     - target: {fileID: 7454662738685998869, guid: 0fc5720fd775fb44f9b69f55282fc78d, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614740799544889293, guid: 0fc5720fd775fb44f9b69f55282fc78d, type: 3}
+      propertyPath: m_fontSize
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614740799544889293, guid: 0fc5720fd775fb44f9b69f55282fc78d, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

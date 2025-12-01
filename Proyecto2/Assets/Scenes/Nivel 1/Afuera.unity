@@ -1035,7 +1035,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24aebed4a4ded62409b9492aeeb71e50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
-  panel: {fileID: 0}
+  panelAudio: {fileID: 0}
+  playAudioButton: {fileID: 0}
+  closePanelButton: {fileID: 0}
 --- !u!4 &637012970
 Transform:
   m_ObjectHideFlags: 0
@@ -1164,7 +1166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1918653672421100318, guid: a9a79493d95c96f49a8c8ae9af7ae0c0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8198466414963198109, guid: a9a79493d95c96f49a8c8ae9af7ae0c0, type: 3}
       propertyPath: m_Pivot.x
@@ -1792,9 +1794,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: Container
       objectReference: {fileID: 0}
+    - target: {fileID: 6932049108880329208, guid: 0fc5720fd775fb44f9b69f55282fc78d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 95.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6932049108880329208, guid: 0fc5720fd775fb44f9b69f55282fc78d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 34.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 6932049108880329208, guid: 0fc5720fd775fb44f9b69f55282fc78d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 350.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 6932049108880329208, guid: 0fc5720fd775fb44f9b69f55282fc78d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -39.45
+      objectReference: {fileID: 0}
     - target: {fileID: 7454662738685998869, guid: 0fc5720fd775fb44f9b69f55282fc78d, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614740799544889293, guid: 0fc5720fd775fb44f9b69f55282fc78d, type: 3}
+      propertyPath: m_fontSize
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614740799544889293, guid: 0fc5720fd775fb44f9b69f55282fc78d, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8138242934343088987, guid: 0fc5720fd775fb44f9b69f55282fc78d, type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -1828,11 +1854,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.198194
+      value: -12.201833
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.19117999
+      value: -0.19116998
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2605,8 +2631,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   inkJSON: {fileID: 4900000, guid: c1b91f0a94f1a6b47b0573f0416c2bc5, type: 3}
-  knotName: organillero
+  firstKnot: organillero
+  repeatKnot: organillero_repeat
+  dialogueID: organillero
   interactKey: 101
+  requiresItem: 0
+  expectedItemName: 
 --- !u!114 &2076730713
 MonoBehaviour:
   m_ObjectHideFlags: 0

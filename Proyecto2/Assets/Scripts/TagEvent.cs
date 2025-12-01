@@ -14,7 +14,7 @@ public class TagEventHandler : MonoBehaviour
         public GameObject panel;
     }
 
-
+    
     void OnEnable()
     {
         InkDialogueManager.OnTagsReceived += ProcessTags;

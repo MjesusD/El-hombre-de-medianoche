@@ -18,31 +18,33 @@ public class InkDialogueManager : MonoBehaviour
     private Story story;
     private bool playing = false;
 
+    // -------------------------------
+    // ENTREGA DE ITEMS
+    // -------------------------------
+    private bool waitingForItem = false;
+    private string expectedItemName = "";
+    private string itemDeliveredKnot = "";
+    private bool consumeItem = true;
+
+    private InkTrigger currentTrigger;
+
     void Awake()
     {
-        // Singleton simple (no persistente)
         if (Instance == null) Instance = this;
-        else Instance = this;
+        else { Destroy(gameObject); return; }
 
-        // Safety checks
-        if (nextButton == null) Debug.LogWarning("[InkDialogueManager] nextButton NO asignado en el Inspector.");
-        if (dialoguePanel == null) Debug.LogWarning("[InkDialogueManager] dialoguePanel NO asignado en el Inspector.");
-        if (dialogueText == null) Debug.LogWarning("[InkDialogueManager] dialogueText NO asignado en el Inspector.");
-        if (choicesContainer == null) Debug.LogWarning("[InkDialogueManager] choicesContainer NO asignado en el Inspector.");
-        if (choiceButtonPrefab == null) Debug.LogWarning("[InkDialogueManager] choiceButtonPrefab NO asignado en el Inspector.");
-
-        // Evitar que el botón acumule listeners, sólo si existe
         if (nextButton != null)
         {
             nextButton.onClick.RemoveAllListeners();
             nextButton.onClick.AddListener(ContinueStory);
         }
 
-        // Ocultar panel al inicio si está asignado
         if (dialoguePanel != null) dialoguePanel.SetActive(false);
     }
 
-    // Inicio diálogo
+    // =================================================
+    // INICIO DE HISTORIA
+    // =================================================
     public void StartStory(TextAsset inkJSON, string knot = "")
     {
         if (inkJSON == null)
@@ -55,11 +57,7 @@ public class InkDialogueManager : MonoBehaviour
 
         if (!string.IsNullOrEmpty(knot))
         {
-            // Elegir path pero lo hacemos con try-catch por si no existe
-            try
-            {
-                story.ChoosePathString(knot);
-            }
+            try { story.ChoosePathString(knot); }
             catch (System.Exception ex)
             {
                 Debug.LogWarning("[InkDialogueManager] ChoosePathString falló: " + ex.Message);
@@ -67,25 +65,17 @@ public class InkDialogueManager : MonoBehaviour
         }
 
         playing = true;
-
-        if (dialoguePanel != null)
-            dialoguePanel.SetActive(true);
-
-        Debug.Log("[InkDialogueManager] Story iniciada. canContinue: " + story.canContinue + " choices: " + story.currentChoices.Count);
+        if (dialoguePanel != null) dialoguePanel.SetActive(true);
 
         ContinueStory();
     }
 
-    // Avanzar diálogo 
+    // =================================================
+    // CONTINUAR HISTORIA
+    // =================================================
     public void ContinueStory()
     {
-        Debug.Log("[InkDialogueManager] ContinueStory llamado.");
-
-        if (story == null)
-        {
-            Debug.LogWarning("[InkDialogueManager] ContinueStory: story es null.");
-            return;
-        }
+        if (story == null) return;
 
         ClearChoices();
 
@@ -93,17 +83,16 @@ public class InkDialogueManager : MonoBehaviour
         {
             if (story.canContinue)
             {
-                if (nextButton != null) nextButton.gameObject.SetActive(true);
+                nextButton?.gameObject.SetActive(true);
 
                 string newText = story.Continue().Trim();
                 if (dialogueText != null) dialogueText.text = newText;
-                Debug.Log("[InkDialogueManager] Texto mostrado: " + newText);
 
                 HandleTags(story.currentTags);
             }
             else if (story.currentChoices.Count > 0)
             {
-                if (nextButton != null) nextButton.gameObject.SetActive(false);
+                nextButton?.gameObject.SetActive(false);
                 DisplayChoices();
             }
             else
@@ -113,106 +102,81 @@ public class InkDialogueManager : MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            Debug.LogError("[InkDialogueManager] Excepción en ContinueStory: " + ex.Message + "\n" + ex.StackTrace);
+            Debug.LogError("[InkDialogueManager] Excepción en ContinueStory: " + ex.Message);
         }
     }
 
-    // Mostrar choices
+    // =================================================
+    // OPCIONES
+    // =================================================
     void DisplayChoices()
     {
-        if (choicesContainer == null || choiceButtonPrefab == null)
-        {
-            Debug.LogWarning("[InkDialogueManager] DisplayChoices: falta choicesContainer o choiceButtonPrefab.");
-            return;
-        }
-
-        if (story == null)
-        {
-            Debug.LogWarning("[InkDialogueManager] DisplayChoices: story es null.");
-            return;
-        }
-
-        nextButton?.gameObject.SetActive(false);
-
         List<Choice> choices = story.currentChoices;
-        Debug.Log("[InkDialogueManager] DisplayChoices count: " + choices.Count);
 
         foreach (var choice in choices)
         {
             GameObject buttonObj = Instantiate(choiceButtonPrefab, choicesContainer);
-            if (buttonObj == null) continue;
-
             TMP_Text txt = buttonObj.GetComponentInChildren<TMP_Text>();
             if (txt != null) txt.text = choice.text;
-            else Debug.LogWarning("[InkDialogueManager] El prefab de choice no tiene TMP_Text en hijos.");
 
             Button btn = buttonObj.GetComponent<Button>();
-            if (btn == null)
-            {
-                Debug.LogWarning("[InkDialogueManager] El prefab de choice NO tiene componente Button.");
-                continue;
-            }
-
-            int choiceIndex = choice.index; // importante: variable local para evitar captura incorrecta
-            btn.onClick.RemoveAllListeners();
-            btn.onClick.AddListener(() => {
-                Debug.Log("[InkDialogueManager] Choice pulsado: index=" + choiceIndex + " text=" + choice.text);
-                ChooseChoice(choiceIndex);
-            });
+            int index = choice.index;
+            btn.onClick.AddListener(() => ChooseChoice(index));
         }
     }
 
     void ChooseChoice(int index)
     {
-        if (story == null)
-        {
-            Debug.LogWarning("[InkDialogueManager] ChooseChoice: story es null.");
-            return;
-        }
-
-        Debug.Log("[InkDialogueManager] ChooseChoice: " + index);
         story.ChooseChoiceIndex(index);
         ContinueStory();
     }
 
-    // Limpiar
     void ClearChoices()
     {
-        if (choicesContainer == null) return;
         for (int i = choicesContainer.childCount - 1; i >= 0; i--)
-        {
             Destroy(choicesContainer.GetChild(i).gameObject);
-        }
     }
+
+    // =================================================
+    // TAGS
+    // =================================================
     public static System.Action<List<string>> OnTagsReceived;
 
-    // Tags opcionales
     void HandleTags(List<string> tags)
     {
-        if (tags == null || tags.Count == 0) return;
+        if (tags == null) return;
 
         foreach (string tag in tags)
         {
             Debug.Log("[InkDialogueManager] TAG: " + tag);
+
+            // ejemplo: "darObjeto"
+            if (tag == "darObjeto")
+            {
+                waitingForItem = true;
+                nextButton.gameObject.SetActive(false);
+                Inventario.Instance.ToggleInventory();
+            }
         }
 
-        // Enviar a inkDialogue
         OnTagsReceived?.Invoke(tags);
     }
 
-    // Fin diálogo 
+    // =================================================
+    // FIN DE HISTORIA
+    // =================================================
     void EndStory()
     {
         playing = false;
-
         if (dialoguePanel != null) dialoguePanel.SetActive(false);
         ClearChoices();
-        Debug.Log("[InkDialogueManager] EndStory ejecutado.");
     }
 
     public bool IsPlaying() => playing;
 
-    // Variables de Ink
+    // =================================================
+    // VARIABLES INK
+    // =================================================
     public object GetVariable(string variableName)
     {
         if (story == null) return null;
@@ -224,6 +188,51 @@ public class InkDialogueManager : MonoBehaviour
         if (story == null) return;
         story.variablesState[variableName] = value;
     }
-    
+
+    // =================================================
+    // ITEM EXPECTATION (INTEGRADO)
+    // =================================================
+    public void ExpectItem(string itemName, bool consume, string knotToJump)
+    {
+        expectedItemName = itemName;
+        consumeItem = consume;
+        itemDeliveredKnot = knotToJump;
+        waitingForItem = true;
+    }
+
+    public bool IsWaitingForItem() => waitingForItem;
+
+    public bool TryGiveItem(string itemName)
+    {
+        if (!waitingForItem) return false;
+
+        if (itemName == expectedItemName)
+        {
+            Debug.Log("Objeto correcto entregado al NPC");
+
+            waitingForItem = false;
+
+            // cerrar inventario
+            Inventario.Instance.ToggleInventory();
+
+            // continuar diálogo
+            ContinueStory();
+
+            return true;
+        }
+        else
+        {
+            Debug.Log("Este no es el objeto que necesita el NPC");
+            return false;
+        }
+    }
+
+
+    // =================================================
+    // TRIGGER ACTUAL (por si necesitas lógica extra)
+    // =================================================
+    public void SetCurrentTrigger(InkTrigger trigger) => currentTrigger = trigger;
+
+    public void SetExpectedItem(string item) => expectedItemName = item;
 
 }

@@ -36,11 +36,29 @@ Soy un capitán, y viajé a través del tiempo.
     Bien, hasta pronto.
 -> END
 
-
+=== organillero_repeat ===
+Ya hablamos antes, viajero.
+¿Necesitas algo más?
+-> END
 
 
 === organillero2 ===
+¿Pudiste encontrar la pieza faltanate de mi amigo?
+    +Si
+Sabía que podías! 
+¿Puedes dármelo?
+#darObjeto
+
+-> END
+    +No
+   No te preocupes, sigue buscando.
+-> END
+
+
+=== organillero2_repeat ===
 ¡Recuperaste mi accesorio!
+¿Puedes dármelo?
+#darObjeto
 Ahora podré tocar de nuevo con mi amigo. (Risas)
     ¿Te gustaría escuchar?
 + Si.
