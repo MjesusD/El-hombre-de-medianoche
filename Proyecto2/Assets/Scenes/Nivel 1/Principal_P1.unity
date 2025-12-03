@@ -1612,7 +1612,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6277344868165203162, guid: f58dc9398bccf6a40b7899a8d2b37cc8, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2797,7 +2797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1816045804397338623, guid: 15c032269cfedc1429ec8db8958c56cb, type: 3}
       propertyPath: m_SortingOrder
-      value: 4
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2508245608898918601, guid: 15c032269cfedc1429ec8db8958c56cb, type: 3}
       propertyPath: m_Color.a
@@ -2813,7 +2813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5361794378254687226, guid: 15c032269cfedc1429ec8db8958c56cb, type: 3}
       propertyPath: m_SortingOrder
-      value: 4
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5430551412959571632, guid: 15c032269cfedc1429ec8db8958c56cb, type: 3}
       propertyPath: m_Pivot.x
@@ -2919,9 +2919,25 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7713753829013588730, guid: 15c032269cfedc1429ec8db8958c56cb, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903770663357358383, guid: 15c032269cfedc1429ec8db8958c56cb, type: 3}
+      propertyPath: 'sceneNames.Array.data[0]'
+      value: Afuera
+      objectReference: {fileID: 0}
     - target: {fileID: 7903770663357358383, guid: 15c032269cfedc1429ec8db8958c56cb, type: 3}
       propertyPath: 'sceneNames.Array.data[1]'
       value: Bar
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903770663357358383, guid: 15c032269cfedc1429ec8db8958c56cb, type: 3}
+      propertyPath: 'sceneNames.Array.data[2]'
+      value: Principal_P2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903770663357358383, guid: 15c032269cfedc1429ec8db8958c56cb, type: 3}
+      propertyPath: 'sceneNames.Array.data[3]'
+      value: Puzzle3
       objectReference: {fileID: 0}
     - target: {fileID: 7903770663357358383, guid: 15c032269cfedc1429ec8db8958c56cb, type: 3}
       propertyPath: 'unlockedHours.Array.data[0]'
@@ -2929,6 +2945,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7903770663357358383, guid: 15c032269cfedc1429ec8db8958c56cb, type: 3}
       propertyPath: 'unlockedHours.Array.data[1]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903770663357358383, guid: 15c032269cfedc1429ec8db8958c56cb, type: 3}
+      propertyPath: 'unlockedHours.Array.data[2]'
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8005882061575555388, guid: 15c032269cfedc1429ec8db8958c56cb, type: 3}
@@ -3852,7 +3872,7 @@ Transform:
   m_GameObject: {fileID: 2097143249}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -53.302094, y: -13.33965, z: -10.047}
+  m_LocalPosition: {x: -53.304455, y: -13.33964, z: -10.047}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

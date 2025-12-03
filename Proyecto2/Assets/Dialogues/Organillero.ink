@@ -2,38 +2,47 @@
 ¿Quién eres?
 ¿Qué haces aquí?
 
-Soy un capitán, y viajé a través del tiempo.
-    Interesante.
-    Entonces puedes ayudarme.
-    ¿Qué necesitas?
-    Como ves soy un organillero, y he perdido una pieza de mi querido amigo.
+Soy un capitán, y viajé a través del tiempo con un reloj de un hombre extraño.
+Me ha teletransportado aquí, y no me deja volver. 
+Es como si las horas se bloquearan después de cada viaje...
+Hombre extraño: Wow, creo haber experimentado algo así antes...
+Capitán: ¿Qué?
+¿Entonces puedes ayudarme a regresar?
+Hombre extraño: Mmmm, primero debes ayudarme. 
+Estoy estancado. 
+Commo tú, ya ves. Ja ja ja!
+Capitán: ¿Qué necesitas?
+    Organillero: Como ves soy un organillero, y he perdido una pieza de mi querido amigo.
     Sin ella no puedo seguir haciendo mi trabajo. 
     De seguro disfrutabas de la música cuando niño, 
     y hay muchos que han quedado sin ella en esta ciudad.
     Entonces, ¿aceptas ayudarme a encontrala?
 
-    + Si
+    + Sí, pero me dirás como regresar.
         Ja ja ja! Sabía que vendría alguien en mi ayuda.
         Toma esa nota que hay más adelante. Te será de ayuda.
         ¡Buena suerte!
 
+    Capitán:(Todo esto es muy extraño).
+
     ->END
 
     + No
-        Hey! No seas así. 
+       Organillero: Hey! No seas así. 
         Ambos necesitamos algo.
         Tienes que hacerlo para poder volver a donde estabas.
         Así que...¿Es un trato?
-    Trato.
-    Eso es.
+    Capitán: Trato.
+    Organillero: Eso es.
     Toma esa nota que hay más adelante, te será de ayuda.
+    ¡Buena suerte!
     
 -> END
 
 
 
 + Debería irme.
-    Bien, hasta pronto.
+    Organillero: Bien, hasta pronto.
 -> END
 
 === organillero_repeat ===
@@ -43,31 +52,35 @@ Ya hablamos antes, viajero.
 
 
 === organillero2 ===
-¿Pudiste encontrar la pieza faltanate de mi amigo?
-    +Si
-Sabía que podías! 
-¿Puedes dármelo?
-#darObjeto
+¡Recuperaste mi accesorio!
+Ahora podré tocar de nuevo con mi amigo. (Risas)
+    ¿Te gustaría escuchar?
++ Está bien...
+#panel_Audio1
+    (Empieza a sonar una música y la gente se acerca)
+Bueno, no hay tiempo que perder.
+Arreglaré tu reloj en mi casa...
+    Espero que funcione y puedas volver...
+    Capitán: ¿Esperas...?
+    Organillero: ¡En marcha!
 
--> END
-    +No
-   No te preocupes, sigue buscando.
+->END
++ No, gracias.
+    Pues entonces, quizás en otra oportunidad.
+    Muy bien. 
+    Arreglaré tu reloj en mi casa...
+    Espero que funcione y puedas volver...
+    Capitán: ¿Esperas...?
+    Organillero: ¡En marcha!
 -> END
 
 
 === organillero2_repeat ===
-¡Recuperaste mi accesorio!
-¿Puedes dármelo?
-#darObjeto
-Ahora podré tocar de nuevo con mi amigo. (Risas)
-    ¿Te gustaría escuchar?
-+ Si.
-#panel_Audio1
-    (Empieza a sonar una música y la gente se acerca)
-Bueno, no hay tiempo que perder. 
-¡Vamos!
-->END
-+ No
-    Pues entonces, otro día será.
-    En marcha!
+
+    Muy bien. 
+    Arreglaré tu reloj en mi casa...
+    Espero que funcione y puedas volver...
+    Capitán: ¿Esperas...?
+    Organillero: ¡En marcha!
+
 -> END

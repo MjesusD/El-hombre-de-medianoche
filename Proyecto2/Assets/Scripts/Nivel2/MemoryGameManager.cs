@@ -17,6 +17,14 @@ public class MemoryGameManager : MonoBehaviour
     private Card secondCard;
     private bool canClick = true;
 
+    [Header("UI")]
+    public GameObject puzzlePanel;       // El panel que contiene el grid
+    public GameObject hiddenObject;      // El objeto oculto que se desbloquea
+
+    [Header("Interacción")]
+    public MonoBehaviour interactionToUnlock;   // El script de interaction que estaba desactivado
+
+
     private void Awake()
     {
         Instance = this;
@@ -80,6 +88,22 @@ public class MemoryGameManager : MonoBehaviour
         {
             firstCard.Lock();
             secondCard.Lock();
+
+            // Comprobar si todas las cartas están emparejadas
+            if (AllCardsMatched())
+            {
+                yield return new WaitForSeconds(0.3f);
+
+                // Cerrar panel del puzzle
+                puzzlePanel.SetActive(false);
+
+                // Desbloquear objeto oculto
+                hiddenObject.SetActive(true);
+
+                // Activar script Interaction
+                if (interactionToUnlock != null)
+                    interactionToUnlock.enabled = true;
+            }
         }
         else
         {
@@ -90,5 +114,15 @@ public class MemoryGameManager : MonoBehaviour
         firstCard = null;
         secondCard = null;
         canClick = true;
+    }
+
+    bool AllCardsMatched()
+    {
+        foreach (var card in cards)
+        {
+            if (!card.isMatched)
+                return false;
+        }
+        return true;
     }
 }
