@@ -1,14 +1,14 @@
-using TMPro;
+Ôªøusing TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PuzzleTuberias : MonoBehaviour
 {
-    [Header("ConfiguraciÛn del Puzzle")]
+    [Header("Configuraci√≥n del Puzzle")]
     [SerializeField] private int filas = 5;
     [SerializeField] private int columnas = 5;
-    [SerializeField] private float tamaÒoCelda = 100f;
+    [SerializeField] private float tama√±oCelda = 100f;
 
     [Header("Llave Requerida")]
     [SerializeField] private string nombreLlaveRequerida = "Llave Inglesa";
@@ -21,21 +21,21 @@ public class PuzzleTuberias : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textoEstado;
     [SerializeField] private GameObject botonVerificar;
 
-    [Header("Sprites de TuberÌas")]
-    [SerializeField] private Sprite spriteRecta; // TuberÌa recta |
-    [SerializeField] private Sprite spriteCurva; // TuberÌa curva L
-    [SerializeField] private Sprite spriteT; // TuberÌa T
-    [SerializeField] private Sprite spriteCruz; // TuberÌa + (cruz)
-    [SerializeField] private Sprite spriteTapada; // Sin conexiÛn
+    [Header("Sprites de Tuber√≠as")]
+    [SerializeField] private Sprite spriteRecta; // Tuber√≠a recta |
+    [SerializeField] private Sprite spriteCurva; // Tuber√≠a curva L
+    [SerializeField] private Sprite spriteT; // Tuber√≠a T
+    [SerializeField] private Sprite spriteCruz; // Tuber√≠a + (cruz)
+    [SerializeField] private Sprite spriteTapada; // Sin conexi√≥n
 
     [Header("Puntos de Inicio y Fin")]
     [SerializeField] private Vector2Int posicionInicio = new Vector2Int(0, 2); // Entrada
     [SerializeField] private Vector2Int posicionFin = new Vector2Int(4, 2); // Salida
 
     [Header("Mensajes")]
-    [SerializeField] private string mensajeNecesitaLlave = "Necesitas una Llave Inglesa para reparar las tuberÌas.";
-    [SerializeField] private string mensajeCorrecto = "°Perfecto! Las tuberÌas est·n conectadas.";
-    [SerializeField] private string mensajeIncorrecto = "Las tuberÌas no est·n conectadas correctamente.";
+    [SerializeField] private string mensajeNecesitaLlave = "Necesitas una Llave Inglesa para reparar las tuber√≠as.";
+    [SerializeField] private string mensajeCorrecto = "¬°Perfecto! Las tuber√≠as est√°n conectadas.";
+    [SerializeField] private string mensajeIncorrecto = "Las tuber√≠as no est√°n conectadas correctamente.";
 
     [Header("Sonidos")]
     [SerializeField] private AudioClip sonidoRotar;
@@ -43,16 +43,16 @@ public class PuzzleTuberias : MonoBehaviour
     [SerializeField] private AudioClip sonidoIncorrecto;
 
     [Header("Recompensa")]
-    [SerializeField] private string nombreItemRecompensa = "V·lvula";
+    [SerializeField] private string nombreItemRecompensa = "V√°lvula";
     [SerializeField] private Sprite iconoRecompensa;
-    [SerializeField] private string descripcionRecompensa = "Una v·lvula importante del sistema.";
+    [SerializeField] private string descripcionRecompensa = "Una v√°lvula importante del sistema.";
 
     private Tuberia[,] grid;
     private bool puzzleResuelto = false;
     private AudioSource audioSource;
     private Player jugador;
 
-    // Clase para cada tuberÌa
+    // Clase para cada tuber√≠a
     [System.Serializable]
     public class Tuberia
     {
@@ -86,12 +86,13 @@ public class PuzzleTuberias : MonoBehaviour
         {
             switch (tipo)
             {
+                
                 case TipoTuberia.Recta:
                     return new bool[] { true, false, true, false }; // Norte y Sur
                 case TipoTuberia.Curva:
                     return new bool[] { true, true, false, false }; // Norte y Este
                 case TipoTuberia.T:
-                    return new bool[] { true, true, false, true }; // Norte, Este, Oeste
+                    return new bool[] { true, true, true, false }; // Norte, Este, Oeste
                 case TipoTuberia.Cruz:
                     return new bool[] { true, true, true, true }; // Todas
                 case TipoTuberia.Tapada:
@@ -122,12 +123,12 @@ public class PuzzleTuberias : MonoBehaviour
         }
     }
 
-    // MÈtodo llamado desde InteractionObject
+    // M√©todo llamado desde InteractionObject
     public void IntentarAbrirPuzzle()
     {
         if (puzzleResuelto)
         {
-            MostrarMensaje("Ya reparaste las tuberÌas.");
+            MostrarMensaje("Ya reparaste las tuber√≠as.");
             return;
         }
 
@@ -142,7 +143,7 @@ public class PuzzleTuberias : MonoBehaviour
         AbrirPuzzle();
     }
 
-    void AbrirPuzzle()
+    public void AbrirPuzzle()
     {
         if (panelPuzzle != null)
         {
@@ -160,7 +161,7 @@ public class PuzzleTuberias : MonoBehaviour
 
         if (textoEstado != null)
         {
-            textoEstado.text = "Rota las tuberÌas para conectar desde la entrada hasta la salida.";
+            textoEstado.text = "Rota las tuber√≠as para conectar desde la entrada hasta la salida.";
         }
     }
 
@@ -180,22 +181,24 @@ public class PuzzleTuberias : MonoBehaviour
 
         grid = new Tuberia[filas, columnas];
 
-        // Configurar Grid Layout
+
+        // Solo asegurar que existe el componente
         if (contenedorGrid != null)
         {
             GridLayoutGroup gridLayout = contenedorGrid.GetComponent<GridLayoutGroup>();
             if (gridLayout == null)
             {
                 gridLayout = contenedorGrid.AddComponent<GridLayoutGroup>();
-                // ConfiguraciÛn por defecto solo si no existe
-                gridLayout.cellSize = new Vector2(tamaÒoCelda, tamaÒoCelda);
+                // Configuraci√≥n por defecto solo si no existe
+                gridLayout.cellSize = new Vector2(tama√±oCelda, tama√±oCelda);
                 gridLayout.spacing = new Vector2(5, 5);
                 gridLayout.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
                 gridLayout.constraintCount = columnas;
             }
+            // Si ya existe, no tocar su configuraci√≥n
         }
 
-        // Crear las tuberÌas
+        // Crear las tuber√≠as (nivel 3 - dif√≠cil)
         for (int fila = 0; fila < filas; fila++)
         {
             for (int col = 0; col < columnas; col++)
@@ -207,19 +210,19 @@ public class PuzzleTuberias : MonoBehaviour
                 tuberia.boton = celda.GetComponent<Button>();
                 tuberia.posicion = new Vector2Int(fila, col);
 
-                // Asignar tipo seg˙n el nivel (m·s difÌcil)
+                // Asignar tipo seg√∫n el nivel (m√°s dif√≠cil)
                 tuberia.tipo = AsignarTipoTuberia(fila, col);
 
-                // Sprite seg˙n tipo
+                // Sprite seg√∫n tipo
                 tuberia.imagen.sprite = ObtenerSprite(tuberia.tipo);
 
-                // RotaciÛn aleatoria para dificultad
+                // Rotaci√≥n aleatoria para dificultad
                 tuberia.rotacion = Random.Range(0, 4) * 90;
                 tuberia.imagen.transform.rotation = Quaternion.Euler(0, 0, -tuberia.rotacion);
 
                 tuberia.ActualizarConexiones();
 
-                // AÒadir listener al botÛn
+                // A√±adir listener al bot√≥n
                 int f = fila;
                 int c = col;
                 tuberia.boton.onClick.AddListener(() => RotarTuberia(f, c));
@@ -241,8 +244,8 @@ public class PuzzleTuberias : MonoBehaviour
 
     TipoTuberia AsignarTipoTuberia(int fila, int col)
     {
-        // SoluciÛn predefinida para nivel 3 (puedes cambiarla)
-        // Esta es una configuraciÛn que tiene soluciÛn
+        // Soluci√≥n predefinida para nivel 3 (puedes cambiarla)
+        // Esta es una configuraci√≥n que tiene soluci√≥n
 
         // Fila del medio (camino principal)
         if (fila == 2)
@@ -262,7 +265,7 @@ public class PuzzleTuberias : MonoBehaviour
             return TipoTuberia.T;
         }
 
-        // M·s curvas para dificultad
+        // M√°s curvas para dificultad
         if (Random.value < 0.5f)
         {
             return TipoTuberia.Curva;
@@ -296,16 +299,34 @@ public class PuzzleTuberias : MonoBehaviour
         {
             grid[fila, col].Rotar();
             ReproducirSonido(sonidoRotar);
+
+            // Debug para ver la rotaci√≥n
+            Debug.Log($"Tuber√≠a rotada en [{fila},{col}] - Nueva rotaci√≥n: {grid[fila, col].rotacion}¬∞");
+
+            // Mostrar conexiones
+            bool[] conex = grid[fila, col].conexiones;
+            Debug.Log($"Conexiones: Norte={conex[0]}, Este={conex[1]}, Sur={conex[2]}, Oeste={conex[3]}");
+        }
+        else
+        {
+            Debug.LogWarning($"No hay tuber√≠a en [{fila},{col}]");
         }
     }
 
     public void VerificarSolucion()
     {
+        Debug.Log("========== VERIFICANDO SOLUCI√ìN ==========");
+        Debug.Log($"Inicio: [{posicionInicio.x},{posicionInicio.y}]");
+        Debug.Log($"Fin: [{posicionFin.x},{posicionFin.y}]");
+
         bool correcto = VerificarCamino();
+
+        Debug.Log($"Resultado: {(correcto ? "CORRECTO " : "INCORRECTO ")}");
+        Debug.Log("==========================================");
 
         if (correcto)
         {
-            // °Puzzle resuelto!
+            // ¬°Puzzle resuelto!
             PuzzleCompletado();
         }
         else
@@ -330,8 +351,13 @@ public class PuzzleTuberias : MonoBehaviour
 
     bool BFS(Vector2Int inicio, Vector2Int fin, bool[,] visitado)
     {
+        Debug.Log($"BFS: Visitando [{inicio.x},{inicio.y}]");
+
         if (inicio == fin)
+        {
+            Debug.Log("¬°Llegamos al final!");
             return true;
+        }
 
         visitado[inicio.x, inicio.y] = true;
 
@@ -344,33 +370,50 @@ public class PuzzleTuberias : MonoBehaviour
             new Vector2Int(0, -1)  // Oeste
         };
 
+        string[] nombresDirecciones = { "Norte", "Este", "Sur", "Oeste" };
+
         for (int i = 0; i < 4; i++)
         {
-            // Verificar si la tuberÌa actual tiene conexiÛn en esta direcciÛn
+            // Verificar si la tuber√≠a actual tiene conexi√≥n en esta direcci√≥n
             if (!grid[inicio.x, inicio.y].conexiones[i])
+            {
+                Debug.Log($"  {nombresDirecciones[i]}: No hay conexi√≥n desde aqu√≠");
                 continue;
+            }
 
             Vector2Int siguiente = inicio + direcciones[i];
 
-            // Verificar lÌmites
+            // Verificar l√≠mites
             if (siguiente.x < 0 || siguiente.x >= filas ||
                 siguiente.y < 0 || siguiente.y >= columnas)
+            {
+                Debug.Log($"  {nombresDirecciones[i]}: Fuera de l√≠mites");
                 continue;
+            }
 
             // Si ya visitado, saltar
             if (visitado[siguiente.x, siguiente.y])
+            {
+                Debug.Log($"  {nombresDirecciones[i]}: Ya visitado");
                 continue;
+            }
 
-            // Verificar si la tuberÌa siguiente tiene conexiÛn de vuelta
+            // Verificar si la tuber√≠a siguiente tiene conexi√≥n de vuelta
             int direccionOpuesta = (i + 2) % 4;
             if (!grid[siguiente.x, siguiente.y].conexiones[direccionOpuesta])
+            {
+                Debug.Log($"  {nombresDirecciones[i]}: La tuber√≠a siguiente no conecta de vuelta");
                 continue;
+            }
 
-            // RecursiÛn
+            Debug.Log($"  {nombresDirecciones[i]}: ‚úì Conexi√≥n v√°lida a [{siguiente.x},{siguiente.y}]");
+
+            // Recursi√≥n
             if (BFS(siguiente, fin, visitado))
                 return true;
         }
 
+        Debug.Log($"No hay m√°s caminos desde [{inicio.x},{inicio.y}]");
         return false;
     }
 
@@ -386,7 +429,7 @@ public class PuzzleTuberias : MonoBehaviour
 
         ReproducirSonido(sonidoCorrecto);
 
-        // Consumir llave si est· configurado
+        // Consumir llave si est√° configurado
         if (consumirLlave && Inventario.Instance != null)
         {
             Inventario.Instance.RemoveItem(nombreLlaveRequerida);
@@ -398,7 +441,7 @@ public class PuzzleTuberias : MonoBehaviour
             Inventario.Instance.AddItem(nombreItemRecompensa, iconoRecompensa, descripcionRecompensa);
         }
 
-        // Cerrar puzzle despuÈs de un momento
+        // Cerrar puzzle despu√©s de un momento
         Invoke("CerrarPuzzle", 2f);
     }
 
@@ -406,7 +449,7 @@ public class PuzzleTuberias : MonoBehaviour
     {
         if (textoEstado != null)
         {
-            textoEstado.text = "Rota las tuberÌas para conectar desde la entrada hasta la salida.";
+            textoEstado.text = "Rota las tuber√≠as para conectar desde la entrada hasta la salida.";
             textoEstado.color = Color.white;
         }
     }
@@ -445,7 +488,7 @@ public class PuzzleTuberias : MonoBehaviour
         }
     }
 
-    public bool Est·Resuelto()
+    public bool Est√°Resuelto()
     {
         return puzzleResuelto;
     }
