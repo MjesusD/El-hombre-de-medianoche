@@ -594,7 +594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7794088486942313918, guid: 45d474824d73a654e8d1391306a94b15, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.48
+      value: -18.5
       objectReference: {fileID: 0}
     - target: {fileID: 7794088486942313918, guid: 45d474824d73a654e8d1391306a94b15, type: 3}
       propertyPath: m_LocalPosition.y
@@ -921,7 +921,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 300652889}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1039562778}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &300652889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1177,7 +1189,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Cerrar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1984,6 +1996,7 @@ GameObject:
   - component: {fileID: 1039562782}
   - component: {fileID: 1039562780}
   - component: {fileID: 1039562784}
+  - component: {fileID: 1039562785}
   m_Layer: 0
   m_Name: SistemaTuberias
   m_TagString: Untagged
@@ -2183,6 +2196,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.62, y: 2.23}
   m_EdgeRadius: 0
+--- !u!114 &1039562785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039562778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63698e88f2e5e8241977244652f61c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DebugPuzzle
+  puzzle: {fileID: 1039562779}
 --- !u!1 &1109061886
 GameObject:
   m_ObjectHideFlags: 0
@@ -2383,11 +2409,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.087313
+      value: -14.029976
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.6514897
+      value: -6.65153
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2399,19 +2425,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -2833,8 +2859,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -262.49, y: -171}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -283.5, y: -185.9}
+  m_SizeDelta: {x: 140.7, y: 40.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1523951788
 MonoBehaviour:
@@ -2891,7 +2917,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 0
+        m_CallState: 2
 --- !u!114 &1523951789
 MonoBehaviour:
   m_ObjectHideFlags: 0
