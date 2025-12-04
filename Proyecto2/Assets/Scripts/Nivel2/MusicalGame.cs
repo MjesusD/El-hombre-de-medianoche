@@ -1,24 +1,82 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
-public class MusicalGame : PuzzleBase
+public class MusicalGameManager : PuzzleBase
 {
-    [Header("Puzzle")]
-    public List<MusicalButton> buttons;     // Lista de botones disponibles
-    public int sequenceLength = 4;
+    public static MusicalGameManager Instance;
 
-    private List<int> sequence = new List<int>();   // La canción generada
+    [Header("Botones")]
+    public MusicalButton buttonPrefab;   // prefab del botón
+    public Transform layoutParent;       // el contenedor con LayoutGroup
+    public int totalButtons = 4;
+
+    [Header("Juego")]
+    public int sequenceLength = 4;
+    public float delayBetweenFlashes = 0.5f;
+
+    private List<MusicalButton> buttons = new List<MusicalButton>();
+    private List<int> sequence = new List<int>();
     private int playerIndex = 0;
     private bool inputEnabled = false;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    void Start()
+    {
+        RefreshUIFader();
+        puzzlePanel.SetActive(false);
+        GenerateButtons();
+    }
+
     public override void StartPuzzle()
     {
-         Debug.Log("StartPuzzle llamado correctamente.");
-        //puzzlePanel.SetActive(true);
         base.StartPuzzle();
-        GenerateSequence();
         StartCoroutine(PlaySequence());
+    }
+
+
+    //   GENERAR BOTONES
+   
+    void GenerateButtons()
+    {
+        buttons.Clear();
+
+        for (int i = 0; i < totalButtons; i++)
+        {
+            MusicalButton mb = Instantiate(buttonPrefab, layoutParent);
+            mb.buttonID = i;
+
+            // conectar evento OnClick
+            mb.GetComponent<Button>().onClick.AddListener(() => mb.OnPlayerClick());
+
+            buttons.Add(mb);
+        }
+    }
+
+ 
+    //   SECUENCIA
+    
+    IEnumerator PlaySequence()
+    {
+        inputEnabled = false;
+
+        GenerateSequence();
+
+        yield return new WaitForSeconds(1f);
+
+        foreach (int id in sequence)
+        {
+            buttons[id].Highlight();
+            yield return new WaitForSeconds(delayBetweenFlashes);
+        }
+
+        inputEnabled = true;
+        playerIndex = 0;
     }
 
     void GenerateSequence()
@@ -27,61 +85,36 @@ public class MusicalGame : PuzzleBase
 
         for (int i = 0; i < sequenceLength; i++)
         {
-            int randomId = Random.Range(0, buttons.Count);
-            sequence.Add(randomId);
-        }
-    }
-
-    IEnumerator PlaySequence()
-    {
-        inputEnabled = false;
-        yield return new WaitForSeconds(0.5f);
-
-        foreach (int id in sequence)
-        {
-            buttons[id].Flash();
-            yield return new WaitForSeconds(0.6f);
+            int randomID = Random.Range(0, totalButtons);
+            sequence.Add(randomID);
         }
 
-        inputEnabled = true;
         playerIndex = 0;
     }
 
-    public void PlayerPress(int buttonId)
+
+    //   INPUT DEL JUGADOR
+  
+    public void PlayerPress(int id)
     {
+        if (!inputEnabled)
+            return;
 
-        Debug.Log("Presionaste botón: " + buttonId);
-        if (!inputEnabled) return;
-
-        // Si presionó correctamente
-        if (buttonId == sequence[playerIndex])
+        if (id == sequence[playerIndex])
         {
             playerIndex++;
 
-            // Si completó toda la secuencia, puzzle ganado
             if (playerIndex >= sequence.Count)
             {
-                Debug.Log("SECUENCIA COMPLETADA");   // AÑADE ESTO
+                Debug.Log("Puzzle Completado");
+                inputEnabled = false;
                 CompletePuzzle();
             }
-
         }
         else
         {
-            // ERROR — Reiniciar puzzle completo
-            Debug.Log("Fallaste. Reiniciando secuencia...");
-            StartCoroutine(RestartPuzzle());
+            Debug.Log("Fallaste. Repitiendo secuencia...");
+            StartCoroutine(PlaySequence());
         }
     }
-
-    IEnumerator RestartPuzzle()
-    {
-        inputEnabled = false;
-        yield return new WaitForSeconds(0.4f);
-
-        GenerateSequence();
-        yield return PlaySequence();
- 
-    }
-
 }

@@ -23,13 +23,13 @@ public class Card : MonoBehaviour
     {
         cardId = id;
         frontImage.sprite = frontSprite;
-        Hide();
+        Hide(); // Inicialmente la carta está boca abajo
     }
 
-    // Se llama desde el OnClick del Button
+    // Este método se llama desde el OnClick del Button
     public void OnCardClicked()
     {
-        if (isMatched || isRevealed) return;
+        if (isMatched || isRevealed) return;   // no permitir tocar cartas bloqueadas o ya abiertas
         MemoryGameManager.Instance.SelectCard(this);
     }
 
@@ -50,6 +50,6 @@ public class Card : MonoBehaviour
     public void Lock()
     {
         isMatched = true;
-        button.interactable = false;
+        button.interactable = false; // deshabilitar botón para que no pueda volver a tocarse
     }
 }

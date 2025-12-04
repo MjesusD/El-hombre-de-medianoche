@@ -2,38 +2,54 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class MemoryGameManager : MonoBehaviour
+public class MemoryGameManager : PuzzleBase
 {
     public static MemoryGameManager Instance;
 
     [Header("Configuración")]
-    public Transform gridParent;         // El GridLayoutGroup
-    public Card cardPrefab;              // Prefab de la carta
-    public List<Sprite> cardSprites;     // Lista de sprites únicos (uno por pareja)
-    public int pairs = 4;                // Cantidad de pares
+    public Transform gridParent;
+    public Card cardPrefab;
+    public List<Sprite> cardSprites;
+    public int pairs = 4;
 
     private List<Card> cards = new List<Card>();
     private Card firstCard;
     private Card secondCard;
     private bool canClick = true;
 
-    [Header("UI")]
-    public GameObject puzzlePanel;       // El panel que contiene el grid
-    public GameObject hiddenObject;      // El objeto oculto que se desbloquea
-
-    [Header("Interacción")]
-    public MonoBehaviour interactionToUnlock;   // El script de interaction que estaba desactivado
-
-
     private void Awake()
     {
         Instance = this;
+
     }
 
     private void Start()
     {
-        GenerateCards();
+
+        RefreshUIFader();
+        puzzlePanel.SetActive(false);   // Ocultar puzzle al inicio
+        
     }
+
+    public override void StartPuzzle()
+    {
+
+        ClearCards();
+        GenerateCards();
+        base.StartPuzzle();
+       
+    }
+
+    void ClearCards()
+    {
+        foreach (Transform child in gridParent)
+        {
+            Destroy(child.gameObject);
+        }
+
+        cards.Clear();
+    }
+
 
     void GenerateCards()
     {
@@ -46,14 +62,14 @@ public class MemoryGameManager : MonoBehaviour
             ids.Add(i);
         }
 
-        // Mezclar la lista
+        // Mezclar
         for (int i = 0; i < ids.Count; i++)
         {
             int rnd = Random.Range(0, ids.Count);
             (ids[i], ids[rnd]) = (ids[rnd], ids[i]);
         }
 
-        // Instanciar cartas según el ID mezclado
+        // Instanciar cartas
         foreach (int id in ids)
         {
             Card newCard = Instantiate(cardPrefab, gridParent);
@@ -89,20 +105,13 @@ public class MemoryGameManager : MonoBehaviour
             firstCard.Lock();
             secondCard.Lock();
 
-            // Comprobar si todas las cartas están emparejadas
+            // Todas las cartas emparejadas?
             if (AllCardsMatched())
             {
                 yield return new WaitForSeconds(0.3f);
 
-                // Cerrar panel del puzzle
-                puzzlePanel.SetActive(false);
-
-                // Desbloquear objeto oculto
-                hiddenObject.SetActive(true);
-
-                // Activar script Interaction
-                if (interactionToUnlock != null)
-                    interactionToUnlock.enabled = true;
+                // Puzzle completado
+                CompletePuzzle();
             }
         }
         else

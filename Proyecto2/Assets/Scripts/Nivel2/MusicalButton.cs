@@ -1,40 +1,35 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
-
 
 public class MusicalButton : MonoBehaviour
 {
-    public int buttonId;
-    public MusicalGame puzzle;
-
-    [Header("Efectos")]
+    public int buttonID;
+    public AudioSource audioSource;
     public Image buttonImage;
-    public Color flashColor = Color.yellow;
-    public float flashTime = 0.25f;
 
-    private Color normalColor;
+    private Color originalColor;
+    public Color highlightColor = Color.yellow;
 
     private void Start()
     {
-        normalColor = buttonImage.color;
+        originalColor = buttonImage.color;
     }
 
-    public void OnClick()
+    public void Highlight()
     {
-        puzzle.PlayerPress(buttonId);
-        StartCoroutine(FlashEffect());
+        buttonImage.color = highlightColor;
+        audioSource.Play();
+        Invoke(nameof(ResetColor), 0.3f);
     }
 
-    public void Flash()
+    void ResetColor()
     {
-        StartCoroutine(FlashEffect());
+        buttonImage.color = originalColor;
     }
 
-    IEnumerator FlashEffect()
+    public void OnPlayerClick()
     {
-        buttonImage.color = flashColor;
-        yield return new WaitForSeconds(flashTime);
-        buttonImage.color = normalColor;
+        MusicalGameManager.Instance.PlayerPress(buttonID);
+        Highlight();
     }
 }
