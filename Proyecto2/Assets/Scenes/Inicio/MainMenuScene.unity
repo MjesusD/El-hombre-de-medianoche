@@ -1084,6 +1084,8 @@ MonoBehaviour:
     musicClip: {fileID: 8300000, guid: 1f8283ab5bac3ad48a6d1dbed6fb84ba, type: 3}
   - sceneName: AfueraB
     musicClip: {fileID: 8300000, guid: 1f8283ab5bac3ad48a6d1dbed6fb84ba, type: 3}
+  - sceneName: Principal_P2
+    musicClip: {fileID: 8300000, guid: 333bdb43ffc36164189b560e5932f3ea, type: 3}
   fadeDuration: 0.3
 --- !u!82 &806786715
 AudioSource:
@@ -1098,7 +1100,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4163,8 +4165,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Controles:\n\nA/D - Movimiento del personaje\nE - Interactuar con objetos\nSPACE
-    - Avanzar di\xE1logos\nI - Abrir inventario\n"
+  m_text: 'Controles:
+
+
+    A/D - Movimiento del personaje
+
+    E - Interactuar con
+    objetos
+
+    I - Abrir inventario
+
+    SPACE - Utilizar objetos
+
+
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 10aedfa024ec9934d9a206d44c481993, type: 2}
   m_sharedMaterial: {fileID: -4910781729972027979, guid: 10aedfa024ec9934d9a206d44c481993, type: 2}

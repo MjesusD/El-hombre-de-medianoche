@@ -20,7 +20,7 @@ public class Inventario : MonoBehaviour
     [SerializeField] private KeyCode closeKey = KeyCode.Escape;
 
     [Header("Navegacion")]
-    [SerializeField] private int itemsPerRow = 5;
+    [SerializeField] private int itemsPerRow = 7;
 
     private List<InventarioItem> items = new List<InventarioItem>();
     private List<GameObject> itemSlots = new List<GameObject>();

@@ -68,13 +68,24 @@ Está bien, hablaremos después.
 
 === mujer1_repeat===
 
-¿Puedes ayudarme a encontrar la BASE del álbum?
+¿Las has encontrado?
 
-+Si.
++Sí.
+¡Increíble!
+Entre todas las cosas que tengo, sola no podía hayarlas...
+¿Puedo verlas?
 Perfecto.
-Puedes mirar a tu alrededor en busca de ellas.
-Estaré trabajando en la otra parte del proyecto.
-Búscame cuando tengas las cuatro fotografías.
+Al fin completé mi proyecto...
+¿Quieres ver?
+#panel_Album
+Mientras tú buscabas, yo he pensado en como ayudarte a regresar.
+Tenía una amiga...
+La de la foto...
+Tengo el presentimiento de que ella es la siguiente en la hora restante...
+Cuenta con ella para regeresar. 
+De seguro te dará una respuesta más concreta del porqué de los viajes en el tiempo.
+Dile que espero poder hablar con ella algún día nuevamente...
+Cuídate y buena suerte.
 -> END
 
 +No.

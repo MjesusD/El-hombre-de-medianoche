@@ -12,6 +12,9 @@ public class PickItem : MonoBehaviour
     [SerializeField] private bool recogerSoloUnaVez = true;
     [SerializeField] private AudioClip sonidoRecoger;
 
+    [Header("Opciones especiales")]
+    public bool noAdd = false;   // PARA QUE NO SE GUARDEN EN EL INVENTARIO
+
     [Header("Visual Feedback")]
     [SerializeField] private GameObject interactionPrompt; // UI "Presiona E"
 
@@ -20,7 +23,6 @@ public class PickItem : MonoBehaviour
 
     private void Update()
     {
-        // Si el jugador está cerca y presiona E
         if (jugadorCerca && !yaRecogido && Input.GetKeyDown(KeyCode.E))
         {
             RecogerItem();
@@ -34,7 +36,6 @@ public class PickItem : MonoBehaviour
             jugadorCerca = true;
             Debug.Log("Cerca de: " + itemName);
 
-            // Mostrar prompt "Presiona E"
             if (interactionPrompt != null)
             {
                 interactionPrompt.SetActive(true);
@@ -48,7 +49,6 @@ public class PickItem : MonoBehaviour
         {
             jugadorCerca = false;
 
-            // Ocultar prompt
             if (interactionPrompt != null)
             {
                 interactionPrompt.SetActive(false);
@@ -58,7 +58,6 @@ public class PickItem : MonoBehaviour
 
     public void RecogerItem()
     {
-        // Evitar duplicados si está configurado
         if (recogerSoloUnaVez && yaRecogido)
         {
             Debug.Log($"El item '{itemName}' ya fue recogido.");
@@ -69,61 +68,64 @@ public class PickItem : MonoBehaviour
 
         Debug.Log("Recogiendo: " + itemName);
 
-        // Ocultar prompt
         if (interactionPrompt != null)
         {
             interactionPrompt.SetActive(false);
         }
 
-        // Opción 1: Usar Singleton (recomendado)
-        if (Inventario.Instance != null)
+        // No agregar los marcados con noAdd
+        if (!noAdd)
         {
-            Inventario.Instance.AddItem(itemName, itemIcon, descripcion);
-            Debug.Log($"{itemName} agregado al inventario.");
-        }
-        else
-        {
-            // Opción 2: Buscar el objeto (menos eficiente pero funcional)
-            GameObject objetoInventario = GameObject.FindWithTag("Inventario");
-            if (objetoInventario != null)
+            
+            if (Inventario.Instance != null)
             {
-                Inventario inventario = objetoInventario.GetComponent<Inventario>();
-                if (inventario != null)
-                {
-                    inventario.AddItem(itemName, itemIcon, descripcion);
-                    Debug.Log($"{itemName} agregado al inventario.");
-                }
-                else
-                {
-                    Debug.LogWarning("No se encontró el componente Inventario.");
-                }
+                Inventario.Instance.AddItem(itemName, itemIcon, descripcion);
+                Debug.Log($"{itemName} agregado al inventario.");
             }
             else
             {
-                Debug.LogWarning("No se encontró el inventario en la escena.");
+                GameObject objetoInventario = GameObject.FindWithTag("Inventario");
+                if (objetoInventario != null)
+                {
+                    Inventario inventario = objetoInventario.GetComponent<Inventario>();
+                    if (inventario != null)
+                    {
+                        inventario.AddItem(itemName, itemIcon, descripcion);
+                        Debug.Log($"{itemName} agregado al inventario.");
+                    }
+                    else
+                    {
+                        Debug.LogWarning("No se encontró el componente Inventario.");
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning("No se encontró el inventario en la escena.");
+                }
             }
         }
+        else
+        {
+            Debug.Log($"{itemName} es noAdd: NO se agrega al inventario.");
+        }
 
-        // Mostrar mensaje en el juego (si DialogueManager existe)
+        // Feedback visual existente
         if (DialogueManager.Instance != null)
         {
             DialogueManager.Instance.ShowBubble($"Has obtenido: {itemName}", transform);
         }
 
-        // Reproducir sonido si existe
         if (sonidoRecoger != null)
         {
             AudioSource.PlayClipAtPoint(sonidoRecoger, transform.position);
         }
 
-        // Destruir el objeto de la escena
         if (destruirAlRecoger)
         {
             Destroy(gameObject);
         }
         else
         {
-            // Alternativa: solo desactivarlo
             gameObject.SetActive(false);
         }
     }

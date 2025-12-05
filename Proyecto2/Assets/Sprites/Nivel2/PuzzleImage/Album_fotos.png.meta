@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2692d9ad5305aa54bbf06aae195af39e
+guid: d0c5129105af6e443b23d69b0175934e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8148695639140222859
-    second: Kitchen_Fondo_0
+      213: 7599758928204485560
+    second: Album_fotos_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Kitchen_Fondo_0
+      name: Album_fotos_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 154
+        y: 114
+        width: 1065
+        height: 686
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 578b5466d740aee80800000000000000
-      internalID: -8148695639140222859
+      spriteID: 8b35b3eda74c77960800000000000000
+      internalID: 7599758928204485560
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Kitchen_Fondo_0: -8148695639140222859
+      Album_fotos_0: 7599758928204485560
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
