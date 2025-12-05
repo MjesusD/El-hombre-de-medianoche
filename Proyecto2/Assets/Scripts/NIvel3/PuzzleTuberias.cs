@@ -42,11 +42,6 @@ public class PuzzleTuberias : MonoBehaviour
     [SerializeField] private AudioClip sonidoCorrecto;
     [SerializeField] private AudioClip sonidoIncorrecto;
 
-    [Header("Recompensa")]
-    [SerializeField] private string nombreItemRecompensa = "Válvula";
-    [SerializeField] private Sprite iconoRecompensa;
-    [SerializeField] private string descripcionRecompensa = "Una válvula importante del sistema.";
-
     private Tuberia[,] grid;
     private bool puzzleResuelto = false;
     private AudioSource audioSource;
@@ -90,9 +85,9 @@ public class PuzzleTuberias : MonoBehaviour
                 case TipoTuberia.Recta:
                     return new bool[] { true, false, true, false }; // Norte y Sur
                 case TipoTuberia.Curva:
-                    return new bool[] { true, true, false, false }; // Norte y Este
+                    return new bool[] { true, false, false, true }; // Norte y Este
                 case TipoTuberia.T:
-                    return new bool[] { true, true, true, false }; // Norte, Este, Oeste
+                    return new bool[] { true, false, true, true }; // Norte, Este, Oeste
                 case TipoTuberia.Cruz:
                     return new bool[] { true, true, true, true }; // Todas
                 case TipoTuberia.Tapada:
@@ -433,12 +428,6 @@ public class PuzzleTuberias : MonoBehaviour
         if (consumirLlave && Inventario.Instance != null)
         {
             Inventario.Instance.RemoveItem(nombreLlaveRequerida);
-        }
-
-        // Dar recompensa
-        if (Inventario.Instance != null && !string.IsNullOrEmpty(nombreItemRecompensa))
-        {
-            Inventario.Instance.AddItem(nombreItemRecompensa, iconoRecompensa, descripcionRecompensa);
         }
 
         // Cerrar puzzle después de un momento
