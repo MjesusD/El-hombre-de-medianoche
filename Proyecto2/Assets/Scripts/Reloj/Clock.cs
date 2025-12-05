@@ -24,7 +24,8 @@ public class Clock : MonoBehaviour
 
     private void Start()
     {
-        uiManager = FindAnyObjectByType<Clock_UIManager>();
+        uiManager = Clock_UIManager.Instance;
+
 
         if (nextHourButton != null)
             nextHourButton.onClick.AddListener(NextHour);

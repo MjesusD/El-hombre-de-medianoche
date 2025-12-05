@@ -273,12 +273,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 867807236931717214, guid: 19b4ff56ad53e0b4fae9adb23c503b4d, type: 3}
+      propertyPath: clockPanel
+      value: 
+      objectReference: {fileID: 1745000511}
+    - target: {fileID: 867807236931717214, guid: 19b4ff56ad53e0b4fae9adb23c503b4d, type: 3}
       propertyPath: clockCanvas
       value: 
       objectReference: {fileID: 1745000511}
     - target: {fileID: 4191998402739376664, guid: 19b4ff56ad53e0b4fae9adb23c503b4d, type: 3}
       propertyPath: m_Name
       value: ClockPanelManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4191998402739376664, guid: 19b4ff56ad53e0b4fae9adb23c503b4d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8880948187787472444, guid: 19b4ff56ad53e0b4fae9adb23c503b4d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2984,7 +2992,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8290212439030009804, guid: 15c032269cfedc1429ec8db8958c56cb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3894,7 +3902,7 @@ Transform:
   m_GameObject: {fileID: 2097143249}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -53.30099, y: -13.33965, z: -10.047}
+  m_LocalPosition: {x: -53.29477, y: -13.33966, z: -10.047}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4189,7 +4197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1918653672421100318, guid: a9a79493d95c96f49a8c8ae9af7ae0c0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3710122091269071154, guid: a9a79493d95c96f49a8c8ae9af7ae0c0, type: 3}
       propertyPath: useItemKey

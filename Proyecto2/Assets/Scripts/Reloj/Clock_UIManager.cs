@@ -16,8 +16,22 @@ public class Clock_UIManager : MonoBehaviour
     // ID del punto de aparición cuando se viaja con el reloj
     [SerializeField] private string clockSpawnID = "ClockSpawn";
 
+
+    public static Clock_UIManager Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     private void Start()
     {
+
+        Debug.Log("Clock_UIManager Inicializado. Panel = " + confirmationPanel);
+        Debug.Log("Text = " + questionText);
+        Debug.Log("YesButton = " + yesButton);
+        Debug.Log("NoButton = " + noButton);
+
         confirmationPanel.SetActive(false);
 
         yesButton.onClick.AddListener(OnYes);

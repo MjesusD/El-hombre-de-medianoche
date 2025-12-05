@@ -390,7 +390,7 @@ Transform:
   m_GameObject: {fileID: 189698110}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.712, y: -1.5384, z: 0}
+  m_LocalPosition: {x: 9.98, y: -1.01, z: 0}
   m_LocalScale: {x: 0.8915359, y: 0.737983, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -420,6 +420,9 @@ MonoBehaviour:
       m_Calls: []
   panelManager: {fileID: 0}
   panelNameToShow: 
+  requiredPuzzleID: 
+  puzzleToStart: {fileID: 0}
+  isFirstPuzzle: 0
 --- !u!1001 &213193766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -428,6 +431,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 867807236931717214, guid: 19b4ff56ad53e0b4fae9adb23c503b4d, type: 3}
+      propertyPath: clockPanel
+      value: 
+      objectReference: {fileID: 1784230889}
     - target: {fileID: 867807236931717214, guid: 19b4ff56ad53e0b4fae9adb23c503b4d, type: 3}
       propertyPath: clockCanvas
       value: 
@@ -786,7 +793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7903770663357358383, guid: 15c032269cfedc1429ec8db8958c56cb, type: 3}
       propertyPath: 'sceneNames.Array.data[3]'
-      value: Puzzle4
+      value: Lobby
       objectReference: {fileID: 0}
     - target: {fileID: 7903770663357358383, guid: 15c032269cfedc1429ec8db8958c56cb, type: 3}
       propertyPath: 'unlockedHours.Array.data[0]'
@@ -798,6 +805,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7903770663357358383, guid: 15c032269cfedc1429ec8db8958c56cb, type: 3}
       propertyPath: 'unlockedHours.Array.data[2]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903770663357358383, guid: 15c032269cfedc1429ec8db8958c56cb, type: 3}
+      propertyPath: 'unlockedHours.Array.data[3]'
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8005882061575555388, guid: 15c032269cfedc1429ec8db8958c56cb, type: 3}
@@ -1008,7 +1019,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1846482031659928994, guid: eda8851aff05563448fd38a406212dd9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.2372
+      value: -5.35
       objectReference: {fileID: 0}
     - target: {fileID: 1846482031659928994, guid: eda8851aff05563448fd38a406212dd9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1447,11 +1458,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.9661698
+      value: -1.9564824
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.26223004
+      value: 0.26217997
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1974,7 +1985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5029756863523987355, guid: 0fc5720fd775fb44f9b69f55282fc78d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -160.99994
+      value: -160.99995
       objectReference: {fileID: 0}
     - target: {fileID: 5118430191613469771, guid: 0fc5720fd775fb44f9b69f55282fc78d, type: 3}
       propertyPath: m_Camera

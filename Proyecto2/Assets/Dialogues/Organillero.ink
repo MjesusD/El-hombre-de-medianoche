@@ -25,7 +25,7 @@ Capitán: ¿Qué necesitas?
 
     Capitán:(Todo esto es muy extraño).
 
-    ->END
+    -> END
 
     + No
        Organillero: Hey! No seas así. 
@@ -59,28 +59,30 @@ Ahora podré tocar de nuevo con mi amigo. (Risas)
 #panel_Audio1
     (Empieza a sonar una música y la gente se acerca)
 Bueno, no hay tiempo que perder.
-Arreglaré tu reloj en casa...
-    Espero que funcione y puedas volver...
-    Capitán: ¿Esperas...?
-    Organillero: ¡En marcha!
+Tu reloj ya debería funcionar...
+Lo arreglé mientras estabas buscando mi pieza...
+    Capitán: Espera...
+    Organillero: ¡Ve al siguiente destino!
+    ¡Buena suerte!
 
 ->END
 + No, gracias.
     Pues entonces, quizás en otra oportunidad.
     Muy bien. 
-    Arreglaré tu reloj en casa...
-    Espero que funcione y puedas volver...
-    Capitán: ¿Esperas...?
-    Organillero: ¡En marcha!
+    Tu reloj ya debería funcionar...
+    Capitán: Espera...
+    Organillero: ¡Ve al siguiente destino!
+    ¡Buena suerte!
 -> END
 
 
 === organillero2_repeat ===
 
     Muy bien. 
-    Arreglaré tu reloj en casa...
-    Espero que funcione y puedas volver...
-    Capitán: ¿Esperas...?
-    Organillero: ¡En marcha!
-
+    Tu reloj ya debería funcionar...
+    Capitán: Espera...
+    Organillero: ¡Ve al siguiente destino!
+    ¡Buena suerte!
 -> END
+
+

@@ -5,7 +5,7 @@ public class ClockPanelManager : MonoBehaviour
     public static ClockPanelManager Instance;
 
     [Header("Panel del reloj")]
-    [SerializeField] private GameObject clockCanvas; // el Canvas del reloj completo
+    [SerializeField] private GameObject clockPanel; // el Canvas del reloj completo
 
     private bool isOpen = false;
 
@@ -16,15 +16,15 @@ public class ClockPanelManager : MonoBehaviour
         else
             Destroy(gameObject);
 
-        if (clockCanvas != null)
-            clockCanvas.SetActive(false);
+        if (clockPanel != null)
+            clockPanel.SetActive(false);
     }
 
     public void ShowClockPanel()
     {
-        if (clockCanvas == null) return;
+        if (clockPanel == null) return;
 
-        clockCanvas.SetActive(true);
+        clockPanel.SetActive(true);
         isOpen = true;
 
         // Pausar juego o bloquear movimiento del jugador
@@ -33,9 +33,9 @@ public class ClockPanelManager : MonoBehaviour
 
     public void HideClockPanel()
     {
-        if (clockCanvas == null) return;
+        if (clockPanel == null) return;
 
-        clockCanvas.SetActive(false);
+        clockPanel.SetActive(false);
         isOpen = false;
 
         // Reanudar juego
