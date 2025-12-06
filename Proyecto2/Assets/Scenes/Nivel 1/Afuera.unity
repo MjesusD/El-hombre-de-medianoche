@@ -1010,6 +1010,31 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3568653f64e1554f8e15035f78bd3a3, type: 3}
+--- !u!1 &599310744 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8249237651293288348, guid: 733e77848e5f77c4cabdd478291223d1, type: 3}
+  m_PrefabInstance: {fileID: 2039367816472290872}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &599310745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599310744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be3efd6871db8042aa76b2b80afc652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntregaItem
+  nombreItem: Nota
+  iconoItem: {fileID: 3058745686700435456, guid: 929a9a46da36fd042a3f37fefcc49ba4, type: 3}
+  descripcionItem: "Cuadro, ba\xF1o y libro."
+  entregarAlFinalDelDialogo: 1
+  soloEntregarUnaVez: 1
+  tagInkParaEntregar: entregarNota
+  requiereCondicion: 0
+  itemRequerido: 
 --- !u!1 &637012968
 GameObject:
   m_ObjectHideFlags: 0
@@ -1690,7 +1715,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5029756863523987355, guid: 0fc5720fd775fb44f9b69f55282fc78d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -161.00008
+      value: -161.00012
       objectReference: {fileID: 0}
     - target: {fileID: 5118430191613469771, guid: 0fc5720fd775fb44f9b69f55282fc78d, type: 3}
       propertyPath: m_Camera
@@ -1772,11 +1797,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.2055645
+      value: -12.189515
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.19115996
+      value: -0.19120002
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2544,7 +2569,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8249237651293288348, guid: 733e77848e5f77c4cabdd478291223d1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 599310745}
   m_SourcePrefab: {fileID: 100100000, guid: 733e77848e5f77c4cabdd478291223d1, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

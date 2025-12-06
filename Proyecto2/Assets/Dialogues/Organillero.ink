@@ -35,6 +35,7 @@ Capitán: ¿Qué necesitas?
     Capitán: Trato.
     Organillero: Eso es.
     Toma esa nota que hay más adelante, te será de ayuda.
+    # entregarNota
     ¡Buena suerte!
     
 -> END
