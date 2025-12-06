@@ -91,3 +91,14 @@ Cuídate y buena suerte.
 +No.
 Está bien, hablaremos después.
 -> END
+
+
+
+=== mujer1_final===
+
+Siempre supe que lo lograrías.
+Gracias por conseguir esto.
+Si nunca nos hubiéramos conocido, no podría estar hablando con mi amiga otra vez.
+Cuídate mucho, ¿si?
+
+-> END

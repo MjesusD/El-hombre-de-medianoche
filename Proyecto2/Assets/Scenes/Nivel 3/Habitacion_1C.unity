@@ -295,6 +295,7 @@ MonoBehaviour:
   destruirAlRecoger: 1
   recogerSoloUnaVez: 1
   sonidoRecoger: {fileID: 0}
+  noAdd: 0
   interactionPrompt: {fileID: 0}
 --- !u!212 &120823038
 SpriteRenderer:
@@ -881,12 +882,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 658865982}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.13, y: 0.032593995, z: -4.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.0591087, y: 5.085494, z: -4.4}
   m_LocalScale: {x: 2.388489, y: 2.388489, z: 2.388489}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1487069082}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &682763231
 PrefabInstance:
@@ -1038,7 +1039,7 @@ GameObject:
   - component: {fileID: 1149795547}
   - component: {fileID: 1149795546}
   m_Layer: 0
-  m_Name: objetos (1)_8
+  m_Name: Sofa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1205,7 +1206,7 @@ GameObject:
   - component: {fileID: 1220040323}
   - component: {fileID: 1220040322}
   m_Layer: 0
-  m_Name: objetos (1)_11 (1)
+  m_Name: Puerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1612,11 +1613,45 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1431374122}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.2, y: -2.117406, z: -2.6}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -23.87089, y: 2.935494, z: -2.6}
   m_LocalScale: {x: 2.3023, y: 2.3023, z: 2.3023}
   m_ConstrainProportionsScale: 0
   m_Children: []
+  m_Father: {fileID: 1487069082}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1487069081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1487069082}
+  m_Layer: 0
+  m_Name: "Objetos_decoraci\xF3n"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1487069082
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487069081}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 25.07089, y: -5.0529, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1431374124}
+  - {fileID: 1916783977}
+  - {fileID: 658865984}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1916783975
@@ -1702,12 +1737,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1916783975}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.32, y: 0.032593995, z: -4.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.24910927, y: 5.085494, z: -4.4}
   m_LocalScale: {x: 2.388489, y: 2.388489, z: 2.388489}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1487069082}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1922031779
 PrefabInstance:
@@ -1723,7 +1758,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.05393
+      value: -14.055276
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1782,8 +1817,6 @@ SceneRoots:
   - {fileID: 120823039}
   - {fileID: 1149795547}
   - {fileID: 1220040321}
-  - {fileID: 1431374124}
-  - {fileID: 1916783977}
-  - {fileID: 658865984}
   - {fileID: 657847472}
   - {fileID: 1223976488}
+  - {fileID: 1487069082}

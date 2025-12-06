@@ -86,3 +86,14 @@ Lo arreglé mientras estabas buscando mi pieza...
 -> END
 
 
+=== organillero_final ===
+
+¡Lo lograste!
+Pero nos volvimos a encontrar...
+¡ja ja ja!
+Te lo dije.
+Tenía razón con que podrías llegar a tu tiempo de vuelta.
+Ven a visitarme otra vez y así escuchrás más canciones de tu infancia.
+¡Buena suerte!
+
+->END

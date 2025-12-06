@@ -1,5 +1,4 @@
-﻿VAR visited_port = false
-VAR has_key = false
+﻿
 
 === hombre1 ===
 Hola viajero.
@@ -72,4 +71,40 @@ Hombre medianoche: Estaré esperando.
 
 
 
+=== hombre_final ===
 
+Has completado mi desafío.
+Pocos lo han logrado...
+Me has sorprendido.
+Pensaba que no encontrarías lo que perdiste como navegante.
+Estabas tan sumido en tus pensamientos, que olvidaste que todo es cuestión de tiempo.
+¿Qué es la vida para usted ahora?
+
++ No lo sé aún.
+
+Muchos dicen que es cuestión de días, horas, minutos y segundos que faltan para morir.
+Olvidan lo que han recorrido en las distintas fases de su vida.
+Espero que haya recoradado cosas importantes que se dejan de lado por estar en el presente.
+
+Gracias a ti, pude reunir a más como yo. 
+Personas de medianoche.
+La hora más densa y poblada del tiempo.
+
+Y recuerda esto antes de despedirnos:
+
+"Corres sobre el mar por entre una malla de lineas horizontales y verticales, que usteden llaman meridianos y paralelos...
+Pero por mucho que navegues, volverás siempre al mismo punto de donde partiste..."
+
+Quizás algún día nos tomemos una cerveza juntos.
+
+Cuídate, capitán.
+
+-> END
+
+=== hombre_Frepeat ===
+
+Quizás algún día nos tomemos una cerveza juntos.
+
+Cuídate, capitán.
+
+-> END
