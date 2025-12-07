@@ -12,6 +12,7 @@ public class Inventario : MonoBehaviour
     [SerializeField] private GameObject itemSlotPrefab;
     [SerializeField] private TextMeshProUGUI itemNameText;
     [SerializeField] private TextMeshProUGUI itemDescripcionText; //descripcion del item seleccionado
+    [SerializeField] private Sprite iconoItem;
 
     [Header("Configuracion")]
     [SerializeField] private int maxItems = 20;
@@ -22,7 +23,7 @@ public class Inventario : MonoBehaviour
     [Header("Navegacion")]
     [SerializeField] private int itemsPerRow = 7;
 
-    private List<InventarioItem> items = new List<InventarioItem>();
+    public List<InventarioItem> items = new List<InventarioItem>();
     private List<GameObject> itemSlots = new List<GameObject>();
     private bool isInventoryOpen = false;
     private int selectedIndex = 0;
@@ -353,5 +354,12 @@ public class Inventario : MonoBehaviour
     public List<InventarioItem> GetAllItems()
     {
         return items;
+    }
+
+    public void AddReloj()
+    {
+        Inventario.Instance.items.Clear();
+        Inventario.Instance.AddItem("Reloj", iconoItem, "Reloj antiguo. Permite viajar en el tiempo.");
+        UpdateInventoryUI();
     }
 } 

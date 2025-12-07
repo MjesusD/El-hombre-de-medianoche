@@ -46,6 +46,7 @@ Capitán: (Quizás es solo otro loco más que se pasó por el bar)
 Hombre medianoche: Muy bien. Gracias por aceptar. 
 Espero que logres encontrar lo que perdiste.
 Vuelve conmigo cuando hayas recuperado el tiempo perdido.
+# entregarReloj
 Buena suerte.
 -> END
 
@@ -62,6 +63,7 @@ Hombre medianoche: ¿Ya estás listo?
 Hombre medianoche: Muy bien. Gracias por aceptar. 
 Espero que logres encontrar lo que perdiste.
 Vuelve conmigo cuando hayas recuperado el tiempo perdido.
+# entregarReloj
 Buena suerte.
 -> END
 

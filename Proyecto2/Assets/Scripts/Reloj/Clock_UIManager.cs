@@ -68,6 +68,8 @@ public class Clock_UIManager : MonoBehaviour
             // Asegurar que el tiempo corra normalmente
             Time.timeScale = 1f;
 
+            Inventario.Instance.AddReloj();
+
             // Cargar la nueva escena
             SceneManager.LoadScene(targetScene);
         }

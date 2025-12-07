@@ -658,11 +658,13 @@ MonoBehaviour:
   itemSlotPrefab: {fileID: 7591329311625348013, guid: 2dff58699baa27d47b94d73d2e5f8172, type: 3}
   itemNameText: {fileID: 3799240868328009687}
   itemDescripcionText: {fileID: 1454856826008209513}
+  iconoItem: {fileID: 849652119764549919, guid: 93e4ca2c03daf9c4ab49463abc6591f0, type: 3}
   maxItems: 4
   toggleKey: 105
   useItemKey: 101
   closeKey: 27
   itemsPerRow: 4
+  items: []
 --- !u!1 &8463487311957306742
 GameObject:
   m_ObjectHideFlags: 0

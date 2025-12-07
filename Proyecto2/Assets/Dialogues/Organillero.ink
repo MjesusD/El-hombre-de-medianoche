@@ -21,6 +21,7 @@ Capitán: ¿Qué necesitas?
     + Sí, pero me dirás como regresar.
         Ja ja ja! Sabía que vendría alguien en mi ayuda.
         Toma esa nota que hay más adelante. Te será de ayuda.
+        # entregarNota
         ¡Buena suerte!
 
     Capitán:(Todo esto es muy extraño).
