@@ -243,7 +243,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.2, y: 7.22}
+    oldSize: {x: 10.24, y: 6.46}
     newSize: {x: 0.97, y: 0.44}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickItem
   itemName: Llave Inglesa
-  itemIcon: {fileID: 9061130121488618908, guid: a0c5403f370b3ee40a61c091516d5f7c, type: 3}
+  itemIcon: {fileID: -9180056114784667954, guid: 504cf5da5c8161e4bb33b2a07e42f3f3, type: 3}
   descripcion: " sirve para reparar tuber\xEDas"
   destruirAlRecoger: 1
   recogerSoloUnaVez: 1
@@ -344,7 +344,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3168988279173302923, guid: aac770adc1a283f49baedb3bac7d0727, type: 3}
+  m_Sprite: {fileID: -9180056114784667954, guid: 504cf5da5c8161e4bb33b2a07e42f3f3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1758,7 +1758,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.055276
+      value: -14.05579
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.y
