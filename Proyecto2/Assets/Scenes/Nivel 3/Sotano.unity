@@ -1145,7 +1145,7 @@ MonoBehaviour:
   botonVerificar: {fileID: 1523951786}
   spriteRecta: {fileID: 1213659493530104521, guid: f34c65d6b23ac3e42afbc87551b97bc3, type: 3}
   spriteCurva: {fileID: 492011027458495156, guid: f34c65d6b23ac3e42afbc87551b97bc3, type: 3}
-  spriteT: {fileID: -5064394749530258808, guid: f56d861cd5129224a8d1ae7dfc76f9fa, type: 3}
+  spriteT: {fileID: -8075631094425812569, guid: 0f4e79b7dcfcde248ada28da25203bfd, type: 3}
   spriteCruz: {fileID: 7915861639484947688, guid: f34c65d6b23ac3e42afbc87551b97bc3, type: 3}
   spriteTapada: {fileID: 1048810956926887924, guid: c5eac048f31f2064ba9ec28ee8171b81, type: 3}
   posicionInicio: {x: 0, y: 2}
@@ -1425,11 +1425,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.34752274
+      value: 0.3556404
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.48152006
+      value: -0.48151004
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.z
