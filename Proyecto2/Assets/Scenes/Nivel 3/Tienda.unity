@@ -382,7 +382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.839971
+      value: 11.8264885
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1977,8 +1977,35 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3838255520907862143, guid: 7dc9506859271ee409a9829a32be6a4f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5271024984546490625}
   m_SourcePrefab: {fileID: 100100000, guid: 7dc9506859271ee409a9829a32be6a4f, type: 3}
+--- !u!1 &5271024984546490624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3838255520907862143, guid: 7dc9506859271ee409a9829a32be6a4f, type: 3}
+  m_PrefabInstance: {fileID: 5271024984546490623}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5271024984546490625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5271024984546490624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be3efd6871db8042aa76b2b80afc652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntregaItem
+  nombreItem: Llave Departamento
+  iconoItem: {fileID: 9061130121488618908, guid: a0c5403f370b3ee40a61c091516d5f7c, type: 3}
+  descripcionItem: Llave del departamento
+  soloEntregarUnaVez: 1
+  tagInkParaEntregar: entregarLlave
+  requiereCondicion: 0
+  itemRequerido: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

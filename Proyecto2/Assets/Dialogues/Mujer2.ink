@@ -113,11 +113,13 @@ Mujer extraña: ¿Puedo confiar en ti?
 
 + Sí.
 Mujer extraña: Entonces toma mis llaves y regresa pronto.
+# entregarLlave
 -> END
 
 + Yo no lo haría...
 
 Mujer extraña: Solo toma mis llaves y regresa pronto.
+# entregarLlave
 Buena suerte.
 
 Capitán: Está bien.

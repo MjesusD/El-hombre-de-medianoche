@@ -13,12 +13,6 @@ public class PuertaConLlave : MonoBehaviour
     [Header("Mensajes")]
     [SerializeField] private string mensajePuertaCerrada = "La puerta está cerrada. Necesitas una llave.";
     [SerializeField] private string mensajePuertaAbierta = "Usaste la llave. La puerta se abre.";
-    [SerializeField] private string mensajeNoTienesLlave = "No tienes la llave correcta.";
-
-    [Header("Sonidos (Opcional)")]
-    [SerializeField] private AudioClip sonidoPuertaCerrada;
-    [SerializeField] private AudioClip sonidoPuertaAbierta;
-    [SerializeField] private AudioClip sonidoUsarLlave;
 
     public bool puertaAbierta = false;
     private AudioSource audioSource;
@@ -98,10 +92,6 @@ public class PuertaConLlave : MonoBehaviour
         //mostrar mensaje
         MostrarMensaje(mensajePuertaAbierta);
 
-        //reproducir sonidos
-        ReproducirSonido(sonidoUsarLlave);
-        ReproducirSonido(sonidoPuertaAbierta);
-
         //cargar escena después de un momento
         Invoke("CargarEscena", 1f);
     }
@@ -112,15 +102,11 @@ public class PuertaConLlave : MonoBehaviour
 
         // Mostrar mensaje
         MostrarMensaje(mensajePuertaCerrada);
-
-        // Sonido de puerta cerrada
-        ReproducirSonido(sonidoPuertaCerrada);
     }
 
     private void DebeUsarLlave()
     {
         Debug.Log("Tienes la llave pero debes seleccionarla en el inventario primero.");
-        ReproducirSonido(sonidoPuertaCerrada);
     }
 
     private void CargarEscena()

@@ -550,7 +550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.190659
+      value: -14.196349
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -615,6 +615,7 @@ GameObject:
   - component: {fileID: 1022907481}
   - component: {fileID: 1022907480}
   - component: {fileID: 1022907479}
+  - component: {fileID: 1022907484}
   m_Layer: 0
   m_Name: objetos (1)_11
   m_TagString: Untagged
@@ -689,9 +690,9 @@ MonoBehaviour:
   onInteract:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1022907481}
-        m_TargetAssemblyTypeName: SceneTransition, Assembly-CSharp
-        m_MethodName: LoadScene
+      - m_Target: {fileID: 1022907484}
+        m_TargetAssemblyTypeName: PuertaConLlave, Assembly-CSharp
+        m_MethodName: IntentarAbrirPuerta
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -793,6 +794,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1022907484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022907478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e337cd0a65b72468d61b9d8a5828d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuertaConLlave
+  nombreLlaveRequerida: Llave Departamento
+  consumirLlave: 1
+  requiereSeleccionarLlave: 1
+  sceneTransition: {fileID: 0}
+  mensajePuertaCerrada: "La puerta est\xE1 cerrada. Necesitas una llave."
+  mensajePuertaAbierta: Usaste la llave. La puerta se abre.
+  puertaAbierta: 0
 --- !u!1 &1399409360
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,11 +1175,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7280331700059884409, guid: 45d474824d73a654e8d1391306a94b15, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.2933998
+      value: -2.2731
       objectReference: {fileID: 0}
     - target: {fileID: 7280331700059884409, guid: 45d474824d73a654e8d1391306a94b15, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.10219
+      value: 2.1376896
       objectReference: {fileID: 0}
     - target: {fileID: 7794088486942313918, guid: 45d474824d73a654e8d1391306a94b15, type: 3}
       propertyPath: m_LocalPosition.x

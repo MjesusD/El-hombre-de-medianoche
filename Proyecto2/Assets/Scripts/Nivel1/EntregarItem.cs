@@ -9,7 +9,6 @@ public class EntregaItem : MonoBehaviour
     [SerializeField] private string descripcionItem = "Una llave importante.";
 
     [Header("Configuración")]
-    [SerializeField] private bool entregarAlFinalDelDialogo = true; // Entrega automáticamente al terminar diálogo
     [SerializeField] private bool soloEntregarUnaVez = true;
     [SerializeField] private string tagInkParaEntregar = "entregarItem"; // Tag en Ink que activa la entrega
 
