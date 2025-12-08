@@ -358,8 +358,6 @@ public class Inventario : MonoBehaviour
 
     public void AddReloj()
     {
-        Inventario.Instance.items.Clear();
-        Inventario.Instance.AddItem("Reloj", iconoItem, "Reloj antiguo. Permite viajar en el tiempo.");
-        UpdateInventoryUI();
+        items.RemoveRange(1, items.Count - 1);
     }
 } 
