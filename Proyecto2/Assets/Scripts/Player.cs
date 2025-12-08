@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
             horizontalInput = 0;
             isMoving = false;
             if (animator != null)
-                animator.SetBool("isWalking", false);
+                animator.SetBool("caminar", false);
             return;
         }
 
@@ -67,7 +67,7 @@ public class Player : MonoBehaviour
             spriteRenderer.flipX = false;
 
         if (animator != null)
-            animator.SetBool("isWalking", isMoving);
+            animator.SetBool("caminar", isMoving);
     }
 
 
@@ -120,7 +120,7 @@ public class Player : MonoBehaviour
         {
             rb.linearVelocity = Vector2.zero;
             if (animator != null)
-                animator.SetBool("isWalking", false);
+                animator.SetBool("caminar", false);
         }
 
         // Solo desactiva el movimiento, no todo el script
