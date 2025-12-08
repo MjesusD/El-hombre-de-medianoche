@@ -28,17 +28,17 @@ Hombre medianoche: Así es. Mientras sus relojes marcan las horas y minutos, el 
 
 Capitán: (No estoy entendiendo. Quizás solo es un sueño. Estoy ebrio.)
 
-Hombre medianoche: Que le parece si hacemos un trato. 
-Usted busca con mi reloj a otros como yo, y nos vemos después de tres tiempos.
+Hombre medianoche: Se le ve perdido.
+Usted debe buscar con mi reloj lo que perdió con su navío.
 Aquí, en su espacio. Su tiempo.
 
-Capitán: ¿Y que gano yo al ayudarlo?
+Capitán: ¿Lo que he perdido?
 
-Hombre medianoche: Logrará comprender de donde provengo. Conocerá lo que que perdió en este puerto. 
-Recuperará el tiempo perdido. O eso espero.
+Hombre medianoche: Logrará comprender de donde provengo. Conocerá lo que perdió en este puerto. 
+Recuperará lo que con el tiempo no es visto. O eso espero.
 ¿Qué dice?
 
-Capitán: (Quizás es solo otro loco más que se pasó por el bar)
+Capitán: (Quizás es otro loco más que se pasó por el bar)
  (Pero si sigo estancado aquí en este puerto, los ruidos me terminarán matando)
 (¿Debería arriesgarme?)
 

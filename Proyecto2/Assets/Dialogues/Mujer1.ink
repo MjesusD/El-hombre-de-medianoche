@@ -1,6 +1,6 @@
 ﻿=== mujer1 ===
 ¿Quién eres?
-¿Qué haces aquí?
+¿Qué haces en mi estudio?
 
 Capitán: Soy un capitán del futuro. 
 No sé que hago aquí, pero estoy tratando de encontrar el camino de vuelta.

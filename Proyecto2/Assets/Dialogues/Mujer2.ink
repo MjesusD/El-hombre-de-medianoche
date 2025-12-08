@@ -114,12 +114,12 @@ Capitán: ¿Estás segura?
 Mujer extraña: ¿Puedo confiar en ti?
 
 +Sí.
-Mujer extraña: Entonces ve y regresa pronto.
+Mujer extraña: Entonces toma mis llaves y regresa pronto.
 ->END
 
 + Yo no lo haría...
 
-Mujer extraña: Solo ve y regresa pronto.
+Mujer extraña: Solo toma mis llaves y regresa pronto.
 Buena suerte.
 
 Capitán: Está bien.
