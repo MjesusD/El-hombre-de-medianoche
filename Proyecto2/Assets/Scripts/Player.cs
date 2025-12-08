@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
             horizontalInput = 0;
             isMoving = false;
             if (animator != null)
-                animator.SetBool("caminar", false);
+                animator.SetInteger("Speed", 0);
             return;
         }
 
@@ -62,12 +62,25 @@ public class Player : MonoBehaviour
         isMoving = horizontalInput != 0;
 
         if (horizontalInput < 0)
+        {
             spriteRenderer.flipX = true;
+            animator.SetInteger("Speed", 1);
+        }
+        
         else if (horizontalInput > 0)
-            spriteRenderer.flipX = false;
+        {
+           spriteRenderer.flipX = false;
+            animator.SetInteger("Speed", 1);
+        }
+        else
+        {
+            animator.SetInteger("Speed", 0);
+        }
 
-        if (animator != null)
-            animator.SetBool("caminar", isMoving);
+
+
+        //if (animator != null)
+        //    animator.SetInteger("Speed", 1);
     }
 
 
