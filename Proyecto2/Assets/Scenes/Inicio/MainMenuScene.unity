@@ -1192,9 +1192,21 @@ MonoBehaviour:
   - sceneName: Principal_P2
     musicClip: {fileID: 8300000, guid: 333bdb43ffc36164189b560e5932f3ea, type: 3}
   - sceneName: Puzzle3
-    musicClip: {fileID: 8300000, guid: f92e73ff230b26f4995f10ae39ea7ad0, type: 3}
+    musicClip: {fileID: 8300000, guid: c55271243c6806348b104b77e27f238c, type: 3}
+  - sceneName: Tienda
+    musicClip: {fileID: 8300000, guid: c55271243c6806348b104b77e27f238c, type: 3}
+  - sceneName: Sotano
+    musicClip: {fileID: 8300000, guid: 960fbbee26b1e174f8a898496af11616, type: 3}
+  - sceneName: Piso1
+    musicClip: {fileID: 8300000, guid: 94278a7fc8102e440a62217ba09ed974, type: 3}
+  - sceneName: Piso2
+    musicClip: {fileID: 8300000, guid: 94278a7fc8102e440a62217ba09ed974, type: 3}
+  - sceneName: Piso3
+    musicClip: {fileID: 8300000, guid: 94278a7fc8102e440a62217ba09ed974, type: 3}
+  - sceneName: Habitacion_1C
+    musicClip: {fileID: 8300000, guid: 39f67d36e7aa2f045a41da70d2e8904f, type: 3}
   - sceneName: Lobby
-    musicClip: {fileID: 8300000, guid: 1f8283ab5bac3ad48a6d1dbed6fb84ba, type: 3}
+    musicClip: {fileID: 8300000, guid: e465f530fde2aa84bb9d6fd14a6abf84, type: 3}
   fadeDuration: 0.3
 --- !u!82 &806786715
 AudioSource:
@@ -1253,7 +1265,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1676,7 +1688,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000030517578, y: 0}
+  m_AnchoredPosition: {x: 0.000061035156, y: 0}
   m_SizeDelta: {x: 23.81, y: 32.555}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &977966653
@@ -3527,7 +3539,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.6600037, y: -1.1699829}
+  m_AnchoredPosition: {x: 4.659973, y: -1.1699829}
   m_SizeDelta: {x: 46.63, y: 34.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1723393130

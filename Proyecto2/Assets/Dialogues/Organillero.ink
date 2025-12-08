@@ -1,23 +1,28 @@
 ﻿=== organillero ===
+
 ¿Quién eres?
 ¿Qué haces aquí?
 
-Soy un capitán, y viajé a través del tiempo con un reloj de un hombre extraño.
-Me ha teletransportado aquí, y no me deja volver. 
+Capitán: Soy un capitán, y viajé a través del tiempo con un reloj de un hombre extraño.
+Me ha teletransportado aquí, y no me deja volver.
 Es como si las horas se bloquearan después de cada viaje...
+
 Hombre extraño: Wow, creo haber experimentado algo así antes...
+
 Capitán: ¿Qué?
 ¿Entonces puedes ayudarme a regresar?
-Hombre extraño: Mmmm, primero debes ayudarme. 
-Estoy estancado. 
-Como tú, ya ves. Ja ja ja!
+
+Hombre extraño: Mmmm, primero debes ayudarme.
+Estoy estancado.
+Como tú, ya ves. ¡Ja ja ja!
 
 Capitán: ¿Qué necesitas?
-    Organillero: Como ves soy un organillero, y he perdido una pieza de mi querido amigo.
-    Sin ella no puedo seguir haciendo mi trabajo. 
-    De seguro disfrutabas de la música cuando niño, 
-    y hay muchos que han quedado sin ella en esta ciudad.
-    Entonces, ¿aceptas ayudarme a encontrala?
+
+Organillero: Como ves, soy un organillero, y he perdido una pieza de mi querido amigo.
+Sin ella no puedo seguir haciendo mi trabajo.
+De seguro disfrutabas de la música cuando niño,
+y hay muchos que han quedado sin ella en esta ciudad.
+Entonces, ¿aceptas ayudarme a encontrarla?
 
     + Sí, pero me dirás como regresar.
         Ja ja ja! Sabía que vendría alguien en mi ayuda.

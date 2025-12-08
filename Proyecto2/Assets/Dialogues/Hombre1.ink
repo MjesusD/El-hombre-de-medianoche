@@ -1,7 +1,7 @@
 ﻿
-
 === hombre1 ===
-Hola viajero.
+
+Hola, viajero.
 Capitán: ¿Hola?
 ¿Usted y yo nos conocemos?
 
@@ -10,36 +10,41 @@ Hombre extraño: Solo pasaba por aquí, para saber si encontraba a alguien con e
 Capitán: ¿El tiempo correcto?
 
 Hombre extraño: Pues sí. Pensaba que quizás alguien tendría un reloj igual al mío.
-Pero me he equivocado. Su reloj también marca solo las horas. 
+Pero me he equivocado. Su reloj también marca solo las horas.
+
 Capitán: ¿Qué querría usted que marcara?
+
 Hombre extraño: Ya le he dicho que me he equivocado.
-Capitán: Bueno, pero me dirá ¿de dónde es?
+
+Capitán: Bueno, pero… ¿me dirá de dónde es?
+
 Hombre extraño: ¿Yo?
-Yo no tengo nombre, y en cuanto a mi origen le diré que simplemente soy de medianoche. 
+Yo no tengo nombre, y en cuanto a mi origen le diré que simplemente soy de medianoche.
 
 Capitán: ¿Cómo?
 
-Hombre medianoche: Ya me ha escuchado, solo soy de medianoche. Busco a más como yo. 
-Realmente por eso estoy aquí. 
+Hombre de medianoche: Ya me ha escuchado, solo soy de medianoche. Busco a más como yo.
+Realmente por eso estoy aquí.
 Otros habrá de mediodía, otros de las tres de la tarde o de las nueve de la mañana...
+
 Capitán: Seres del tiempo. Eso es lo que busca.
 
-Hombre medianoche: Así es. Mientras sus relojes marcan las horas y minutos, el mío da los meridianos y los paralelos.
+Hombre de medianoche: Así es. Mientras sus relojes marcan las horas y minutos, el mío da los meridianos y los paralelos.
 
 Capitán: (No estoy entendiendo. Quizás solo es un sueño. Estoy ebrio.)
 
-Hombre medianoche: Se le ve perdido.
+Hombre de medianoche: Se le ve perdido.
 Usted debe buscar con mi reloj lo que perdió con su navío.
 Aquí, en su espacio. Su tiempo.
 
 Capitán: ¿Lo que he perdido?
 
-Hombre medianoche: Logrará comprender de donde provengo. Conocerá lo que perdió en este puerto. 
+Hombre de medianoche: Logrará comprender de dónde provengo. Conocerá lo que perdió en este puerto.
 Recuperará lo que con el tiempo no es visto. O eso espero.
 ¿Qué dice?
 
-Capitán: (Quizás es otro loco más que se pasó por el bar)
- (Pero si sigo estancado aquí en este puerto, los ruidos me terminarán matando)
+Capitán: (Quizás es otro loco más que se pasó por el bar.)
+(Pero si sigo estancado aquí en este puerto, los ruidos me terminarán matando.)
 (¿Debería arriesgarme?)
 
 + Está bien, acepto.

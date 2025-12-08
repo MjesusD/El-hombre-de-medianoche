@@ -247,6 +247,9 @@ MonoBehaviour:
         m_CallState: 2
   panelManager: {fileID: 0}
   panelNameToShow: 
+  requiredPuzzleID: 
+  puzzleToStart: {fileID: 0}
+  isFirstPuzzle: 0
 --- !u!61 &8761234
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -849,8 +852,8 @@ MonoBehaviour:
   iconoPista: {fileID: 0}
   tiempoParaRevelar: 3
   tiempoVaporVisible: 10
-  sonidoActivarDucha: {fileID: 8300000, guid: a335965e51b996845982910a166bc23e, type: 3}
-  sonidoNumeroAparece: {fileID: 0}
+  sonidoActivarDucha: {fileID: 8300000, guid: 1e7faa80dbafb1847a4486bfa6858379, type: 3}
+  sonidoNumeroAparece: {fileID: 8300000, guid: c67fcda79ff58954cb0d9cdb6e1d7831, type: 3}
 --- !u!4 &1104014299
 Transform:
   m_ObjectHideFlags: 0
@@ -1181,7 +1184,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1636660627
 Transform:
   m_ObjectHideFlags: 0
@@ -1684,7 +1687,7 @@ MonoBehaviour:
   interactionMessage: Dar el agua de la ducha
   canPickup: 0
   inventoryIcon: {fileID: 0}
-  interactionPrompt: {fileID: 1636660626}
+  interactionPrompt: {fileID: 0}
   highlightSprite: {fileID: 0}
   onInteract:
     m_PersistentCalls:
@@ -1703,6 +1706,9 @@ MonoBehaviour:
         m_CallState: 2
   panelManager: {fileID: 0}
   panelNameToShow: 
+  requiredPuzzleID: 
+  puzzleToStart: {fileID: 0}
+  isFirstPuzzle: 0
 --- !u!61 &2085524250
 BoxCollider2D:
   m_ObjectHideFlags: 0
