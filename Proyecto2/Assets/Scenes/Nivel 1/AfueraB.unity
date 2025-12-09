@@ -358,11 +358,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.993228
+      value: -11.997424
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.43967998
+      value: -0.43966997
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -449,6 +449,14 @@ PrefabInstance:
     - target: {fileID: 1462930118925495824, guid: 3f59867ded9a7434f9f5aee4c351fde8, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1462930118925495824, guid: 3f59867ded9a7434f9f5aee4c351fde8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1462930118925495824, guid: 3f59867ded9a7434f9f5aee4c351fde8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.01
       objectReference: {fileID: 0}
     - target: {fileID: 1462930118925495824, guid: 3f59867ded9a7434f9f5aee4c351fde8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -558,6 +566,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3881287048437371908, guid: 3f59867ded9a7434f9f5aee4c351fde8, type: 3}
+      propertyPath: m_Color.a
+      value: 0.3529412
+      objectReference: {fileID: 0}
     - target: {fileID: 4591621280133699953, guid: 3f59867ded9a7434f9f5aee4c351fde8, type: 3}
       propertyPath: m_Type
       value: 0
@@ -576,11 +588,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5234039943720200637, guid: 3f59867ded9a7434f9f5aee4c351fde8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5234039943720200637, guid: 3f59867ded9a7434f9f5aee4c351fde8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -38.62
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 6113950506955436005, guid: 3f59867ded9a7434f9f5aee4c351fde8, type: 3}
       propertyPath: m_Name
@@ -1028,7 +1040,7 @@ AudioSource:
   m_GameObject: {fileID: 626458667}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 9b020543eb7f9ab479f9e91ba5b20d45, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: d0b60a396eedcdf4891ab69b8cc1fd78, type: 3}
   m_PlayOnAwake: 0
@@ -6386,7 +6398,7 @@ Transform:
   m_GameObject: {fileID: 956371268}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 18, y: -158, z: -4}
+  m_LocalPosition: {x: -3, y: -181, z: -4}
   m_LocalScale: {x: 43.300865, y: 43.300865, z: 43.300865}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6672,7 +6684,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5029756863523987355, guid: 0fc5720fd775fb44f9b69f55282fc78d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -161.00008
+      value: -161.00009
       objectReference: {fileID: 0}
     - target: {fileID: 5118430191613469771, guid: 0fc5720fd775fb44f9b69f55282fc78d, type: 3}
       propertyPath: m_Camera
@@ -7078,11 +7090,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4648828847410905525, guid: 103857b168eb24144895a2f1c1c6363e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.31
+      value: 38.15
       objectReference: {fileID: 0}
     - target: {fileID: 4648828847410905525, guid: 103857b168eb24144895a2f1c1c6363e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.99
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 4648828847410905525, guid: 103857b168eb24144895a2f1c1c6363e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7187,10 +7199,6 @@ MonoBehaviour:
   sceneTransition: {fileID: 0}
   mensajePuertaCerrada: "La puerta est\xE1 cerrada. Necesitas una llave."
   mensajePuertaAbierta: Usaste la llave. La puerta se abre.
-  mensajeNoTienesLlave: No tienes la llave correcta.
-  sonidoPuertaCerrada: {fileID: 0}
-  sonidoPuertaAbierta: {fileID: 0}
-  sonidoUsarLlave: {fileID: 0}
   puertaAbierta: 1
 --- !u!114 &1919632485
 MonoBehaviour:

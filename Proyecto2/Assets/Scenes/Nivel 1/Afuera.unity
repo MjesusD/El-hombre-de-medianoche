@@ -894,7 +894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1918653672421100318, guid: a9a79493d95c96f49a8c8ae9af7ae0c0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8198466414963198109, guid: a9a79493d95c96f49a8c8ae9af7ae0c0, type: 3}
       propertyPath: m_Pivot.x
@@ -1349,7 +1349,6 @@ MonoBehaviour:
   nombreItem: Nota
   iconoItem: {fileID: 3058745686700435456, guid: 929a9a46da36fd042a3f37fefcc49ba4, type: 3}
   descripcionItem: "Cuadro, ba\xF1o y libro."
-  entregarAlFinalDelDialogo: 1
   soloEntregarUnaVez: 1
   tagInkParaEntregar: entregarNota
   requiereCondicion: 0
@@ -1611,11 +1610,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.198554
+      value: -12.207186
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.19117999
+      value: -0.19114995
       objectReference: {fileID: 0}
     - target: {fileID: 7293340972800962687, guid: 82282027bd3a24844b4822388ca3e7fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1852,10 +1851,6 @@ MonoBehaviour:
   sceneTransition: {fileID: 0}
   mensajePuertaCerrada: "La puerta est\xE1 cerrada. Necesitas una llave."
   mensajePuertaAbierta: Usaste la llave. La puerta se abre.
-  mensajeNoTienesLlave: No tienes la llave correcta.
-  sonidoPuertaCerrada: {fileID: 0}
-  sonidoPuertaAbierta: {fileID: 0}
-  sonidoUsarLlave: {fileID: 0}
   puertaAbierta: 0
 --- !u!114 &1919632485
 MonoBehaviour:
